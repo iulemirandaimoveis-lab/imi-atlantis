@@ -194,7 +194,7 @@ export default function Hero({ dict }: HeroProps) {
               variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0, transition: { delay: 0.7, duration: 0.5 } } }}
               className="mt-8 sm:mt-10"
             >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/30 mb-3">Explorar portfólio</p>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60 mb-3">Explorar portfólio</p>
               <div className="grid grid-cols-2 gap-2 w-full max-w-xs">
                 {[
                   { label: 'Alto Padrão',    icon: Building2, href: `/${lang}/imoveis`, primary: false },
@@ -260,7 +260,7 @@ export default function Hero({ dict }: HeroProps) {
                 <span className="text-xl sm:text-3xl font-bold text-[#C8A44A]" style={{ fontFamily: 'var(--font-mono)' }}>
                   <StatCounter to={stat.value} suffix={stat.suffix} />
                 </span>
-                <span className="text-[10px] sm:text-xs text-white/40 mt-0.5 leading-snug">{stat.label}</span>
+                <span className="text-[10px] sm:text-xs text-white/70 mt-0.5 leading-snug">{stat.label}</span>
               </div>
             ))}
           </motion.div>

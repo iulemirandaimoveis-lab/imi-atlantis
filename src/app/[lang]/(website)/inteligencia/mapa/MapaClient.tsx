@@ -56,7 +56,7 @@ export default function MapaClient({ developments }: MapaClientProps) {
                             <h1 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white">
                                 Mapa <span className="text-navy-300 italic">Interativo</span>
                             </h1>
-                            <p className="text-white/40 text-sm font-light mt-2">
+                            <p className="text-white/70 text-sm font-light mt-2">
                                 {filtered.length} empreendimento{filtered.length !== 1 ? 's' : ''} disponíve{filtered.length !== 1 ? 'is' : 'l'}
                             </p>
                         </div>
@@ -102,7 +102,7 @@ export default function MapaClient({ developments }: MapaClientProps) {
                                 </button>
                             )}
 
-                            <div className="ml-auto text-[10px] text-white/30 font-mono">
+                            <div className="ml-auto text-[10px] text-white/60 font-mono">
                                 {neighborhoods.length} bairros · {cities.length} cidades
                             </div>
                         </div>

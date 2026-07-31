@@ -94,7 +94,7 @@ function POICategoryCard({ cat }: { cat: POICategoryResult }) {
             <div className="flex-1 min-w-0 pt-0.5">
                 <p
                     className="text-[11px] font-bold uppercase tracking-wide leading-none mb-1"
-                    style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
+                    style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
                 >
                     {cat.label}
                 </p>
@@ -201,7 +201,7 @@ export function POIGrid({
                         >
                             Conveniência e Proximidade
                         </h3>
-                        <p className="text-[12px] mt-0.5" style={{ color: '#948F84' }}>
+                        <p className="text-[12px] mt-0.5" style={{ color: '#5A6577' }}>
                             Serviços e pontos de interesse próximos
                         </p>
                     </div>
@@ -221,7 +221,7 @@ export function POIGrid({
                 <div className="pt-4" style={{ borderTop: '1px solid rgba(184,179,168,0.2)' }}>
                     <p
                         className="text-[10px] font-bold uppercase tracking-widest mb-3"
-                        style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
+                        style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
                     >
                         Destaques próximos
                     </p>
@@ -239,7 +239,7 @@ export function POIGrid({
                                 >
                                     {poi.rating?.toFixed(1)}
                                 </span>
-                                <span style={{ color: '#B8B3A8' }}>·</span>
+                                <span style={{ color: '#6E6C60' }}>·</span>
                                 <span className="truncate max-w-[110px]" style={{ color: '#4A5568' }}>
                                     {poi.name}
                                 </span>

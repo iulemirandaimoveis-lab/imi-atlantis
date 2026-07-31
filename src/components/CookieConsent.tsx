@@ -86,7 +86,8 @@ export default function CookieConsent() {
                             height: 36,
                             borderRadius: 6,
                             background: 'var(--accent-400, #C8A44A)',
-                            color: 'white',
+                            // Branco sobre dourado da 2,9:1; navy da 8,1:1.
+                            color: '#0B1928',
                             border: 'none',
                             fontSize: 13,
                             fontWeight: 600,

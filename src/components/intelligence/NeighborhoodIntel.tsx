@@ -52,7 +52,7 @@ interface NeighborhoodIntelProps {
 const NAVY = '#0B1928'
 const GOLD = '#C8A44A'
 const LIGHT_BG = '#F8F6F2'
-const MUTED = '#948F84'
+const MUTED = '#5A6577'
 
 function formatCurrency(v: number | null): string {
     if (v == null) return '--'

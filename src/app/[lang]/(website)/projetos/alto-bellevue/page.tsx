@@ -104,7 +104,7 @@ export default async function AltoBellevuePage({
           {/* Back link */}
           <Link
             href={`/${lang}/projetos`}
-            className="inline-flex items-center gap-2 text-white/40 text-xs font-medium hover:text-white/70 transition-colors mb-14 uppercase tracking-widest"
+            className="inline-flex items-center gap-2 text-white/70 text-xs font-medium hover:text-white/70 transition-colors mb-14 uppercase tracking-widest"
           >
             <ArrowLeft size={13} />
             Projetos
@@ -138,7 +138,7 @@ export default async function AltoBellevuePage({
           <p className="text-white/50 text-lg sm:text-xl font-light max-w-xl leading-relaxed mb-4">
             Loteamento residencial premium em Garanhuns, PE.
           </p>
-          <p className="text-white/35 text-base font-light max-w-md leading-relaxed mb-16">
+          <p className="text-white/70 text-base font-light max-w-md leading-relaxed mb-16">
             Lotes de 289 a 693 m² com infraestrutura completa, segurança 24h e qualidade de vida.
           </p>
 
@@ -159,15 +159,15 @@ export default async function AltoBellevuePage({
                 >
                   {stat.n}
                 </p>
-                <p className="text-white/40 text-xs uppercase tracking-widest">{stat.label}</p>
+                <p className="text-white/70 text-xs uppercase tracking-widest">{stat.label}</p>
               </div>
             ))}
           </div>
 
           {/* Scroll indicator */}
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
-            <span className="text-[10px] uppercase tracking-[0.3em]">Explorar</span>
-            <div className="w-px h-10 bg-white animate-pulse" style={{ animationDuration: '2s' }} />
+          <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+            <span className="text-[10px] uppercase tracking-[0.3em] text-white/70">Explorar</span>
+            <div className="w-px h-10 bg-white/40 animate-pulse" style={{ animationDuration: '2s' }} />
           </div>
         </div>
       </section>
@@ -175,7 +175,7 @@ export default async function AltoBellevuePage({
       {/* ── Interactive Lot Map ──────────────────────────── */}
       <section className="bg-[#F5F0EA] py-10 lg:py-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
-          <p className="text-[#C8A44A] text-xs font-bold uppercase tracking-[0.3em] mb-3">
+          <p className="text-[#8A6820] text-xs font-bold uppercase tracking-[0.3em] mb-3">
             Mapa do Loteamento
           </p>
           <h2
@@ -199,7 +199,7 @@ export default async function AltoBellevuePage({
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-14 max-w-lg">
-            <p className="text-[#C8A44A] text-xs font-bold uppercase tracking-[0.3em] mb-3">
+            <p className="text-[#8A6820] text-xs font-bold uppercase tracking-[0.3em] mb-3">
               O Empreendimento
             </p>
             <h2
@@ -242,7 +242,7 @@ export default async function AltoBellevuePage({
               <p className="text-white text-xl font-bold" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                 R$ 202.231 — R$ 476.570
               </p>
-              <p className="text-white/40 text-xs mt-1">Lotes de 289 m² a 693 m² · BR-424, Km 86 · Garanhuns, PE</p>
+              <p className="text-white/70 text-xs mt-1">Lotes de 289 m² a 693 m² · BR-424, Km 86 · Garanhuns, PE</p>
             </div>
             <a
               href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent('Olá! Tenho interesse em um lote no Alto Bellevue. Gostaria de saber mais sobre preços e condições.')}`}

@@ -48,7 +48,7 @@ const CARD_BG = '#FFFFFF';     // --Lc
 const NAVY = '#0B1928';        // --La
 const TEXT_PRIMARY = '#0C1220'; // --Lt1
 const TEXT_BODY = '#2D3748';   // --Lt2
-const TEXT_MUTED = '#948F84';  // --Lb2
+const TEXT_MUTED = '#5A6577';  // --Lb2
 const TEXT_SUB = '#5A6577';    // --Lt3
 const BORDER = '#B8B3A8';      // --Lb (2px solid)
 const BORDER_LIGHT = '#D9D5CB'; // --Lf
@@ -176,8 +176,8 @@ function PropertyCard({ dev, lang, index = 0 }: { dev: Development; lang: string
                     />
                 ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center gap-2">
-                        <Building2 size={32} className="text-[#B8B3A8] opacity-30" strokeWidth={1} />
-                        <span className="text-[#B8B3A8] text-[9px] font-bold tracking-[0.15em] uppercase">{dev.name}</span>
+                        <Building2 size={32} className="text-[#6E6C60] opacity-30" strokeWidth={1} />
+                        <span className="text-[#6E6C60] text-[9px] font-bold tracking-[0.15em] uppercase">{dev.name}</span>
                     </div>
                 )}
 
@@ -280,7 +280,7 @@ function PropertyCard({ dev, lang, index = 0 }: { dev: Development; lang: string
 
                 {/* Location */}
                 <div className="flex items-center gap-1.5 text-[#5A6577] text-[12px]">
-                    <MapPin size={11} className="flex-shrink-0 text-[#948F84]" />
+                    <MapPin size={11} className="flex-shrink-0 text-[#5A6577]" />
                     <span className="overflow-hidden text-ellipsis whitespace-nowrap">{locationStr}</span>
                 </div>
 
@@ -382,12 +382,12 @@ function MapSidebarCard({ dev, lang, selected, onClick }: { dev: Development; la
                 <div className="flex items-center gap-2.5">
                     <span className="text-[#0B1928] text-xs font-bold font-mono">{formatPrice(dev.priceRange.min)}</span>
                     {dev.specs.bedroomsRange && dev.specs.bedroomsRange !== '—' && (
-                        <span className="flex items-center gap-1 text-[#948F84] text-[10px]">
+                        <span className="flex items-center gap-1 text-[#5A6577] text-[10px]">
                             <Bed size={9} />{dev.specs.bedroomsRange}
                         </span>
                     )}
                     {dev.specs.areaRange && dev.specs.areaRange !== '—' && (
-                        <span className="flex items-center gap-1 text-[#948F84] text-[10px]">
+                        <span className="flex items-center gap-1 text-[#5A6577] text-[10px]">
                             <Maximize2 size={9} />{dev.specs.areaRange}
                         </span>
                     )}
@@ -428,13 +428,13 @@ function BrokerCard({ compact = false }: { compact?: boolean }) {
                     <span className={`font-semibold text-[${TEXT_PRIMARY}] ${compact ? 'text-sm' : 'text-base'}`}>Iule Miranda</span>
                     <CheckCircle size={14} className="text-[#C8A44A]" />
                 </div>
-                <div className="text-[11px] text-[#948F84]">CRECI 12345 · Consultora de investimentos</div>
+                <div className="text-[11px] text-[#5A6577]">CRECI 12345 · Consultora de investimentos</div>
                 {!compact && (
                     <div className="flex items-center gap-1 mt-1.5">
                         {[1, 2, 3, 4, 5].map(i => (
                             <Star key={i} size={12} className={i <= 4 ? 'text-[#C8A44A] fill-[#C8A44A]' : 'text-[#E2E0DB]'} />
                         ))}
-                        <span className="text-[11px] text-[#948F84] ml-1">4.8 (127)</span>
+                        <span className="text-[11px] text-[#5A6577] ml-1">4.8 (127)</span>
                     </div>
                 )}
             </div>
@@ -794,7 +794,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
 
             {/* Count */}
             <div className="px-4 pb-3">
-                <span className="text-sm text-[#948F84]">
+                <span className="text-sm text-[#5A6577]">
                     <strong className="text-[#0B1928]">{filteredDevelopments.length}</strong> imóveis encontrados
                 </span>
             </div>
@@ -818,7 +818,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
                 {visibleDevelopments.length > 0 ? visibleDevelopments.map((dev, i) => (
                     <PropertyCard key={dev.id} dev={dev} lang={lang} index={i} />
                 )) : (
-                    <div className="text-center py-12 text-[#948F84]">
+                    <div className="text-center py-12 text-[#5A6577]">
                         <div className="text-4xl mb-3 opacity-30">🔍</div>
                         <p className="mb-4">Nenhum imóvel encontrado</p>
                         <button onClick={() => setFilters(DEFAULT_FILTERS)}
@@ -854,7 +854,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
                         >
                             <div className="flex items-center justify-between mb-5">
                                 <h3 className="text-[#0B1928] text-[17px] font-bold m-0">
-                                    <SlidersHorizontal size={16} className="inline mr-2 text-[#948F84]" />
+                                    <SlidersHorizontal size={16} className="inline mr-2 text-[#5A6577]" />
                                     Filtros
                                 </h3>
                                 <button onClick={() => setShowMobileFilters(false)}
@@ -926,7 +926,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
                                         className="flex-1 min-w-0 bg-white px-3 py-2.5 text-sm outline-none box-border transition-colors"
                                         style={{ border: `2px solid ${BORDER}`, borderRadius: R.btn, color: TEXT_PRIMARY }}
                                     />
-                                    <span className="text-[#948F84] text-xs">até</span>
+                                    <span className="text-[#5A6577] text-xs">até</span>
                                     <input
                                         type="number"
                                         placeholder="R$ máx"
@@ -949,7 +949,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
                                         className="flex-1 min-w-0 bg-white px-3 py-2.5 text-sm outline-none box-border transition-colors"
                                         style={{ border: `2px solid ${BORDER}`, borderRadius: R.btn, color: TEXT_PRIMARY }}
                                     />
-                                    <span className="text-[#948F84] text-xs">até</span>
+                                    <span className="text-[#5A6577] text-xs">até</span>
                                     <input
                                         type="number"
                                         placeholder="máx"
@@ -1266,7 +1266,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
                                     onMarkerClick={handleMarkerClick}
                                 />
                             ) : (
-                                <div className="h-full flex flex-col items-center justify-center gap-4 text-[#948F84]">
+                                <div className="h-full flex flex-col items-center justify-center gap-4 text-[#5A6577]">
                                     <span className="text-[40px] opacity-20">🗺️</span>
                                     <p className="m-0 text-sm">Nenhum resultado com esses filtros</p>
                                     <button onClick={() => setFilters(DEFAULT_FILTERS)}
@@ -1279,7 +1279,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
                         {/* Sidebar */}
                         <div ref={listRef} className="w-full md:w-[380px] flex-shrink-0 overflow-y-auto" style={{ borderLeft: `2px solid ${BORDER}`, background: CARD_BG }}>
                             <div className="sticky top-0 px-3.5 py-3 z-[5]" style={{ background: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(12px)', borderBottom: `2px solid ${BORDER_LIGHT}` }}>
-                                <p className="m-0 text-[11px] font-bold tracking-[0.1em] uppercase text-[#948F84]">
+                                <p className="m-0 text-[11px] font-bold tracking-[0.1em] uppercase text-[#5A6577]">
                                     {filteredDevelopments.length} empreendimento{filteredDevelopments.length !== 1 ? 's' : ''}
                                 </p>
                                 {selectedId && (
@@ -1306,7 +1306,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
                             <div className="text-center py-20 bg-white border-dashed" style={{ borderRadius: R.card, border: `2px dashed ${BORDER}` }}>
                                 <div className="text-[40px] opacity-20 mb-3">🔍</div>
                                 <h3 className="text-xl font-bold text-[#0B1928] mb-2">Nenhum ativo encontrado</h3>
-                                <p className="text-[#948F84] mb-5">Tente remover alguns filtros.</p>
+                                <p className="text-[#5A6577] mb-5">Tente remover alguns filtros.</p>
                                 <button onClick={() => setFilters(DEFAULT_FILTERS)}
                                     className="px-6 py-2.5 text-[11px] font-semibold cursor-pointer transition-colors"
                                     style={{ borderRadius: R.btn, border: `2px solid ${BORDER}`, background: CARD_BG, color: TEXT_BODY }}>
@@ -1413,7 +1413,7 @@ export default function ImoveisClient({ initialDevelopments, lang }: ImoveisClie
 function FilterSection({ label, children }: { label: string; children: React.ReactNode }) {
     return (
         <div className="mb-5">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-[#948F84] mb-2.5 m-0">{label}</p>
+            <p className="text-[10px] font-bold tracking-widest uppercase text-[#5A6577] mb-2.5 m-0">{label}</p>
             {children}
         </div>
     );

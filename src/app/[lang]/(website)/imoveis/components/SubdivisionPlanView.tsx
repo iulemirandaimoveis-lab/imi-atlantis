@@ -174,7 +174,7 @@ function LotDetailPanel({
             <ChevronLeft size={15} />
           </button>
           <span style={{ fontSize: 9, fontWeight: 700, color: '#C8A44A', letterSpacing: '0.2em', textTransform: 'uppercase', flex: 1 }}>LOTE SELECIONADO</span>
-          <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.3)', padding: 2 }}>
+          <button onClick={onClose} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.6)', padding: 2 }}>
             <X size={14} />
           </button>
         </div>
@@ -183,7 +183,7 @@ function LotDetailPanel({
           {cfg.label}
         </span>
         <p style={{ fontSize: 24, fontWeight: 800, color: '#fff', margin: '8px 0 0', lineHeight: 1.1 }}>Lote {lot.lot_number}</p>
-        <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', margin: '3px 0 0' }}>Quadra {lot.quadra} · {developmentName}</p>
+        <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)', margin: '3px 0 0' }}>Quadra {lot.quadra} · {developmentName}</p>
       </div>
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '14px 16px' }}>
@@ -191,28 +191,28 @@ function LotDetailPanel({
           <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: 12, padding: '12px 10px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 5 }}>
               <Ruler size={11} style={{ color: '#C8A44A' }} />
-              <span style={{ fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,0.35)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Metragem</span>
+              <span style={{ fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Metragem</span>
             </div>
             <p style={{ fontSize: 18, fontWeight: 800, color: '#fff', margin: 0 }}>{Math.round(lot.area_m2)} m²</p>
           </div>
           <div style={{ background: isAvail ? 'rgba(22,163,74,0.12)' : 'rgba(255,255,255,0.05)', borderRadius: 12, padding: '12px 10px', border: isAvail ? '1px solid rgba(22,163,74,0.25)' : 'none' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 5 }}>
               <DollarSign size={11} style={{ color: '#C8A44A' }} />
-              <span style={{ fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,0.35)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Valor</span>
+              <span style={{ fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Valor</span>
             </div>
             {lot.price ? (
               <p style={{ fontSize: 14, fontWeight: 800, color: isAvail ? '#4ADE80' : '#fff', margin: 0, wordBreak: 'break-word' }}>
                 {fmtBRL(lot.price)}
               </p>
             ) : (
-              <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.35)', margin: 0 }}>Consultar</p>
+              <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', margin: 0 }}>Consultar</p>
             )}
           </div>
         </div>
 
         {pricePerM2 && (
           <div style={{ background: 'rgba(200,164,74,0.07)', border: '1px solid rgba(200,164,74,0.15)', borderRadius: 10, padding: '9px 12px', marginBottom: 10, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)' }}>Preço / m²</span>
+            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)' }}>Preço / m²</span>
             <span style={{ fontSize: 14, fontWeight: 800, color: '#C8A44A' }}>{fmtBRL(pricePerM2)}/m²</span>
           </div>
         )}
@@ -226,7 +226,7 @@ function LotDetailPanel({
         )}
 
         {lot.notes && (
-          <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.4)', background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '8px 10px', margin: '0 0 10px', lineHeight: 1.5 }}>
+          <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '8px 10px', margin: '0 0 10px', lineHeight: 1.5 }}>
             {lot.notes}
           </p>
         )}
@@ -255,7 +255,7 @@ function LotDetailPanel({
               navigator.share?.({ title: `Lote ${lot.lot_number} — Quadra ${lot.quadra}`, url }) ??
               navigator.clipboard?.writeText(url);
             }}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, height: 38, borderRadius: 10, background: 'transparent', color: 'rgba(255,255,255,0.35)', fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', border: 'none', cursor: 'pointer' }}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, height: 38, borderRadius: 10, background: 'transparent', color: 'rgba(255,255,255,0.7)', fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', border: 'none', cursor: 'pointer' }}
           >
             <Share2 size={11} />
             Compartilhar
@@ -295,7 +295,7 @@ function QuadraPanel({
           </div>
           <button
             onClick={onClose}
-            style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, width: 32, height: 32, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(255,255,255,0.4)' }}
+            style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, width: 32, height: 32, display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', color: 'rgba(255,255,255,0.7)' }}
           >
             <X size={13} />
           </button>
@@ -314,7 +314,7 @@ function QuadraPanel({
       </div>
 
       <div style={{ flex: 1, overflowY: 'auto', padding: '12px 16px' }}>
-        <p style={{ fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 10px' }}>
+        <p style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 10px' }}>
           {visible.length} lote{visible.length !== 1 ? 's' : ''}
           {filterStatus !== 'ALL' ? ' · filtro ativo' : ''}
         </p>
@@ -322,7 +322,7 @@ function QuadraPanel({
           {visible.map((lot: Lot) => <LotCell key={lot.id} lot={lot} onClick={onLotSelect} />)}
         </div>
         {visible.length === 0 && (
-          <p style={{ textAlign: 'center', padding: '24px 0', color: 'rgba(255,255,255,0.2)', fontSize: 12, margin: 0 }}>
+          <p style={{ textAlign: 'center', padding: '24px 0', color: 'rgba(255,255,255,0.6)', fontSize: 12, margin: 0 }}>
             Nenhum lote neste filtro
           </p>
         )}
@@ -690,25 +690,25 @@ export default function SubdivisionPlanView({
         {/* Price range */}
         {stats.priceMin > 0 && (
           <div style={{ padding: '12px 16px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-            <p style={{ fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.2em', margin: '0 0 8px' }}>FAIXA DE PREÇO</p>
-            <p style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', margin: 0 }}>A partir de</p>
+            <p style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: '0.2em', margin: '0 0 8px' }}>FAIXA DE PREÇO</p>
+            <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', margin: 0 }}>A partir de</p>
             <p style={{ fontSize: 14, fontWeight: 800, color: '#C8A44A', margin: '2px 0 6px' }}>{fmtBRL(stats.priceMin)}</p>
-            <p style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', margin: 0 }}>Até</p>
+            <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', margin: 0 }}>Até</p>
             <p style={{ fontSize: 14, fontWeight: 800, color: '#C8A44A', margin: '2px 0 0' }}>{fmtBRL(stats.priceMax)}</p>
           </div>
         )}
 
         {/* Legend */}
         <div style={{ padding: '12px 16px', marginTop: 'auto', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
-          <p style={{ fontSize: 8, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.2em', margin: '0 0 8px' }}>LEGENDA</p>
+          <p style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.6)', textTransform: 'uppercase', letterSpacing: '0.2em', margin: '0 0 8px' }}>LEGENDA</p>
           {Object.entries(STATUS_COLORS).slice(0, 4).map(([k, v]) => (
             <div key={k} style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
               <div style={{ width: 12, height: 8, borderRadius: 2, background: v.bg, flexShrink: 0 }} />
-              <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)' }}>{v.label}</span>
+              <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.7)' }}>{v.label}</span>
             </div>
           ))}
           <div style={{ marginTop: 10, padding: '8px 10px', background: 'rgba(200,164,74,0.06)', border: '1px solid rgba(200,164,74,0.12)', borderRadius: 8 }}>
-            <p style={{ fontSize: 9, color: 'rgba(255,255,255,0.3)', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', margin: 0, lineHeight: 1.5 }}>
               Toque numa quadra para explorar os lotes · Pinça para zoom
             </p>
           </div>
@@ -906,7 +906,7 @@ export default function SubdivisionPlanView({
 
         {/* ── SCALE BADGE ──────────────────────────────────────────────────────── */}
         <div style={{ position: 'absolute', bottom: 22, left: 64, zIndex: 10 }}>
-          <span style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.4)', background: 'rgba(11,25,40,0.85)', padding: '4px 8px', borderRadius: 6, backdropFilter: 'blur(8px)', display: 'block' }}>
+          <span style={{ fontSize: 10, fontWeight: 700, color: 'rgba(255,255,255,0.7)', background: 'rgba(11,25,40,0.85)', padding: '4px 8px', borderRadius: 6, backdropFilter: 'blur(8px)', display: 'block' }}>
             {displayScale}%
           </span>
         </div>

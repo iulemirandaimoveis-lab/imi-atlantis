@@ -165,17 +165,17 @@ export default async function FeaturedDevelopments({ lang = 'pt' }: { lang?: str
                             </div>
                             <h2
                                 className="text-[26px] sm:text-[32px] font-bold leading-tight"
-                                style={{ fontFamily: 'var(--font-display)', color: 'var(--text-primary)' }}
+                                style={{ fontFamily: 'var(--font-display)', color: '#EDF2F8' }}
                             >
                                 Empreendimentos{' '}
                                 <span style={{ color: '#C8A44A' }}>Selecionados</span>
                             </h2>
-                            <p className="text-sm mt-2" style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-sans)' }}>Brasil · Estados Unidos · Emirados Árabes</p>
+                            <p className="text-sm mt-2" style={{ color: '#94A3B8', fontFamily: 'var(--font-sans)' }}>Brasil · Estados Unidos · Emirados Árabes</p>
                         </div>
                         <Link
                             href={`/${lang}/imoveis`}
                             className="hidden sm:flex items-center gap-1.5 text-xs font-semibold transition-colors group"
-                        style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-sans)' }}
+                        style={{ color: '#94A3B8', fontFamily: 'var(--font-sans)' }}
                         >
                             Ver portfólio completo
                             <ArrowRight size={12} className="transition-transform duration-200 group-hover:translate-x-0.5" />

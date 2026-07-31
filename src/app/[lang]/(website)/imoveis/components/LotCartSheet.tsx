@@ -112,7 +112,7 @@ export function CartSheet({
             <span style={{ fontSize: 15, fontWeight: 800, color: '#fff', fontFamily: "'Outfit', sans-serif" }}>
               Sua proposta
             </span>
-            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>
+            <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)' }}>
               {items.length} {items.length === 1 ? 'lote' : 'lotes'}
             </span>
           </div>
@@ -134,7 +134,7 @@ export function CartSheet({
                 </div>
                 <div className="min-w-0">
                   <p style={{ fontSize: 13, fontWeight: 700, color: '#fff', margin: 0 }}>Quadra {l.block} · Lote {l.lot}</p>
-                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)', margin: '2px 0 0', fontFamily: "'JetBrains Mono', monospace" }}>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)', margin: '2px 0 0', fontFamily: "'JetBrains Mono', monospace" }}>
                     {fmtM2(l.areaM2)} · {fmtBRL(l.price)}
                   </p>
                   {l.selectedPlan && (

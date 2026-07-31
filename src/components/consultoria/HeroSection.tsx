@@ -77,7 +77,7 @@ export function HeroSection() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
-                            className="mt-16 flex flex-wrap gap-8 text-white/40 text-sm"
+                            className="mt-16 flex flex-wrap gap-8 text-white/70 text-sm"
                         >
                             {[
                                 '+$50M Alocados',

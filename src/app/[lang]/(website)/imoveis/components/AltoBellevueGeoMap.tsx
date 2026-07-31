@@ -559,7 +559,7 @@ function StatusLegend({ stats }: { stats: Record<string, number> }) {
         <div key={item.status} className="flex items-center gap-1.5">
           <div className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: item.fill }} />
           <span style={{ fontSize: 10, fontWeight: 600, color: 'rgba(255,255,255,0.75)', whiteSpace: 'nowrap' }}>
-            {item.label} · <span style={{ color: 'rgba(255,255,255,0.45)' }}>{item.count}</span>
+            {item.label} · <span style={{ color: 'rgba(255,255,255,0.7)' }}>{item.count}</span>
           </span>
         </div>
       ))}
@@ -850,7 +850,7 @@ function LayerPanel({
     >
       <div className="flex items-center justify-between px-3 py-2.5" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
         <span style={{ fontSize: 9, fontWeight: 800, color: GOLD, textTransform: 'uppercase', letterSpacing: '0.2em' }}>Camadas</span>
-        <button onClick={onClose} aria-label="Fechar painel de camadas" style={{ color: 'rgba(255,255,255,0.40)', background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex' }}><X size={12} /></button>
+        <button onClick={onClose} aria-label="Fechar painel de camadas" style={{ color: 'rgba(255,255,255,0.7)', background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex' }}><X size={12} /></button>
       </div>
       {ALL_LAYER_GROUPS.map(group => {
         const on = active.has(group.id);
@@ -909,7 +909,7 @@ function CalibrationOverlay({
       <div className="flex items-center gap-2 px-4 py-2.5" style={{ borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
         <SlidersHorizontal size={14} color={GOLD} />
         <span style={{ fontSize: 11, fontWeight: 800, color: GOLD, textTransform: 'uppercase', letterSpacing: '0.12em' }}>Calibração</span>
-        <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.35)', marginLeft: 'auto' }}>admin</span>
+        <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)', marginLeft: 'auto' }}>admin</span>
       </div>
       <div className="p-4 flex flex-col gap-3">
         <CalRow label="Rotação" value={`${round(cal.rotationDeg, 1)}°`}
@@ -1487,7 +1487,7 @@ export default function AltoBellevueGeoMap({
             <div key={k} className="flex items-center gap-1 flex-shrink-0 rounded-full px-2.5 py-1"
               style={{ background: 'rgba(8,20,36,0.85)', backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.08)' }}>
               <div style={{ width: 6, height: 6, borderRadius: 3, background: v.fill, flexShrink: 0 }} />
-              <span style={{ fontSize: 9, fontWeight: 600, color: 'rgba(255,255,255,0.70)', whiteSpace: 'nowrap' }}>
+              <span style={{ fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,0.70)', whiteSpace: 'nowrap' }}>
                 {v.label} {stats[k]}
               </span>
             </div>

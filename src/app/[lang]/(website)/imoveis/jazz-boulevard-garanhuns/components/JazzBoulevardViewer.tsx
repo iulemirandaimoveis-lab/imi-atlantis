@@ -112,7 +112,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
               Unidades Disponíveis
             </h2>
           </div>
-          <p style={{ fontSize: 13, color: '#948F84', margin: 0 }}>
+          <p style={{ fontSize: 13, color: '#5A6577', margin: 0 }}>
             Torre {selectedTower} · {towerStats.available} de {towerStats.total} unidades disponíveis
           </p>
         </div>
@@ -122,7 +122,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
             className="flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-bold transition-all"
             style={{
               background: compareMode ? '#0B1928' : '#F8F6F2',
-              color: compareMode ? '#C8A44A' : '#948F84',
+              color: compareMode ? '#C8A44A' : '#5A6577',
               border: compareMode ? '1.5px solid #0B1928' : '1px solid rgba(184,179,168,0.3)',
               fontFamily: "var(--fu, 'Outfit', sans-serif)",
             }}
@@ -138,7 +138,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
       <div className="flex flex-col gap-2.5 mb-6">
         {/* Torre row */}
         <div className="flex items-center gap-2">
-          <span style={{ fontSize: 10, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)", flexShrink: 0, minWidth: 44 }}>
+          <span style={{ fontSize: 10, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)", flexShrink: 0, minWidth: 44 }}>
             Torre
           </span>
           <div className="flex gap-1">
@@ -150,7 +150,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
                 style={{
                   height: 32, padding: '0 12px',
                   background: selectedTower === tower ? '#0B1928' : '#F8F6F2',
-                  color: selectedTower === tower ? '#fff' : '#948F84',
+                  color: selectedTower === tower ? '#fff' : '#5A6577',
                   border: selectedTower === tower ? '1.5px solid #0B1928' : '1px solid rgba(184,179,168,0.3)',
                   fontSize: 13,
                   fontFamily: "var(--fu, 'Outfit', sans-serif)",
@@ -165,7 +165,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
 
         {/* Planta row — label pinned left, buttons scroll right */}
         <div className="flex items-center gap-2 min-w-0">
-          <span style={{ fontSize: 10, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)", flexShrink: 0, minWidth: 44 }}>
+          <span style={{ fontSize: 10, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)", flexShrink: 0, minWidth: 44 }}>
             Planta
           </span>
           <div className="flex gap-1 overflow-x-auto no-scrollbar flex-1 pb-0.5">
@@ -175,7 +175,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
               style={{
                 height: 28, padding: '0 10px',
                 background: selectedPlan === null ? '#0B1928' : '#F8F6F2',
-                color: selectedPlan === null ? '#fff' : '#948F84',
+                color: selectedPlan === null ? '#fff' : '#5A6577',
                 border: selectedPlan === null ? '1.5px solid #0B1928' : '1px solid rgba(184,179,168,0.3)',
                 fontFamily: "var(--fu, 'Outfit', sans-serif)",
                 whiteSpace: 'nowrap',
@@ -191,7 +191,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
                 style={{
                   height: 28, padding: '0 10px',
                   background: selectedPlan === plan ? '#C8A44A' : '#F8F6F2',
-                  color: selectedPlan === plan ? '#0B1928' : '#948F84',
+                  color: selectedPlan === plan ? '#0B1928' : '#5A6577',
                   border: selectedPlan === plan ? '1.5px solid #C8A44A' : '1px solid rgba(184,179,168,0.3)',
                   fontFamily: "var(--fu, 'Outfit', sans-serif)",
                   whiteSpace: 'nowrap',
@@ -208,7 +208,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
       <div className="flex flex-col sm:flex-row gap-4">
         {/* Floor column */}
         <div className="sm:flex-shrink-0">
-          <p style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 8, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+          <p style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', marginBottom: 8, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
             Andar
           </p>
           <FloorSelector
@@ -222,7 +222,7 @@ export default function JazzBoulevardViewer({ whatsappPhone = '5581986141487' }:
         {/* Units area */}
         <div className="flex-1 min-w-0">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-1 mb-4" style={{ fontSize: 11, color: '#948F84', fontWeight: 600 }}>
+          <div className="flex items-center gap-1 mb-4" style={{ fontSize: 11, color: '#5A6577', fontWeight: 600 }}>
             <span>Jazz Boulevard</span>
             <ChevronRight size={11} />
             <span>Torre {selectedTower}</span>
@@ -323,7 +323,7 @@ function ComparePanel({ units, whatsappPhone, onClose }: { units: IMIProperty[];
             </span>
           </div>
           <button onClick={onClose} aria-label="Fechar comparação" className="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center">
-            <XIcon size={15} style={{ color: '#948F84' }} />
+            <XIcon size={15} style={{ color: '#5A6577' }} />
           </button>
         </div>
 
@@ -333,7 +333,7 @@ function ComparePanel({ units, whatsappPhone, onClose }: { units: IMIProperty[];
           {[a, b].map(u => (
             <div key={u.id} className="text-center">
               <p style={{ fontSize: 13, fontWeight: 800, color: '#0B1928', margin: 0, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Apto {u.code}</p>
-              <p style={{ fontSize: 10, color: '#948F84', margin: '2px 0 0' }}>Torre {u.tower}</p>
+              <p style={{ fontSize: 10, color: '#5A6577', margin: '2px 0 0' }}>Torre {u.tower}</p>
             </div>
           ))}
         </div>
@@ -342,7 +342,7 @@ function ComparePanel({ units, whatsappPhone, onClose }: { units: IMIProperty[];
         <div className="overflow-y-auto" style={{ maxHeight: 'calc(85vh - 160px)' }}>
           {rows.map(row => (
             <div key={row.label} className="grid grid-cols-3 px-5 py-2.5 border-b border-gray-50" style={{ background: row.highlight ? '#FFFDF5' : undefined }}>
-              <span style={{ fontSize: 11, fontWeight: 600, color: '#948F84', alignSelf: 'center' }}>{row.label}</span>
+              <span style={{ fontSize: 11, fontWeight: 600, color: '#5A6577', alignSelf: 'center' }}>{row.label}</span>
               {[row.a, row.b].map((val, i) => (
                 <span key={i} className="text-center" style={{ fontSize: 13, fontWeight: row.highlight ? 800 : 600, color: row.highlight ? '#0B1928' : '#374151', fontFamily: row.highlight ? "var(--fm, 'JetBrains Mono', monospace)" : undefined }}>
                   {val}

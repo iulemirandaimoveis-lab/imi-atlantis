@@ -101,7 +101,7 @@ export default function BibliotecaClient({ ebooks, pilares, bookSlugs = [] }: Pr
                         className="flex items-center gap-6"
                     >
                         <div className="flex items-center gap-2">
-                            <BookOpen size={14} className="text-white/40" />
+                            <BookOpen size={14} className="text-white/70" />
                             <span className="text-[13px] text-white/50">
                                 <span className="text-white font-semibold">{ebooks.length}</span> títulos
                             </span>
@@ -165,7 +165,7 @@ export default function BibliotecaClient({ ebooks, pilares, bookSlugs = [] }: Pr
             <section id="ebooks-grid" className="py-12 lg:py-16">
                 <div className="max-w-[1280px] mx-auto px-6 lg:px-8">
                     {/* Result count */}
-                    <p className="text-[11px] font-semibold uppercase tracking-wider text-white/30 mb-6">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-white/60 mb-6">
                         {filtered.length} {filtered.length === 1 ? 'título' : 'títulos'}
                         {activeFilter !== 'todos' && ` em ${PILAR_LABELS[activeFilter] || activeFilter}`}
                     </p>
@@ -180,7 +180,7 @@ export default function BibliotecaClient({ ebooks, pilares, bookSlugs = [] }: Pr
                                 className="text-center py-24"
                             >
                                 <BookOpen size={40} className="mx-auto mb-4 text-white/20" />
-                                <p className="text-white/40 text-sm">Nenhuma publicação neste pilar ainda.</p>
+                                <p className="text-white/70 text-sm">Nenhuma publicação neste pilar ainda.</p>
                             </motion.div>
                         ) : (
                             <motion.div
@@ -209,7 +209,7 @@ export default function BibliotecaClient({ ebooks, pilares, bookSlugs = [] }: Pr
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-3" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                         Novos títulos toda temporada
                     </h2>
-                    <p className="text-[14px] text-white/40 mb-6 max-w-md mx-auto">
+                    <p className="text-[14px] text-white/70 mb-6 max-w-md mx-auto">
                         Receba notificações quando novos ebooks forem lançados e acesse conteúdo exclusivo.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -349,10 +349,10 @@ function EbookCard({ ebook, index, lang, bookSlugs }: { ebook: Ebook; index: num
                     {ebook.title}
                 </h3>
                 {ebook.subtitle && (
-                    <p className="text-[12px] text-white/45 mb-3 leading-relaxed">{ebook.subtitle}</p>
+                    <p className="text-[12px] text-white/70 mb-3 leading-relaxed">{ebook.subtitle}</p>
                 )}
                 {!ebook.subtitle && ebook.description && (
-                    <p className="text-[12px] text-white/35 mb-3 line-clamp-2 leading-relaxed">{ebook.description}</p>
+                    <p className="text-[12px] text-white/70 mb-3 line-clamp-2 leading-relaxed">{ebook.description}</p>
                 )}
 
                 <div className="mt-auto pt-2 space-y-2">

@@ -38,7 +38,7 @@ function FieldInput({
         <div>
             <label
                 className="block text-[10px] font-bold uppercase tracking-[0.2em] mb-2"
-                style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
+                style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
             >
                 {label}
             </label>
@@ -142,7 +142,7 @@ export default function LeadCaptureModal({
                             <button
                                 onClick={onClose}
                                 className="absolute top-6 right-6 w-8 h-8 flex items-center justify-center rounded-lg transition-colors hover:bg-gray-100"
-                                style={{ color: '#948F84' }}
+                                style={{ color: '#5A6577' }}
                                 aria-label="Fechar"
                             >
                                 <X size={18} />
@@ -152,7 +152,7 @@ export default function LeadCaptureModal({
                             <div className="mb-8">
                                 <div className="flex items-center gap-2 mb-3">
                                     <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: GOLD }} />
-                                    <span className="text-[10px] font-bold uppercase tracking-[0.3em]" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+                                    <span className="text-[10px] font-bold uppercase tracking-[0.3em]" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                                         Atendimento VIP
                                     </span>
                                 </div>
@@ -162,7 +162,7 @@ export default function LeadCaptureModal({
                                 >
                                     {title}
                                 </h3>
-                                <p className="text-sm leading-relaxed" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+                                <p className="text-sm leading-relaxed" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                                     {description || (propertyName ? (
                                         <>Registre seu interesse no <strong style={{ color: NAVY }}>{propertyName}</strong> e fale com um especialista em instantes.</>
                                     ) : 'Preencha seus dados para receber um atendimento especializado.')}
@@ -243,12 +243,12 @@ export default function LeadCaptureModal({
                             >
                                 Solicitação Recebida!
                             </h3>
-                            <p className="text-sm leading-relaxed mb-8" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+                            <p className="text-sm leading-relaxed mb-8" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                                 Nossa equipe já está processando sua solicitação e um especialista entrará em contato via WhatsApp.
                             </p>
                             <div
                                 className="flex items-center justify-center gap-2 py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest"
-                                style={{ background: '#F8F6F2', border: '1px solid rgba(184,179,168,0.3)', color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
+                                style={{ background: '#F8F6F2', border: '1px solid rgba(184,179,168,0.3)', color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
                             >
                                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#10B981' }} />
                                 Redirecionando para WhatsApp...

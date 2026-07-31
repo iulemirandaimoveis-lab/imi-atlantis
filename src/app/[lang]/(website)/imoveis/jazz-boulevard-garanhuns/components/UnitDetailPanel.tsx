@@ -72,7 +72,7 @@ function UnitPanelContent({ unit, whatsappPhone, onClose }: { unit: IMIProperty;
             </span>
             <span
               className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-              style={{ background: '#F0EDE5', color: '#948F84' }}
+              style={{ background: '#F0EDE5', color: '#5A6577' }}
             >
               {planType}
             </span>
@@ -80,7 +80,7 @@ function UnitPanelContent({ unit, whatsappPhone, onClose }: { unit: IMIProperty;
           <h3 style={{ fontSize: 22, fontWeight: 800, color: '#0B1928', fontFamily: "var(--fu, 'Outfit', sans-serif)", margin: '4px 0 0' }}>
             Apto {unit.code}
           </h3>
-          <p style={{ fontSize: 12, color: '#948F84', margin: '2px 0 0' }}>
+          <p style={{ fontSize: 12, color: '#5A6577', margin: '2px 0 0' }}>
             Torre {unit.tower} · {unit.floor}º andar
           </p>
         </div>
@@ -100,14 +100,14 @@ function UnitPanelContent({ unit, whatsappPhone, onClose }: { unit: IMIProperty;
             className="col-span-2"
             style={{ background: isAvailable ? '#0B1928' : '#F8F6F2', borderRadius: 14, padding: '14px 16px' }}
           >
-            <p style={{ fontSize: 10, fontWeight: 700, color: isAvailable ? '#C8A44A' : '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+            <p style={{ fontSize: 10, fontWeight: 700, color: isAvailable ? '#C8A44A' : '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
               Valor
             </p>
             <p style={{ fontSize: 24, fontWeight: 800, color: isAvailable ? '#fff' : '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", margin: 0 }}>
               {fmtBRL(unit.price)}
             </p>
             {(unit.privateAreaM2 ?? 0) > 0 && (
-              <p style={{ fontSize: 11, fontWeight: 600, color: isAvailable ? 'rgba(255,255,255,0.5)' : '#948F84', margin: '4px 0 0' }}>
+              <p style={{ fontSize: 11, fontWeight: 600, color: isAvailable ? 'rgba(255,255,255,0.5)' : '#5A6577', margin: '4px 0 0' }}>
                 {fmtBRL(Math.round(unit.price / unit.privateAreaM2!))}/m²
               </p>
             )}
@@ -125,8 +125,8 @@ function UnitPanelContent({ unit, whatsappPhone, onClose }: { unit: IMIProperty;
         ].map(item => (
           <div key={item.label} style={{ background: '#F8F6F2', borderRadius: 14, padding: '12px 14px' }}>
             <div className="flex items-center gap-1.5 mb-1">
-              <span style={{ color: '#948F84' }}>{item.icon}</span>
-              <span style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.12em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+              <span style={{ color: '#5A6577' }}>{item.icon}</span>
+              <span style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.12em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                 {item.label}
               </span>
             </div>
@@ -139,7 +139,7 @@ function UnitPanelContent({ unit, whatsappPhone, onClose }: { unit: IMIProperty;
 
       {/* Plan description */}
       <div className="px-5 pb-4">
-        <p style={{ fontSize: 12, color: '#948F84', background: '#F8F6F2', borderRadius: 10, padding: '10px 14px', margin: 0, lineHeight: 1.6 }}>
+        <p style={{ fontSize: 12, color: '#5A6577', background: '#F8F6F2', borderRadius: 10, padding: '10px 14px', margin: 0, lineHeight: 1.6 }}>
           {planDef.description}
         </p>
       </div>

@@ -23,7 +23,7 @@ export function TourViewer({ provider, externalId, panoramaUrls, meshUrl }: Prop
       <div style={{
         background: '#0B1928', borderRadius: 16, height: 260,
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        color: 'rgba(255,255,255,0.3)', fontSize: 13, fontWeight: 600,
+        color: 'rgba(255,255,255,0.6)', fontSize: 13, fontWeight: 600,
         letterSpacing: '0.05em',
       }}>
         Tour indisponível para este imóvel
@@ -102,7 +102,7 @@ export function TourViewer({ provider, externalId, panoramaUrls, meshUrl }: Prop
             href={meshUrl}
             download
             style={{
-              fontSize: 11, fontWeight: 700, color: '#948F84',
+              fontSize: 11, fontWeight: 700, color: '#5A6577',
               textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 4,
             }}
           >

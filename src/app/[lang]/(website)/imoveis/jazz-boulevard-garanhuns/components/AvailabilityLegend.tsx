@@ -12,7 +12,7 @@ export default function AvailabilityLegend() {
         return (
           <div key={status} className="flex items-center gap-1.5">
             <div style={{ width: 10, height: 10, borderRadius: 3, background: cfg.bg }} />
-            <span style={{ fontSize: 11, color: '#948F84', fontWeight: 600 }}>{cfg.label}</span>
+            <span style={{ fontSize: 11, color: '#5A6577', fontWeight: 600 }}>{cfg.label}</span>
           </div>
         )
       })}

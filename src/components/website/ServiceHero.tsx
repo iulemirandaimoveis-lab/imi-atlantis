@@ -76,7 +76,7 @@ export default function ServiceHero({
           {/* Subtitle */}
           <p
             className={`text-[17px] lg:text-[19px] leading-relaxed font-light max-w-2xl ${
-              dark ? 'text-white/50' : 'text-white/40'
+              dark ? 'text-white/70' : 'text-[#545248]'
             }`}
           >
             {subtitle}
@@ -117,7 +117,7 @@ export default function ServiceHero({
                   </div>
                   <div
                     className={`text-[11px] font-semibold uppercase tracking-[0.15em] ${
-                      dark ? 'text-white/40' : 'text-gray-400'
+                      dark ? 'text-white/70' : 'text-[#545248]'
                     }`}
                   >
                     {stat.label}

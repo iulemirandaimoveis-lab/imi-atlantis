@@ -64,7 +64,7 @@ export default function RealtorCard({ broker, propertyName, compact, development
             >
                 <p
                     className="text-[10px] font-bold tracking-widest uppercase"
-                    style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
+                    style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
                 >
                     Corretor Responsável
                 </p>
@@ -105,7 +105,7 @@ export default function RealtorCard({ broker, propertyName, compact, development
                         {broker.creci && (
                             <p
                                 className="text-[10px] mt-0.5"
-                                style={{ color: '#948F84', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", letterSpacing: '0.04em' }}
+                                style={{ color: '#5A6577', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", letterSpacing: '0.04em' }}
                             >
                                 CRECI {broker.creci}
                             </p>
@@ -113,7 +113,7 @@ export default function RealtorCard({ broker, propertyName, compact, development
                         {!compact && (
                             <p
                                 className="text-[10px] font-bold uppercase tracking-widest mt-1"
-                                style={{ color: '#B8B3A8', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
+                                style={{ color: '#6E6C60', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
                             >
                                 Consultor Imobiliário
                             </p>
@@ -128,7 +128,7 @@ export default function RealtorCard({ broker, propertyName, compact, development
                             <Award className="w-3.5 h-3.5" style={{ color: '#C8A44A' }} />
                             <span
                                 className="text-[10px] font-bold tracking-widest uppercase"
-                                style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
+                                style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
                             >
                                 Especialidades
                             </span>

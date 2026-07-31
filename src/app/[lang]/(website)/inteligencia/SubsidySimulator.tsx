@@ -83,8 +83,8 @@ function SliderField({
         style={{ accentColor: '#C8A44A', background: `linear-gradient(to right, #C8A44A ${((value - min) / (max - min)) * 100}%, #142840 0%)` }}
       />
       <div className="flex justify-between mt-1">
-        <span className="text-[9px] text-[#8496AC]">{format(min)}</span>
-        <span className="text-[9px] text-[#8496AC]">{format(max)}</span>
+        <span className="text-[11px] text-[#8496AC]">{format(min)}</span>
+        <span className="text-[11px] text-[#8496AC]">{format(max)}</span>
       </div>
     </div>
   )
@@ -244,7 +244,7 @@ function Step3({ result, form, onStrategy }: { result: SubsidyResult; form: Form
           <div className="h-full rounded-full transition-all duration-500"
             style={{ width: `${Math.min(100, commitmentPct)}%`, background: commitmentPct <= 30 ? '#4ADE80' : commitmentPct <= 40 ? '#FBBF24' : '#F87171' }} />
         </div>
-        <div className="text-[9px] text-[#8496AC] mt-1">Limite recomendado: 30% da renda</div>
+        <div className="text-[11px] text-[#8496AC] mt-1">Limite recomendado: 30% da renda</div>
       </div>
 
       {/* Programs */}

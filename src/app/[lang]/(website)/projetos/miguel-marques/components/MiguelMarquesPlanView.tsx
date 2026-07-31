@@ -186,7 +186,7 @@ const CartPanel = memo(function CartPanel({ cart, onRemove, onClear }: CartPanel
       </div>
 
       {cart.length === 0 ? (
-        <div className="flex-1 flex flex-col items-center justify-center gap-3 p-6 text-center" style={{ color: '#948F84' }}>
+        <div className="flex-1 flex flex-col items-center justify-center gap-3 p-6 text-center" style={{ color: '#5A6577' }}>
           <ShoppingCart size={32} className="opacity-30" />
           <p className="text-sm">Selecione lotes no mapa para adicionar à proposta</p>
         </div>
@@ -199,13 +199,13 @@ const CartPanel = memo(function CartPanel({ cart, onRemove, onClear }: CartPanel
                   <div className="font-semibold text-sm" style={{ color: NAVY }}>
                     Quadra {lot.quadra} · Lote {lot.lote}
                   </div>
-                  <div className="text-xs mt-0.5" style={{ color: '#948F84' }}>{fmtM2(lot.metragem)}</div>
+                  <div className="text-xs mt-0.5" style={{ color: '#5A6577' }}>{fmtM2(lot.metragem)}</div>
                   <div className="text-xs font-semibold mt-0.5" style={{ color: '#16A34A' }}>{fmtBRL(lot.valor)}</div>
                 </div>
                 <button
                   onClick={() => onRemove(lot.id)}
                   className="flex-shrink-0 mt-0.5 hover:opacity-70"
-                  style={{ color: '#948F84' }}
+                  style={{ color: '#5A6577' }}
                 >
                   <X size={14} />
                 </button>
@@ -215,7 +215,7 @@ const CartPanel = memo(function CartPanel({ cart, onRemove, onClear }: CartPanel
 
           <div className="p-3 space-y-3" style={{ borderTop: '1px solid rgba(184,179,168,0.2)' }}>
             <div className="rounded-xl p-3 space-y-1.5" style={{ background: '#F8F6F2' }}>
-              <div className="flex justify-between text-xs" style={{ color: '#948F84' }}>
+              <div className="flex justify-between text-xs" style={{ color: '#5A6577' }}>
                 <span>Área total</span><span>{fmtM2(totalArea)}</span>
               </div>
               <div className="flex justify-between text-sm font-bold" style={{ color: NAVY }}>
@@ -224,7 +224,7 @@ const CartPanel = memo(function CartPanel({ cart, onRemove, onClear }: CartPanel
             </div>
 
             <div className="space-y-1">
-              <div className="text-[10px] font-bold uppercase tracking-widest mb-1" style={{ color: '#948F84' }}>Condição</div>
+              <div className="text-[10px] font-bold uppercase tracking-widest mb-1" style={{ color: '#5A6577' }}>Condição</div>
               {PAYMENT_CONDITIONS.map((c, i) => (
                 <button
                   key={i}
@@ -232,7 +232,7 @@ const CartPanel = memo(function CartPanel({ cart, onRemove, onClear }: CartPanel
                   className="w-full flex justify-between px-3 py-2 rounded-lg text-xs transition-all"
                   style={i === payIdx
                     ? { background: '#F0FDF4', border: '1.5px solid #86EFAC', color: '#15803D' }
-                    : { background: '#F8F6F2', border: '1px solid rgba(184,179,168,0.25)', color: '#948F84' }
+                    : { background: '#F8F6F2', border: '1px solid rgba(184,179,168,0.25)', color: '#5A6577' }
                   }
                 >
                   <span className="font-semibold">{c.label}</span>
@@ -333,7 +333,7 @@ function LotInfoPanel({ lot, inCart, onAddToCart, onRemoveFromCart, onClose }: L
           <button
             onClick={onClose}
             className="flex items-center justify-center flex-shrink-0 mt-0.5 transition-all hover:opacity-70 active:scale-95"
-            style={{ width: 32, height: 32, borderRadius: '50%', background: '#F8F6F2', color: '#948F84' }}
+            style={{ width: 32, height: 32, borderRadius: '50%', background: '#F8F6F2', color: '#5A6577' }}
           >
             <X size={15} />
           </button>
@@ -350,9 +350,9 @@ function LotInfoPanel({ lot, inCart, onAddToCart, onRemoveFromCart, onClose }: L
                 <div className="text-[11px] mt-1 font-medium" style={{ color: '#4ADE80' }}>20% desconto</div>
               </div>
               <div style={{ background: '#F8F6F2', border: '1.5px solid rgba(184,179,168,0.35)', borderRadius: 14, padding: '14px 16px' }}>
-                <div className="text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: '#948F84' }}>TABELA</div>
+                <div className="text-[10px] font-bold uppercase tracking-wider mb-1" style={{ color: '#5A6577' }}>TABELA</div>
                 <div className="font-bold text-lg leading-tight" style={{ color: NAVY }}>{fmtBRL(lot.valor)}</div>
-                <div className="text-[11px] mt-1" style={{ color: '#948F84' }}>
+                <div className="text-[11px] mt-1" style={{ color: '#5A6577' }}>
                   {fmtBRL(lot.valor / lot.metragem)}/m²
                 </div>
               </div>
@@ -360,13 +360,13 @@ function LotInfoPanel({ lot, inCart, onAddToCart, onRemoveFromCart, onClose }: L
 
             {/* Área */}
             <div className="flex items-center justify-between py-2" style={{ borderBottom: '1px solid rgba(184,179,168,0.15)' }}>
-              <span style={{ color: '#948F84', fontSize: 14 }}>Área do lote</span>
+              <span style={{ color: '#5A6577', fontSize: 14 }}>Área do lote</span>
               <span style={{ color: NAVY, fontWeight: 700, fontSize: 14 }}>{fmtM2(lot.metragem)}</span>
             </div>
 
             {/* Payment conditions */}
             <div className="space-y-1.5">
-              <div style={{ fontSize: 10, color: '#948F84', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "'Outfit', sans-serif" }}>
+              <div style={{ fontSize: 10, color: '#5A6577', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "'Outfit', sans-serif" }}>
                 Condições de Pagamento
               </div>
               {PAYMENT_CONDITIONS.map((c, i) => (
@@ -380,7 +380,7 @@ function LotInfoPanel({ lot, inCart, onAddToCart, onRemoveFromCart, onClose }: L
                 >
                   <div>
                     <span style={{ fontSize: 12, fontWeight: 700, color: i === 0 ? '#15803D' : NAVY }}>{c.label}</span>
-                    <span style={{ fontSize: 11, color: '#948F84', marginLeft: 6 }}>{c.desc}</span>
+                    <span style={{ fontSize: 11, color: '#5A6577', marginLeft: 6 }}>{c.desc}</span>
                   </div>
                   <span style={{ fontSize: 12, fontWeight: 700, color: i === 0 ? '#15803D' : NAVY }}>
                     {fmtBRL(c.calc(lot.valor))}
@@ -1099,7 +1099,7 @@ export default function MiguelMarquesPlanView({ lots: lotsProp }: MiguelMarquesP
             >
               <div className="flex items-center justify-between px-4 py-3" style={{ borderBottom: '1px solid rgba(184,179,168,0.2)' }}>
                 <span className="text-sm font-bold" style={{ color: NAVY }}>Proposta de Compra</span>
-                <button onClick={() => setShowCart(false)} className="hover:opacity-70" style={{ color: '#948F84' }}>
+                <button onClick={() => setShowCart(false)} className="hover:opacity-70" style={{ color: '#5A6577' }}>
                   <X size={16} />
                 </button>
               </div>
@@ -1130,7 +1130,7 @@ export default function MiguelMarquesPlanView({ lots: lotsProp }: MiguelMarquesP
                   <span style={{ fontSize: 10, fontWeight: 700, color: '#16A34A', fontFamily: "'Outfit', sans-serif" }}>
                     🟢 {avail} disponíveis
                   </span>
-                  <span style={{ fontSize: 9, fontWeight: 600, color: '#948F84' }}>
+                  <span style={{ fontSize: 11, fontWeight: 600, color: '#5A6577' }}>
                     {pctAvail}% disponível · {total} lotes
                   </span>
                 </div>
@@ -1148,7 +1148,7 @@ export default function MiguelMarquesPlanView({ lots: lotsProp }: MiguelMarquesP
                   <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
                     <span style={{ width: 8, height: 8, borderRadius: '50%', background: item.dot, display: 'inline-block' }} />
                     <span style={{ fontSize: 11, color: '#636363', fontWeight: 600 }}>{item.count}</span>
-                    <span style={{ fontSize: 10, color: '#948F84' }}>{item.label}</span>
+                    <span style={{ fontSize: 10, color: '#5A6577' }}>{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -1190,7 +1190,7 @@ export default function MiguelMarquesPlanView({ lots: lotsProp }: MiguelMarquesP
                     </span>
                   )}
                 </div>
-                <button onClick={() => setShowCart(false)} className="hover:opacity-70" style={{ color: '#948F84' }}>
+                <button onClick={() => setShowCart(false)} className="hover:opacity-70" style={{ color: '#5A6577' }}>
                   <X size={16} />
                 </button>
               </div>

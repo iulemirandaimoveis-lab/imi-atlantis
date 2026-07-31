@@ -83,7 +83,7 @@ export default function Method({ dict }: MethodProps) {
                         className="h-px overflow-hidden"
                         style={{ background: '#C8A44A' }}
                     />
-                    <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-sans)' }}>{dict.method_pre}</span>
+                    <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#94A3B8', fontFamily: 'var(--font-sans)' }}>{dict.method_pre}</span>
                     <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: 32 }}

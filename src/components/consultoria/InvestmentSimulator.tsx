@@ -83,7 +83,7 @@ export function InvestmentSimulator() {
                                 onChange={(e) => setDownPaymentPercent(Number(e.target.value))}
                                 className="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-[#C8A44A]"
                             />
-                            <div className="text-xs text-white/40 font-medium">Equivalente a: ${(propertyValue * (downPaymentPercent / 100)).toLocaleString('pt-BR')}</div>
+                            <div className="text-xs text-white/70 font-medium">Equivalente a: ${(propertyValue * (downPaymentPercent / 100)).toLocaleString('pt-BR')}</div>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-8">
@@ -142,7 +142,7 @@ export function InvestmentSimulator() {
                                 <span className={`text-5xl font-bold font-display ${monthlyCashflow >= 0 ? 'text-white' : 'text-red-400'}`}>
                                     ${Math.abs(monthlyCashflow).toLocaleString('pt-BR', { maximumFractionDigits: 0 })}
                                 </span>
-                                <span className="text-white/40 font-medium">/ mês</span>
+                                <span className="text-white/70 font-medium">/ mês</span>
                             </div>
                             {monthlyCashflow < 0 && <p className="text-red-400 text-xs mt-2 font-medium">Saldo Negativo no Cenário Atual</p>}
                         </div>
@@ -158,10 +158,10 @@ export function InvestmentSimulator() {
                                 <span className={`text-5xl font-bold font-display ${cocReturn > 0 ? 'text-[#C8A44A]' : 'text-red-400'}`}>
                                     {cocReturn.toFixed(1)}%
                                 </span>
-                                <span className="text-white/40 font-medium">ao ano</span>
+                                <span className="text-white/70 font-medium">ao ano</span>
                             </div>
                             {cocReturn < 0 && (
-                                <p className="text-white/40 text-xs mt-3 leading-relaxed">
+                                <p className="text-white/70 text-xs mt-3 leading-relaxed">
                                     Cenário conservador: o retorno negativo reflete a alta alavancagem com despesas operacionais elevadas (40%). Ajuste entrada ou yield para simular cenários mais favoráveis.
                                 </p>
                             )}

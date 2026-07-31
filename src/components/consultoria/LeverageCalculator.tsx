@@ -39,9 +39,9 @@ export function LeverageCalculator() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="p-6 bg-navy-950 rounded-2xl border border-white/[0.05]">
-                        <div className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-4">Investimento à Vista</div>
+                        <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-4">Investimento à Vista</div>
                         <div className="text-3xl font-bold text-white mb-1">{cashRoi.toFixed(0)}%</div>
-                        <p className="text-[10px] text-white/40 font-medium">ROI Estimado em 5 Anos</p>
+                        <p className="text-[10px] text-white/70 font-medium">ROI Estimado em 5 Anos</p>
                     </div>
 
                     <div className="p-6 bg-navy-800 rounded-2xl border border-white/10 text-white relative overflow-hidden">

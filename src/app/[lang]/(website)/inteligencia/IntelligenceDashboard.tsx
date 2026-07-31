@@ -441,7 +441,7 @@ export default function IntelligenceDashboard({
             </div>
             <div className="flex items-center gap-2 shrink-0">
               {lastUpdated && (
-                <span className="hidden sm:flex items-center gap-1 text-[9px] text-[#75899E] font-medium">
+                <span className="hidden sm:flex items-center gap-1 text-[11px] text-[#75899E] font-medium">
                   <span className="w-1 h-1 rounded-full bg-[#75899E]" />
                   {lastUpdated.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
                 </span>
@@ -704,7 +704,7 @@ function NeighborhoodCard({
               <h3 className="text-sm font-bold text-white group-hover:text-[#C8A44A] transition-colors leading-tight truncate">
                 {data.neighborhood}
               </h3>
-              <span className="text-[9px] text-[#5C7089] font-medium shrink-0">
+              <span className="text-[11px] text-[#5C7089] font-medium shrink-0">
                 #{rank}/{total}
               </span>
             </div>
@@ -735,7 +735,7 @@ function NeighborhoodCard({
             {fmtCurrency(price)}
           </div>
           {priceDiffLabel && (
-            <div className="text-[9px] mt-1 font-medium" style={{ color: accentColor }}>
+            <div className="text-[11px] mt-1 font-medium" style={{ color: accentColor }}>
               {priceDiffLabel}
             </div>
           )}
@@ -766,7 +766,7 @@ function NeighborhoodCard({
           ].map(({ label, value }) => (
             <div key={label} className="bg-[#060D16]/60 rounded-lg p-2 text-center border border-white/[0.04]">
               <div className="text-xs font-bold text-white">{value}</div>
-              <div className="text-[8px] text-[#75899E] mt-0.5">{label}</div>
+              <div className="text-[11px] text-[#75899E] mt-0.5">{label}</div>
             </div>
           ))}
         </div>

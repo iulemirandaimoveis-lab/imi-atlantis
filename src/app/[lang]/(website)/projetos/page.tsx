@@ -209,7 +209,7 @@ export default async function ProjetosWebsitePage({
                                         <span className="w-1.5 h-1.5 rounded-full" style={{ background: sttD.dotColor }} />
                                         {destaque.statusLabel}
                                     </span>
-                                    <span className="text-white/40 text-xs">{destaque.tipo}</span>
+                                    <span className="text-white/70 text-xs">{destaque.tipo}</span>
                                 </div>
                                 <h2 className="font-bold text-4xl lg:text-5xl mb-3 leading-tight" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                                     {destaque.nome}
@@ -236,7 +236,7 @@ export default async function ProjetosWebsitePage({
                                         { l: 'Área', v: destaque.area },
                                     ].map(m => (
                                         <div key={m.l}>
-                                            <p className="text-xs text-white/40 mb-1">{m.l}</p>
+                                            <p className="text-xs text-white/70 mb-1">{m.l}</p>
                                             <p className="text-sm font-bold">{m.v}</p>
                                         </div>
                                     ))}
@@ -274,7 +274,7 @@ export default async function ProjetosWebsitePage({
                                                 <MapPin size={13} className="opacity-60" />
                                                 <span className="text-xs text-white/60">{destaque.localizacao}</span>
                                             </div>
-                                            <p className="text-xs text-white/40">Imagens do projeto disponíveis mediante NDA para investidores qualificados.</p>
+                                            <p className="text-xs text-white/70">Imagens do projeto disponíveis mediante NDA para investidores qualificados.</p>
                                         </div>
                                     </div>
                                 </div>

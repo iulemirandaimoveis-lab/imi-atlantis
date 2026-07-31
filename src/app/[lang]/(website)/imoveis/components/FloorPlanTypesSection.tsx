@@ -155,7 +155,7 @@ export default function FloorPlanTypesSection({
           >
             Plantas &amp; Valores
           </h2>
-          <p className="text-sm mt-0.5" style={{ color: '#948F84' }}>
+          <p className="text-sm mt-0.5" style={{ color: '#5A6577' }}>
             {floorPlanTypes.length} tipologi{floorPlanTypes.length === 1 ? 'a' : 'as'} disponíve{floorPlanTypes.length === 1 ? 'l' : 'is'}
           </p>
         </div>
@@ -191,7 +191,7 @@ export default function FloorPlanTypesSection({
                   <div>
                     <p
                       className="text-xs font-bold uppercase tracking-widest mb-1"
-                      style={{ color: isActive ? meta.accent : '#948F84' }}
+                      style={{ color: isActive ? meta.accent : '#5A6577' }}
                     >
                       {meta.category}
                     </p>
@@ -204,7 +204,7 @@ export default function FloorPlanTypesSection({
                     >
                       {tower?.name ?? tid}
                     </h3>
-                    <p className="text-xs leading-relaxed" style={{ color: isActive ? 'rgba(255,255,255,0.6)' : '#948F84' }}>
+                    <p className="text-xs leading-relaxed" style={{ color: isActive ? 'rgba(255,255,255,0.6)' : '#5A6577' }}>
                       {tower?.tagline ?? meta.tagline}
                     </p>
                   </div>
@@ -253,7 +253,7 @@ export default function FloorPlanTypesSection({
 
       {/* ── Type Scroll / Grid ── */}
       <div>
-        <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#948F84' }}>
+        <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: '#5A6577' }}>
           Selecione a tipologia
         </p>
         {/* horizontal scroll on mobile, wrapping grid on desktop */}
@@ -300,7 +300,7 @@ export default function FloorPlanTypesSection({
                   <span className="text-sm font-normal">m²</span>
                 </p>
                 {plan.price_from && (
-                  <p className="text-[11px] mb-3" style={{ color: isActive ? 'rgba(255,255,255,0.6)' : '#948F84' }}>
+                  <p className="text-[11px] mb-3" style={{ color: isActive ? 'rgba(255,255,255,0.6)' : '#5A6577' }}>
                     a partir de{' '}
                     <span className="font-bold" style={{ color: isActive ? GOLD : NAVY }}>
                       {fmtPriceFull(plan.price_from)}
@@ -312,7 +312,7 @@ export default function FloorPlanTypesSection({
                   {plan.bedrooms > 0 && (
                     <span
                       className="flex items-center gap-1 text-[11px] font-semibold"
-                      style={{ color: isActive ? 'rgba(255,255,255,0.7)' : '#948F84' }}
+                      style={{ color: isActive ? 'rgba(255,255,255,0.7)' : '#5A6577' }}
                     >
                       <Bed size={11} /> {plan.bedrooms}
                     </span>
@@ -320,7 +320,7 @@ export default function FloorPlanTypesSection({
                   {plan.bathrooms > 0 && (
                     <span
                       className="flex items-center gap-1 text-[11px] font-semibold"
-                      style={{ color: isActive ? 'rgba(255,255,255,0.7)' : '#948F84' }}
+                      style={{ color: isActive ? 'rgba(255,255,255,0.7)' : '#5A6577' }}
                     >
                       <Bath size={11} /> {plan.bathrooms}
                     </span>
@@ -328,7 +328,7 @@ export default function FloorPlanTypesSection({
                   {plan.parking > 0 && (
                     <span
                       className="flex items-center gap-1 text-[11px] font-semibold"
-                      style={{ color: isActive ? 'rgba(255,255,255,0.7)' : '#948F84' }}
+                      style={{ color: isActive ? 'rgba(255,255,255,0.7)' : '#5A6577' }}
                     >
                       <Car size={11} /> {plan.parking}
                     </span>
@@ -468,7 +468,7 @@ export default function FloorPlanTypesSection({
                     </div>
                     <div
                       className="mt-4 pt-3 text-[10px] leading-relaxed"
-                      style={{ borderTop: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.3)' }}
+                      style={{ borderTop: '1px solid rgba(255,255,255,0.06)', color: 'rgba(255,255,255,0.6)' }}
                     >
                       Valores corrigidos pelo INCC-FGV &bull; Sujeito a disponibilidade
                     </div>
@@ -500,8 +500,8 @@ export default function FloorPlanTypesSection({
       {/* ── All Types Summary Grid ── */}
       <div>
         <div className="flex items-center gap-2 mb-3">
-          <Layers size={13} style={{ color: '#948F84' }} />
-          <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#948F84' }}>
+          <Layers size={13} style={{ color: '#5A6577' }} />
+          <p className="text-xs font-bold uppercase tracking-widest" style={{ color: '#5A6577' }}>
             Todas as tipologias
           </p>
         </div>
@@ -518,7 +518,7 @@ export default function FloorPlanTypesSection({
                   border: `1.5px solid ${isActive ? GOLD : '#E5E2DA'}`,
                 }}
               >
-                <p className="text-[10px] font-bold uppercase tracking-wider mb-0.5" style={{ color: '#948F84' }}>
+                <p className="text-[10px] font-bold uppercase tracking-wider mb-0.5" style={{ color: '#5A6577' }}>
                   {plan.tower}
                 </p>
                 <p className="text-xs font-bold mb-0.5" style={{ color: NAVY }}>
@@ -527,7 +527,7 @@ export default function FloorPlanTypesSection({
                 <p
                   className="text-[11px] font-mono"
                   style={{
-                    color: '#948F84',
+                    color: '#5A6577',
                     fontFamily: "var(--fm, 'JetBrains Mono', monospace)",
                   }}
                 >

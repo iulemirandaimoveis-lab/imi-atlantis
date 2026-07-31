@@ -106,11 +106,11 @@ export default function Footer({ lang, settings }: FooterProps) {
                             <span
                                 className="select-none"
                                 style={{
-                                    fontSize: '7px',
+                                    fontSize: '10px',
                                     fontWeight: 600,
-                                    letterSpacing: '2.2px',
+                                    letterSpacing: '1.6px',
                                     textTransform: 'uppercase' as const,
-                                    color: 'rgba(255,255,255,0.6)',
+                                    color: 'rgba(255,255,255,0.75)',
                                     lineHeight: 1.45,
                                 }}
                             >
@@ -118,7 +118,7 @@ export default function Footer({ lang, settings }: FooterProps) {
                             </span>
                         </Link>
 
-                        <p className="text-white/40 text-sm leading-relaxed max-w-sm mb-5 lg:mb-8">
+                        <p className="text-white/70 text-sm leading-relaxed max-w-sm mb-5 lg:mb-8">
                             Decisões imobiliárias baseadas em inteligência, método e segurança.
                             Transformamos incerteza em capital protegido.
                         </p>
@@ -126,7 +126,7 @@ export default function Footer({ lang, settings }: FooterProps) {
                         {/* Credentials card */}
                         <div className="border-l-[3px] border-[#C8A44A]/50 bg-gradient-to-br from-white/[0.04] to-transparent rounded-r-xl p-3 lg:p-4 mb-4 lg:mb-6">
                             <p className="font-bold text-white text-[13px] lg:text-[14px] mb-0.5">Iule Miranda</p>
-                            <p className="text-[#C8A44A]/70 text-[9px] font-bold uppercase tracking-[0.2em] mb-3">
+                            <p className="text-[#C8A44A] text-[10px] font-bold uppercase tracking-[0.2em] mb-3">
                                 CRECI 17933 | CNAI 53290
                             </p>
 
@@ -135,10 +135,10 @@ export default function Footer({ lang, settings }: FooterProps) {
                                     href={`mailto:${settings?.companyEmail || 'iule.miranda.imoveis@gmail.com'}`}
                                     className="flex items-center gap-[10px] hover:bg-white/[0.04] transition-all duration-200 px-[8px] py-[6px] rounded-lg group"
                                 >
-                                    <div className="w-[28px] h-[28px] bg-white/[0.06] rounded-md flex items-center justify-center flex-shrink-0 text-white/50 group-hover:text-[#C8A44A] transition-colors border border-white/[0.06]">
+                                    <div className="w-[28px] h-[28px] bg-white/[0.06] rounded-md flex items-center justify-center flex-shrink-0 text-white/70 group-hover:text-[#C8A44A] transition-colors border border-white/[0.06]">
                                         <Mail className="w-[14px] h-[14px]" />
                                     </div>
-                                    <span className="text-white/50 group-hover:text-white transition-colors text-[11px] font-medium break-all">{settings?.companyEmail || 'iule.miranda.imoveis@gmail.com'}</span>
+                                    <span className="text-white/70 group-hover:text-white transition-colors text-[11px] font-medium break-all">{settings?.companyEmail || 'iule.miranda.imoveis@gmail.com'}</span>
                                 </a>
 
                                 <a
@@ -147,10 +147,10 @@ export default function Footer({ lang, settings }: FooterProps) {
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-[10px] hover:bg-white/[0.04] transition-all duration-200 px-[8px] py-[6px] rounded-lg group"
                                 >
-                                    <div className="w-[28px] h-[28px] bg-white/[0.06] rounded-md flex items-center justify-center flex-shrink-0 text-white/50 group-hover:text-[#C8A44A] transition-colors border border-white/[0.06]">
+                                    <div className="w-[28px] h-[28px] bg-white/[0.06] rounded-md flex items-center justify-center flex-shrink-0 text-white/70 group-hover:text-[#C8A44A] transition-colors border border-white/[0.06]">
                                         <MessageCircle className="w-[14px] h-[14px]" />
                                     </div>
-                                    <span className="text-white/50 group-hover:text-white transition-colors text-[11px] font-medium">{settings?.companyPhone || '+55 81 9 8614-1487'}</span>
+                                    <span className="text-white/70 group-hover:text-white transition-colors text-[11px] font-medium">{settings?.companyPhone || '+55 81 9 8614-1487'}</span>
                                 </a>
 
                                 <a
@@ -159,10 +159,10 @@ export default function Footer({ lang, settings }: FooterProps) {
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-[10px] hover:bg-white/[0.04] transition-all duration-200 px-[8px] py-[6px] rounded-lg group"
                                 >
-                                    <div className="w-[28px] h-[28px] bg-white/[0.06] rounded-md flex items-center justify-center flex-shrink-0 text-white/50 group-hover:text-[#C8A44A] transition-colors border border-white/[0.06]">
+                                    <div className="w-[28px] h-[28px] bg-white/[0.06] rounded-md flex items-center justify-center flex-shrink-0 text-white/70 group-hover:text-[#C8A44A] transition-colors border border-white/[0.06]">
                                         <Linkedin className="w-[14px] h-[14px]" />
                                     </div>
-                                    <span className="text-white/50 group-hover:text-white transition-colors text-[11px] font-medium">linkedin.com/in/iule-miranda</span>
+                                    <span className="text-white/70 group-hover:text-white transition-colors text-[11px] font-medium">linkedin.com/in/iule-miranda</span>
                                 </a>
                             </div>
                         </div>
@@ -186,7 +186,7 @@ export default function Footer({ lang, settings }: FooterProps) {
                                         <li key={link.href}>
                                             <Link
                                                 href={`/${lang}/${link.href}`}
-                                                className="text-[13px] text-white/40 hover:text-white transition-colors duration-200"
+                                                className="text-[13px] text-white/70 hover:text-white transition-colors duration-200"
                                             >
                                                 {link.label}
                                             </Link>
@@ -200,7 +200,7 @@ export default function Footer({ lang, settings }: FooterProps) {
 
                 {/* ── Bottom bar ── */}
                 <div className="mt-16 pt-8 border-t border-[#C8A44A]/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-[11px] text-white/30 font-medium">
+                    <p className="text-[11px] text-white/60 font-medium">
                         © {year} IMI – Inteligência Imobiliária. Todos os direitos reservados.
                     </p>
 
@@ -211,7 +211,7 @@ export default function Footer({ lang, settings }: FooterProps) {
                                 href={`/${l.code}`}
                                 className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-[0.1em] transition-all duration-150 ${lang === l.code
                                     ? 'text-[#C8A44A] bg-white/[0.06] border border-[#C8A44A]/20'
-                                    : 'text-white/30 hover:text-white hover:bg-white/[0.04] border border-transparent'
+                                    : 'text-white/60 hover:text-white hover:bg-white/[0.04] border border-transparent'
                                 }`}
                             >
                                 <span className="text-sm">{l.flag}</span>

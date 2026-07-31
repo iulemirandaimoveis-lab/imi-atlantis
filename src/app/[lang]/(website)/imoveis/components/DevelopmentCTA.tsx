@@ -63,12 +63,12 @@ export default function DevelopmentCTA({ development, imiData, whatsappPhone, co
                 <div className={`rounded-2xl overflow-hidden ${compact ? 'h-full flex flex-col' : ''}`} style={{ background: '#FFFFFF', border: '1px solid rgba(184,179,168,0.3)', boxShadow: '0 2px 16px rgba(0,0,0,0.06)' }}>
                     {/* Price Header */}
                     <div className={`${compact ? 'p-3' : 'p-6'} relative overflow-hidden`} style={{ borderBottom: '1px solid rgba(184,179,168,0.2)' }}>
-                        <p className="text-[10px] uppercase tracking-widest font-bold mb-1" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>A partir de</p>
+                        <p className="text-[10px] uppercase tracking-widest font-bold mb-1" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>A partir de</p>
                         <p
                             className={`${compact ? 'text-[15px]' : 'text-[32px]'} font-bold tracking-tight relative z-10`}
                             style={{ fontFamily: "var(--fm, 'JetBrains Mono', monospace)", color: '#0B1928' }}
                         >
-                            <span className="text-[10px] font-normal mr-0.5" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>R$</span>
+                            <span className="text-[10px] font-normal mr-0.5" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>R$</span>
                             {formatPrice(development.priceRange.min)}
                         </p>
                     </div>
@@ -141,7 +141,7 @@ export default function DevelopmentCTA({ development, imiData, whatsappPhone, co
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-full flex items-center justify-center gap-2.5 h-12 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-all duration-200 hover:bg-gray-50"
-                                style={{ background: '#FFFFFF', color: '#948F84', border: '1px solid #B8B3A8', fontFamily: "var(--fu, 'Outfit', sans-serif)", textDecoration: 'none' }}
+                                style={{ background: '#FFFFFF', color: '#5A6577', border: '1px solid #B8B3A8', fontFamily: "var(--fu, 'Outfit', sans-serif)", textDecoration: 'none' }}
                             >
                                 <Download className="w-4 h-4" style={{ opacity: 0.6 }} />
                                 Baixar Material
@@ -165,12 +165,12 @@ export default function DevelopmentCTA({ development, imiData, whatsappPhone, co
                     {/* Trust indicators */}
                     {!compact && (
                         <div className="px-5 pb-5 flex items-center gap-3">
-                            <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest" style={{ color: '#948F84' }}>
+                            <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest" style={{ color: '#5A6577' }}>
                                 <Shield size={12} style={{ color: '#0B1928', opacity: 0.4 }} />
                                 Verificado
                             </div>
-                            <div className="w-px h-3" style={{ background: '#B8B3A8' }} />
-                            <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest" style={{ color: '#948F84' }}>
+                            <div className="w-px h-3" style={{ background: '#6E6C60' }} />
+                            <div className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest" style={{ color: '#5A6577' }}>
                                 <Star size={12} style={{ color: '#0B1928', opacity: 0.4 }} />
                                 Premium
                             </div>
@@ -205,12 +205,12 @@ export default function DevelopmentCTA({ development, imiData, whatsappPhone, co
                                 ].map(item => (
                                     <div key={item.label} className="p-3 rounded-xl" style={{ background: '#F8F6F2', border: '1px solid rgba(184,179,168,0.2)' }}>
                                         <div className="flex items-center justify-between mb-1.5">
-                                            <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: '#948F84' }}>{item.label}</span>
-                                            <item.Icon size={11} style={{ color: '#948F84', opacity: 0.7 }} />
+                                            <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: '#5A6577' }}>{item.label}</span>
+                                            <item.Icon size={11} style={{ color: '#5A6577', opacity: 0.7 }} />
                                         </div>
                                         <div className="flex items-end gap-1.5">
                                             <span className="text-xl font-bold" style={{ color: '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>{item.score}</span>
-                                            <span className="text-[10px] font-bold mb-0.5" style={{ color: '#948F84' }}>/100</span>
+                                            <span className="text-[10px] font-bold mb-0.5" style={{ color: '#5A6577' }}>/100</span>
                                         </div>
                                         <div className="mt-1.5 h-1 rounded-full" style={{ background: 'rgba(11,25,40,0.08)' }}>
                                             <div className="h-full rounded-full" style={{ width: `${item.score}%`, background: item.score >= 90 ? '#22C55E' : item.score >= 75 ? '#C8A44A' : '#EF4444' }} />

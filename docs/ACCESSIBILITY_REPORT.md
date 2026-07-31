@@ -21,8 +21,8 @@
 | A-01 | ✅ **CORRIGIDO 2026-07-02** — `MotionProvider` (`MotionConfig reducedMotion="user"`) no layout raiz cobre todo framer-motion | — | — | animações CSS/GSAP fora do framer ainda precisam de checagem individual |
 | A-02 | Mapas (canvas WebGL) sem alternativa acessível | seleção de lote é 100% visual/pointer | MÉDIA | manter/lista tabular dos lotes como alternativa navegável por teclado (a lista já existe em algumas vistas — padronizar) |
 | A-03 | Cobertura aria parcial em composições do backoffice | leitores de tela em tabelas/dashboards | MÉDIA | exigir aria em code review para componentes novos; corrigir ao tocar |
-| A-04 | Sem verificação automatizada | regressões invisíveis | MÉDIA | `@axe-core/playwright` nos 2 specs E2E existentes (baixo esforço) |
-| A-05 | Contraste do tema luxo (dourado/creme) não auditado | textos decorativos podem <4.5:1 | BAIXA | passar as páginas públicas no Lighthouse e registrar aqui |
+| A-04 | ✅ FECHADO (2026-07-31) — `@axe-core/playwright` ligado em `e2e/a11y.spec.ts` (regra `color-contrast`, 7 rotas públicas). Ressalva: E2E ainda não roda no CI | — | — | estender para outras regras do axe (labels, landmarks) e colocar o job no CI |
+| A-05 | ✅ FECHADO (2026-07-31) — varredura WCAG AA no site público (ver D-16). Dourado `#C8A44A` sobre claro dava 2,4:1 → `#8A6820` (5,1:1); `#948F84` como corpo em fundo claro dava 3,2:1 → `#5A6577` (5,9:1); brancos `text-white/20..45` em fundo escuro → escala /55 · /60 · /70 | — | — | rodar `npm run test:e2e -- e2e/a11y.spec.ts` antes de mudar cor de texto |
 | A-06 | ✅ N/A — a única ocorrência era mock de teste (`PropertyCard.test.tsx`), não código de produto | — | — | auditoria corrigida 2026-07-02 |
 
 ## Regras para Código Novo

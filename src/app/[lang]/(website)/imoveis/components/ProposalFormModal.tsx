@@ -299,7 +299,7 @@ export default function ProposalFormModal({
                   <span style={{ fontSize: 15, fontWeight: 800, color: GOLD, fontFamily: "'JetBrains Mono', monospace" }}>{fmtBRL(totals.totalPrice)}</span>
                 </div>
                 <div className="flex items-center justify-between mt-1">
-                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.45)' }}>
+                  <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)' }}>
                     Entrada sugerida {items.some((l) => l.selectedPlan) ? '(conforme forma de pagamento)' : '(20%)'}
                   </span>
                   <span style={{ fontSize: 12, fontWeight: 700, color: 'rgba(255,255,255,0.75)', fontFamily: "'JetBrains Mono', monospace" }}>{fmtBRL(suggestedDown)}</span>
@@ -369,7 +369,7 @@ export default function ProposalFormModal({
                     </li>
                   ))}
                 </ul>
-                <p style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.4)', margin: '8px 0 6px', lineHeight: 1.45 }}>
+                <p style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.7)', margin: '8px 0 6px', lineHeight: 1.45 }}>
                   Anexe agora os documentos que já tiver — o restante pode ser enviado ao corretor depois.
                 </p>
 
@@ -412,7 +412,7 @@ export default function ProposalFormModal({
                         <span className="flex-1 truncate" style={{ fontSize: 11.5, color: 'rgba(255,255,255,0.82)' }}>{d.name}</span>
                         <CheckCircle2 size={13} color="#34D399" style={{ flexShrink: 0 }} />
                         <button type="button" onClick={() => removeDoc(i)} aria-label="Remover documento"
-                          style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.4)', padding: 0, flexShrink: 0 }}>
+                          style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.7)', padding: 0, flexShrink: 0 }}>
                           <Trash2 size={13} />
                         </button>
                       </div>
@@ -440,7 +440,7 @@ export default function ProposalFormModal({
                 </div>
               )}
 
-              <div className="flex items-center gap-2 mt-3" style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.4)' }}>
+              <div className="flex items-center gap-2 mt-3" style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.7)' }}>
                 <ShieldCheck size={13} color="rgba(255,255,255,0.4)" />
                 <span>Reserva válida por 24h após a confirmação. Seus dados são usados apenas para esta proposta.</span>
               </div>
@@ -501,7 +501,7 @@ function SuccessView({
         {docCount > 0 ? ` com ${docCount} ${docCount === 1 ? 'documento anexado' : 'documentos anexados'}` : ''}.
         {' '}Você receberá no WhatsApp a relação de documentação, o contrato e a forma de pagamento da entrada.
       </p>
-      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', margin: '0 0 18px' }}>
+      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', margin: '0 0 18px' }}>
         Um corretor entrará em contato para concluir a reserva.
       </p>
       {error && (

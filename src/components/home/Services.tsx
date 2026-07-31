@@ -85,7 +85,7 @@ export default function Services({ dict }: ServicesProps) {
                         className="h-px overflow-hidden"
                         style={{ background: '#C8A44A' }}
                     />
-                    <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-sans)' }}>Nossos Serviços</span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#94A3B8', fontFamily: 'var(--font-sans)' }}>Nossos Serviços</span>
                 </motion.div>
 
                 <h2 className="sr-only">Nossos Serviços</h2>
@@ -122,7 +122,7 @@ export default function Services({ dict }: ServicesProps) {
                                         <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-[#C8A44A]/[0.06] border border-[#C8A44A]/20 transition-all duration-500 group-hover:border-white/[0.08] group-hover:bg-white/[0.05]">
                                             <item.icon className="w-5 h-5 text-[#C8A44A] transition-colors duration-500 group-hover:text-white/70" strokeWidth={1.5} />
                                         </div>
-                                        <span className="text-[10px] font-bold uppercase tracking-wider bg-white/[0.04] px-2.5 py-1 rounded-full border border-white/[0.06]" style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-sans)' }}>
+                                        <span className="text-[10px] font-bold uppercase tracking-wider bg-white/[0.04] px-2.5 py-1 rounded-full border border-white/[0.06]" style={{ color: '#94A3B8', fontFamily: 'var(--font-sans)' }}>
                                             {item.tag}
                                         </span>
                                     </div>

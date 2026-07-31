@@ -79,7 +79,7 @@ export default async function UnidadePage({ params }: Props) {
         <Link
           href={`/${lang}/empreendimentos/${slug}`}
           className="inline-flex items-center gap-2 text-sm font-medium mb-8"
-          style={{ color: '#948F84', textDecoration: 'none' }}
+          style={{ color: '#5A6577', textDecoration: 'none' }}
         >
           <ArrowLeft size={14} />
           {dev?.name ?? slug}
@@ -101,14 +101,14 @@ export default async function UnidadePage({ params }: Props) {
               {unit.title ?? unit.code}
             </h1>
             {unit.tower && (
-              <p style={{ fontSize: 14, color: '#948F84', margin: '4px 0 0', fontWeight: 600 }}>
+              <p style={{ fontSize: 14, color: '#5A6577', margin: '4px 0 0', fontWeight: 600 }}>
                 Torre {unit.tower} · {unit.floor}º andar · Unidade {unit.unit_number}
               </p>
             )}
           </div>
           {unit.price_visible && unit.price && (
             <div style={{ textAlign: 'right' }}>
-              <p style={{ fontSize: 11, color: '#948F84', margin: 0, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Valor</p>
+              <p style={{ fontSize: 11, color: '#5A6577', margin: 0, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Valor</p>
               <p style={{ fontSize: 26, fontWeight: 800, color: '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", margin: 0 }}>
                 {fmtBRL(unit.price)}
               </p>
@@ -127,7 +127,7 @@ export default async function UnidadePage({ params }: Props) {
             <div key={item.label} style={{ background: '#fff', borderRadius: 14, padding: '16px', border: '1px solid rgba(184,179,168,0.3)' }}>
               <div className="flex items-center gap-2 mb-2">
                 <item.icon size={13} style={{ color: '#C8A44A' }} />
-                <span style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.12em' }}>{item.label}</span>
+                <span style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.12em' }}>{item.label}</span>
               </div>
               <p style={{ fontSize: 16, fontWeight: 800, color: '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", margin: 0 }}>
                 {item.value}
@@ -141,7 +141,7 @@ export default async function UnidadePage({ params }: Props) {
           <div style={{ background: '#fff', borderRadius: 20, padding: 24, border: '1px solid rgba(184,179,168,0.3)', marginBottom: 24 }}>
             <div className="flex items-center gap-2 mb-4">
               <Layers size={15} style={{ color: '#C8A44A' }} />
-              <span style={{ fontSize: 11, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
+              <span style={{ fontSize: 11, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
                 Tour Digital
               </span>
               <span style={{

@@ -68,7 +68,7 @@ export default function ConsultoriaPage({ params }: PageProps) {
                                     {city.tagline}
                                 </p>
                                 <div className="pt-6 border-t border-white/5 flex justify-between items-center">
-                                    <span className="text-[10px] font-bold text-white/40 uppercase tracking-widest">Yield Estimado</span>
+                                    <span className="text-[10px] font-bold text-white/70 uppercase tracking-widest">Yield Estimado</span>
                                     <span className="text-sm font-bold text-white">{city.investmentProfile.avgYield}</span>
                                 </div>
                             </Link>

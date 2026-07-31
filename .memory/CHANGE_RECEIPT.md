@@ -617,3 +617,29 @@ usa service_role+token, funciona sob a RLS real).
   (ease-out 350ms, passo 1,6×); duplo-toque vira toggle detalhe↔"Ver tudo"; mapa +um pouco
   maior no mobile (500px). Arquivo único: `AltoBellevuePlanView.tsx`.
 - Gates: tsc 0 erros · jest alto-bellevue 27/27 · lint limpo. Sem regressão de pan/pinça/seleção.
+
+## 2026-07-31 · Site público — varredura de contraste WCAG AA + gate axe
+- Branch `claude/website-visibility-readability-2bwhi2`. 3ª recorrência da mesma classe de bug
+  (#379, #381): cor de um tema sobre o fundo do outro. Causa: a casca pública é navy
+  (`(website)/layout.tsx:39`) enquanto UI_DESIGN_STANDARDS §4 declara fundo claro, e não havia
+  `body { color }` — texto sem cor explícita virava preto do browser sobre navy.
+- Defeitos reais corrigidos: `error.tsx` h2 a 1,0:1 (invisível); `ui/Textarea.tsx` com
+  `dark:bg-card-dark` INEXISTENTE no tailwind.config → caixa branca + `dark:text-white` =
+  texto digitado branco no branco nos formulários de avaliação/consultoria; `ui/Select.tsx`
+  label a 1,6:1 (escala `--imi-*` só existe em `:root`, nunca sob `.dark`); foco do form de
+  contato que ENFRAQUECIA a borda; CookieConsent branco sobre dourado (2,9:1).
+- Escala: sobre navy `text-white/70` (9,1:1) corpo · `/60` (6,9:1) meta · `/55` (6,0:1)
+  placeholder. Sobre claro `#948F84`→`#5A6577` (5,9:1) · `#B8B3A8`→`#6E6C60` (5,3:1) ·
+  `#C8A44A`→`#8A6820` (5,1:1). `#948F84`/`#C8A44A` MANTIDOS sobre navy (5,1:1 / 7,5:1) —
+  troca decidida por fundo, arquivo a arquivo, nunca sed cego. Bordas (`border-[#B8B3A8]`)
+  intocadas. Prosa 8–9,5px → 11px; rótulos uppercase 8–9px → 10px.
+- Gate novo: `@axe-core/playwright` + regra `color-contrast` em `e2e/a11y.spec.ts` (7 rotas).
+  **Aprendizado 1**: o gate PRECISA rolar a página toda antes de auditar — framer-motion
+  `whileInView` deixa tudo abaixo da dobra em `opacity: 0` e o axe ignora invisível; sem scroll
+  um rótulo navy-sobre-navy (1,0:1) passava batido. **Aprendizado 2**: overlay decorativo com
+  `opacity` no ancestral vira falso positivo (faixa dourada de /pt/credito acusada a 1,1:1
+  quando o real é ~7:1) — pôr a opacidade na própria cor (`bg-[#C8A44A]/10`).
+- Gates: tsc 0 · lint limpo · jest 981 passed/5 skipped (0 regressão) · contraste 7/7.
+  18 falhas do e2e completo são PRÉ-EXISTENTES (conferido com git stash na base limpa):
+  credenciais Supabase stub deste container. Detalhe:
+  `.claude/completions/2026-07-31-site-publico-contraste-legibilidade.md` · ADR D-16.

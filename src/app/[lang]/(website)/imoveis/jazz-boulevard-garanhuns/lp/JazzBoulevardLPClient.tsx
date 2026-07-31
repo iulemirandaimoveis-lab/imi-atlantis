@@ -197,9 +197,9 @@ export default function JazzBoulevardLPClient() {
         </motion.div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40">
-          <div className="h-8 w-[1px] bg-white" />
-          <p className="text-[10px] uppercase tracking-widest text-white">scroll</p>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
+          <div className="h-8 w-[1px] bg-white/40" />
+          <p className="text-[10px] uppercase tracking-widest text-white/70">scroll</p>
         </div>
       </section>
 
@@ -473,7 +473,7 @@ export default function JazzBoulevardLPClient() {
                     className="rounded-xl border p-3 text-center"
                     style={{ borderColor: c.cenario === 'base' ? `${GOLD}55` : '#ffffff10', background: c.cenario === 'base' ? `${GOLD}10` : 'transparent' }}
                   >
-                    <p className="text-[10px] uppercase tracking-wider text-white/40 mb-1">{c.cenario}</p>
+                    <p className="text-[10px] uppercase tracking-wider text-white/70 mb-1">{c.cenario}</p>
                     <p className="text-xs font-semibold" style={{ color: c.cenario === 'base' ? GOLD_LIGHT : 'white' }}>
                       R$ {(c.total / 1e6).toFixed(1)}M
                     </p>
@@ -590,7 +590,7 @@ export default function JazzBoulevardLPClient() {
 
       {/* ─── FOOTER ─── */}
       <footer
-        className="border-t px-6 py-8 text-center text-xs text-white/30"
+        className="border-t px-6 py-8 text-center text-xs text-white/60"
         style={{ borderColor: '#ffffff0a' }}
       >
         <p>© 2025 Iule Miranda Imóveis · Jazz Boulevard é comercializado exclusivamente por nossa equipe.</p>

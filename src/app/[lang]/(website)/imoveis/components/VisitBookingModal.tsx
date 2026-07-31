@@ -272,7 +272,7 @@ export default function VisitBookingModal({
                               <span style={{ fontSize: 15, fontWeight: 800, color: active ? NAVY : '#fff', fontFamily: "'Outfit', sans-serif", lineHeight: 1.2 }}>
                                 {day.dayLabel.split(' ')[0]}
                               </span>
-                              <span style={{ fontSize: 9, fontWeight: 600, color: active ? 'rgba(11,25,40,0.6)' : 'rgba(255,255,255,0.4)' }}>
+                              <span style={{ fontSize: 11, fontWeight: 600, color: active ? 'rgba(11,25,40,0.6)' : 'rgba(255,255,255,0.4)' }}>
                                 {day.dayLabel.split(' ')[1]}
                               </span>
                             </button>
@@ -301,7 +301,7 @@ export default function VisitBookingModal({
                           })}
                         </div>
                         {activeDay && activeDay.slots.length === 0 && (
-                          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', marginTop: 8 }}>
+                          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', marginTop: 8 }}>
                             Sem horários neste dia. Escolha outro.
                           </p>
                         )}
@@ -369,7 +369,7 @@ export default function VisitBookingModal({
                             <span className="flex-1 truncate" style={{ fontSize: 11.5, color: 'rgba(255,255,255,0.82)' }}>{doc.name}</span>
                             <CheckCircle2 size={13} color="#34D399" style={{ flexShrink: 0 }} />
                             <button type="button" onClick={() => setDocs((p) => p.filter((_, idx) => idx !== i))} aria-label="Remover"
-                              style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.4)', padding: 0, flexShrink: 0 }}>
+                              style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.7)', padding: 0, flexShrink: 0 }}>
                               <Trash2 size={13} />
                             </button>
                           </div>
@@ -381,7 +381,7 @@ export default function VisitBookingModal({
 
                   <Field label="Observações (opcional)" value={obs} onChange={setObs} placeholder="Algo que o corretor deva saber…" textarea />
 
-                  <div className="flex items-center gap-2 mt-2" style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.4)' }}>
+                  <div className="flex items-center gap-2 mt-2" style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.7)' }}>
                     <ShieldCheck size={13} color="rgba(255,255,255,0.4)" />
                     <span>Seus dados são usados apenas para agendar e confirmar esta visita.</span>
                   </div>
@@ -474,7 +474,7 @@ function SuccessView({
         {whenLabel ? <> para <strong style={{ color: '#fff' }}>{whenLabel}</strong></> : ''}.
         {docCount > 0 ? ' Documento recebido.' : ''}
       </p>
-      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.45)', margin: '0 0 18px' }}>
+      <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', margin: '0 0 18px' }}>
         Enviamos a confirmação e o convite de calendário no seu WhatsApp. O corretor foi avisado.
       </p>
       {mode === 'video' && videoRoomUrl && (

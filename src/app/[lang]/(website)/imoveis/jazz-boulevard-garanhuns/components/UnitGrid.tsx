@@ -21,7 +21,7 @@ export default function UnitGrid({ units: allUnits, selectedUnitId, onUnitSelect
   if (units.length === 0) {
     return (
       <div className="flex items-center justify-center py-12">
-        <p style={{ fontSize: 13, color: '#948F84', fontWeight: 600 }}>
+        <p style={{ fontSize: 13, color: '#5A6577', fontWeight: 600 }}>
           Nenhuma unidade neste andar.
         </p>
       </div>
@@ -59,7 +59,7 @@ export default function UnitGrid({ units: allUnits, selectedUnitId, onUnitSelect
                   <p style={{ fontSize: 15, fontWeight: 800, color: '#0B1928', margin: 0, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                     Apto {unit.code}
                   </p>
-                  <p style={{ fontSize: 10, color: '#948F84', margin: '1px 0 0', fontWeight: 600 }}>
+                  <p style={{ fontSize: 10, color: '#5A6577', margin: '1px 0 0', fontWeight: 600 }}>
                     {planType}
                   </p>
                 </div>
@@ -74,17 +74,17 @@ export default function UnitGrid({ units: allUnits, selectedUnitId, onUnitSelect
               {/* Specs row */}
               <div className="flex items-center gap-3 mb-3 flex-wrap">
                 <div className="flex items-center gap-1">
-                  <BedDouble size={11} style={{ color: '#948F84' }} />
-                  <span style={{ fontSize: 11, fontWeight: 600, color: '#948F84' }}>{unit.bedrooms} dorms</span>
+                  <BedDouble size={11} style={{ color: '#5A6577' }} />
+                  <span style={{ fontSize: 11, fontWeight: 600, color: '#5A6577' }}>{unit.bedrooms} dorms</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Maximize2 size={11} style={{ color: '#948F84' }} />
-                  <span style={{ fontSize: 11, fontWeight: 600, color: '#948F84' }}>{unit.privateAreaM2} m²</span>
+                  <Maximize2 size={11} style={{ color: '#5A6577' }} />
+                  <span style={{ fontSize: 11, fontWeight: 600, color: '#5A6577' }}>{unit.privateAreaM2} m²</span>
                 </div>
                 {typeof unit.metadata?.viewLabel === 'string' && (
                   <div className="flex items-center gap-1">
-                    <Eye size={11} style={{ color: '#948F84' }} />
-                    <span style={{ fontSize: 10, fontWeight: 600, color: '#948F84' }}>{unit.metadata.viewLabel}</span>
+                    <Eye size={11} style={{ color: '#5A6577' }} />
+                    <span style={{ fontSize: 10, fontWeight: 600, color: '#5A6577' }}>{unit.metadata.viewLabel}</span>
                   </div>
                 )}
               </div>
@@ -99,7 +99,7 @@ export default function UnitGrid({ units: allUnits, selectedUnitId, onUnitSelect
                     {unit.status === 'sold' ? 'Vendido' : fmtBRL(unit.price)}
                   </p>
                   {isAvailable && (unit.privateAreaM2 ?? 0) > 0 && (
-                    <p style={{ fontSize: 10, fontWeight: 600, color: '#948F84', margin: '2px 0 0' }}>
+                    <p style={{ fontSize: 10, fontWeight: 600, color: '#5A6577', margin: '2px 0 0' }}>
                       {fmtBRL(Math.round(unit.price / unit.privateAreaM2!))}/m²
                     </p>
                   )}

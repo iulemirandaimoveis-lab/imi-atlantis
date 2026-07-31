@@ -60,8 +60,8 @@ export default function DevelopmentCard({ development, index, lang }: Props) {
                     />
                 ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center gap-2">
-                        <Building2 size={36} className="text-[#B8B3A8] opacity-40" strokeWidth={1} />
-                        <span className="text-[#B8B3A8] text-[10px] font-bold tracking-[0.15em] uppercase">
+                        <Building2 size={36} className="text-[#6E6C60] opacity-40" strokeWidth={1} />
+                        <span className="text-[#6E6C60] text-[10px] font-bold tracking-[0.15em] uppercase">
                             {development.name}
                         </span>
                     </div>
@@ -103,7 +103,7 @@ export default function DevelopmentCard({ development, index, lang }: Props) {
 
                 {/* Location */}
                 <div className="flex items-center gap-1.5 mb-3.5 text-sm text-[#5A6577]">
-                    <MapPin size={12} className="text-[#948F84] flex-shrink-0" />
+                    <MapPin size={12} className="text-[#5A6577] flex-shrink-0" />
                     <span className="overflow-hidden text-ellipsis whitespace-nowrap">
                         {[development.location.neighborhood, development.location.city, development.location.state].filter(Boolean).join(', ')}
                     </span>
@@ -113,19 +113,19 @@ export default function DevelopmentCard({ development, index, lang }: Props) {
                 <div className="flex items-center gap-3 py-2.5 border-t border-b border-[#E2E0DB] mb-4">
                     {development.specs.bedroomsRange && development.specs.bedroomsRange !== '—' && (
                         <span className="flex items-center gap-1 text-sm text-[#2D3748]">
-                            <Bed size={13} className="text-[#948F84]" />
+                            <Bed size={13} className="text-[#5A6577]" />
                             {development.specs.bedroomsRange}
                         </span>
                     )}
                     {development.specs.areaRange && development.specs.areaRange !== '—' && (
                         <span className="flex items-center gap-1 text-sm text-[#2D3748]">
-                            <Ruler size={13} className="text-[#948F84]" />
+                            <Ruler size={13} className="text-[#5A6577]" />
                             {development.specs.areaRange}
                         </span>
                     )}
                     {development.specs.parkingRange && development.specs.parkingRange !== '—' && (
                         <span className="flex items-center gap-1 text-sm text-[#2D3748]">
-                            <Car size={13} className="text-[#948F84]" />
+                            <Car size={13} className="text-[#5A6577]" />
                             {development.specs.parkingRange}
                         </span>
                     )}
@@ -140,7 +140,7 @@ export default function DevelopmentCard({ development, index, lang }: Props) {
                             </p>
                         ) : (
                             <>
-                                <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#948F84] mb-0.5">Valor</p>
+                                <p className="text-[9px] font-bold uppercase tracking-[0.12em] text-[#5A6577] mb-0.5">Valor</p>
                                 <p className="text-sm font-semibold text-[#5A6577]">Consultar</p>
                             </>
                         )}

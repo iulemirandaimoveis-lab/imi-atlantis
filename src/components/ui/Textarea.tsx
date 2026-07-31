@@ -11,14 +11,18 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         return (
             <div className="w-full">
                 {label && (
-                    <label className="block text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-bold text-[#545248] dark:text-[#C8A44A] uppercase tracking-wider mb-2">
                         {label}
                     </label>
                 )}
                 <textarea
                     ref={ref}
                     className={twMerge(
-                        "w-full bg-white dark:bg-card-dark border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all shadow-sm resize-y min-h-[100px]",
+                        // `dark:bg-card-dark` nao existe no tailwind.config.ts: a caixa ficava
+                        // branca enquanto `dark:text-white` aplicava (o layout raiz forca
+                        // defaultTheme="dark"), ou seja, texto branco no branco. Alinhado ao
+                        // TextArea de ui/Input.tsx, que ja usa o fundo escuro correto.
+                        "w-full bg-white dark:bg-[#081624] border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-sm text-gray-900 dark:text-[#E8E4DC] placeholder-[#6E6C60] dark:placeholder:text-[#8FA0B4] focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all shadow-sm resize-y min-h-[100px]",
                         error && "border-red-500 focus:border-red-500 focus:ring-red-500/20",
                         className
                     )}

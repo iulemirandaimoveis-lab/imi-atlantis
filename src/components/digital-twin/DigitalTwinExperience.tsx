@@ -57,7 +57,7 @@ export default function DigitalTwinExperience({ lang, media }: Props) {
         </section>
       ) : !model ? (
         <section className="bg-[#F5F0EA] py-24">
-          <div className="max-w-3xl mx-auto px-6 flex items-center justify-center gap-3 text-[#948F84]">
+          <div className="max-w-3xl mx-auto px-6 flex items-center justify-center gap-3 text-[#5A6577]">
             <Loader2 size={18} className="animate-spin" />
             <span className="text-sm">Carregando modelo do Digital Twin…</span>
           </div>

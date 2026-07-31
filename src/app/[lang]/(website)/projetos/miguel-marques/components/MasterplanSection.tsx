@@ -102,7 +102,7 @@ export default function MasterplanSection() {
           >
             Escolha o seu lote
           </h2>
-          <p className="text-sm text-[#948F84]">
+          <p className="text-sm text-[#5A6577]">
             {stats.disponivel} de {stats.total} lotes disponíveis
           </p>
         </div>
@@ -135,12 +135,12 @@ export default function MasterplanSection() {
             className="mb-4 flex flex-wrap items-center gap-2"
             style={{ background: '#F0EBE3', borderRadius: 12, padding: '12px 16px' }}
           >
-            <span style={{ fontSize: 12, color: '#948F84', fontWeight: 600 }}>Lotes disponíveis:</span>
+            <span style={{ fontSize: 12, color: '#5A6577', fontWeight: 600 }}>Lotes disponíveis:</span>
             <span style={{ fontSize: 13, fontWeight: 800, color: '#0D1410', fontFamily: "'JetBrains Mono', monospace" }}>
               {fmtBRL(stats.priceMin)} — {fmtBRL(stats.priceMax)}
             </span>
             {stats.areaMin > 0 && (
-              <span style={{ fontSize: 11, color: '#948F84' }}>· a partir de {Math.round(stats.areaMin)} m²</span>
+              <span style={{ fontSize: 11, color: '#5A6577' }}>· a partir de {Math.round(stats.areaMin)} m²</span>
             )}
           </div>
         )}
@@ -164,7 +164,7 @@ export default function MasterplanSection() {
               { label: 'Direto com', value: PAYMENT_CONDITIONS.seller },
             ]).map(item => (
               <div key={item.label}>
-                <p style={{ fontSize: 9, fontWeight: 700, color: 'rgba(255,255,255,0.45)', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "'Outfit', sans-serif" }}>
+                <p style={{ fontSize: 9, fontWeight: 700, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "'Outfit', sans-serif" }}>
                   {item.label}
                 </p>
                 <p style={{ fontSize: 13, fontWeight: 800, color: item.gold ? '#C8A44A' : '#fff', margin: 0, fontFamily: "'JetBrains Mono', monospace", lineHeight: 1.4 }}>

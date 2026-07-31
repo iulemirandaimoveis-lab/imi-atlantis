@@ -377,7 +377,7 @@ export default async function DevelopmentDetailPage({ params }: { params: { slug
                                 <item.Icon size={13} aria-hidden="true" style={{ color: '#0B1928', opacity: 0.7 }} />
                             </div>
                             <p style={{ fontSize: 13, fontWeight: 700, color: '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", margin: '0 0 2px', whiteSpace: 'nowrap' as const }}>{item.value}</p>
-                            <p style={{ fontSize: 9, color: '#948F84', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, fontFamily: "var(--fu, 'Outfit', sans-serif)", margin: 0 }}>{item.label}</p>
+                            <p style={{ fontSize: 10, color: '#5A6577', fontWeight: 700, letterSpacing: '1px', textTransform: 'uppercase' as const, fontFamily: "var(--fu, 'Outfit', sans-serif)", margin: 0 }}>{item.label}</p>
                         </div>
                     ))}
                 </div>

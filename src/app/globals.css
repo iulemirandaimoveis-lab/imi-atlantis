@@ -588,6 +588,10 @@
   }
 
   body {
+    /* Cor de texto padrao do tema. Sem isso, qualquer elemento sem cor explicita
+       cai no preto do browser — invisivel sobre a casca navy do site publico
+       (ver [lang]/(website)/layout.tsx). Foi essa a causa do h2 sumido no error.tsx. */
+    color: var(--text-primary);
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;

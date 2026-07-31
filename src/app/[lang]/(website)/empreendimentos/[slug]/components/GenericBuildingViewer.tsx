@@ -120,7 +120,7 @@ export default function GenericBuildingViewer({
       <div className="flex items-center justify-center py-20">
         <div className="flex items-center gap-3">
           <div className="w-4 h-4 rounded-full animate-pulse" style={{ background: '#C8A44A' }} />
-          <p style={{ fontSize: 13, color: '#948F84', fontWeight: 600 }}>Carregando unidades…</p>
+          <p style={{ fontSize: 13, color: '#5A6577', fontWeight: 600 }}>Carregando unidades…</p>
         </div>
       </div>
     )
@@ -130,7 +130,7 @@ export default function GenericBuildingViewer({
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <Building2 size={48} className="mb-4 opacity-20" />
-        <p style={{ fontSize: 14, color: '#948F84', fontWeight: 600 }}>Unidades em breve.</p>
+        <p style={{ fontSize: 14, color: '#5A6577', fontWeight: 600 }}>Unidades em breve.</p>
       </div>
     )
   }
@@ -151,7 +151,7 @@ export default function GenericBuildingViewer({
               Unidades Disponíveis
             </h2>
           </div>
-          <p style={{ fontSize: 13, color: '#948F84', margin: 0 }}>
+          <p style={{ fontSize: 13, color: '#5A6577', margin: 0 }}>
             {selectedTower ? `Torre ${selectedTower} · ` : ''}
             {stats.available} de {stats.total} unidades disponíveis
           </p>
@@ -164,7 +164,7 @@ export default function GenericBuildingViewer({
         <div className="flex items-center gap-2 mb-4">
           <span
             style={{
-              fontSize: 10, fontWeight: 700, color: '#948F84', textTransform: 'uppercase',
+              fontSize: 10, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase',
               letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)",
               flexShrink: 0, minWidth: 44,
             }}
@@ -181,7 +181,7 @@ export default function GenericBuildingViewer({
                   height: 32, padding: '0 12px', fontSize: 13,
                   fontFamily: "var(--fu, 'Outfit', sans-serif)",
                   background: selectedTower === tower ? '#0B1928' : '#F8F6F2',
-                  color: selectedTower === tower ? '#fff' : '#948F84',
+                  color: selectedTower === tower ? '#fff' : '#5A6577',
                   border: selectedTower === tower ? '1.5px solid #0B1928' : '1px solid rgba(184,179,168,0.3)',
                 }}
               >
@@ -199,7 +199,7 @@ export default function GenericBuildingViewer({
           <div className="sm:flex-shrink-0">
             <p
               style={{
-                fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase',
+                fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase',
                 letterSpacing: '0.15em', marginBottom: 8,
                 fontFamily: "var(--fu, 'Outfit', sans-serif)",
               }}
@@ -219,7 +219,7 @@ export default function GenericBuildingViewer({
           {/* Breadcrumb */}
           <div
             className="flex items-center gap-1 mb-4"
-            style={{ fontSize: 11, color: '#948F84', fontWeight: 600 }}
+            style={{ fontSize: 11, color: '#5A6577', fontWeight: 600 }}
           >
             <span>{developmentName}</span>
             {selectedTower && (
@@ -237,7 +237,7 @@ export default function GenericBuildingViewer({
           <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
             {floorUnits.length === 0 ? (
               <div className="col-span-2 flex items-center justify-center py-12">
-                <p style={{ fontSize: 13, color: '#948F84', fontWeight: 600 }}>
+                <p style={{ fontSize: 13, color: '#5A6577', fontWeight: 600 }}>
                   Nenhuma unidade neste andar.
                 </p>
               </div>
@@ -372,7 +372,7 @@ function UnitCard({
               Apto {unit.unitNumber ?? unit.code}
             </p>
             {label && (
-              <p style={{ fontSize: 10, color: '#948F84', margin: '1px 0 0', fontWeight: 600 }}>
+              <p style={{ fontSize: 10, color: '#5A6577', margin: '1px 0 0', fontWeight: 600 }}>
                 {label}
               </p>
             )}
@@ -388,16 +388,16 @@ function UnitCard({
         <div className="flex items-center gap-3 mb-3">
           {unit.bedrooms != null && (
             <div className="flex items-center gap-1">
-              <BedDouble size={11} style={{ color: '#948F84' }} />
-              <span style={{ fontSize: 11, fontWeight: 600, color: '#948F84' }}>
+              <BedDouble size={11} style={{ color: '#5A6577' }} />
+              <span style={{ fontSize: 11, fontWeight: 600, color: '#5A6577' }}>
                 {unit.bedrooms} dorms
               </span>
             </div>
           )}
           {unit.privateAreaM2 != null && (
             <div className="flex items-center gap-1">
-              <Maximize2 size={11} style={{ color: '#948F84' }} />
-              <span style={{ fontSize: 11, fontWeight: 600, color: '#948F84' }}>
+              <Maximize2 size={11} style={{ color: '#5A6577' }} />
+              <span style={{ fontSize: 11, fontWeight: 600, color: '#5A6577' }}>
                 {unit.privateAreaM2} m²
               </span>
             </div>
@@ -496,7 +496,7 @@ function PanelContent({
             {label && (
               <span
                 className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
-                style={{ background: '#F0EDE5', color: '#948F84' }}
+                style={{ background: '#F0EDE5', color: '#5A6577' }}
               >
                 {label}
               </span>
@@ -511,7 +511,7 @@ function PanelContent({
             Apto {unit.unitNumber ?? unit.code}
           </h3>
           {locationParts && (
-            <p style={{ fontSize: 12, color: '#948F84', margin: '2px 0 0' }}>{locationParts}</p>
+            <p style={{ fontSize: 12, color: '#5A6577', margin: '2px 0 0' }}>{locationParts}</p>
           )}
         </div>
         <button
@@ -538,19 +538,19 @@ function PanelContent({
       {/* Specs grid */}
       <div className="mx-5 mb-5 grid grid-cols-2 gap-2">
         {unit.bedrooms != null && (
-          <SpecTile icon={<BedDouble size={16} style={{ color: '#948F84' }} />} value={unit.bedrooms} label="Dorms" />
+          <SpecTile icon={<BedDouble size={16} style={{ color: '#5A6577' }} />} value={unit.bedrooms} label="Dorms" />
         )}
         {unit.suites != null && unit.suites > 0 && (
           <SpecTile icon={<BedDouble size={16} style={{ color: '#C8A44A' }} />} value={unit.suites} label={`Suíte${unit.suites !== 1 ? 's' : ''}`} />
         )}
         {unit.bathrooms != null && (
-          <SpecTile icon={<Bath size={16} style={{ color: '#948F84' }} />} value={unit.bathrooms} label={`Banheiro${unit.bathrooms !== 1 ? 's' : ''}`} />
+          <SpecTile icon={<Bath size={16} style={{ color: '#5A6577' }} />} value={unit.bathrooms} label={`Banheiro${unit.bathrooms !== 1 ? 's' : ''}`} />
         )}
         {unit.parkingSpaces != null && unit.parkingSpaces > 0 && (
-          <SpecTile icon={<Car size={16} style={{ color: '#948F84' }} />} value={unit.parkingSpaces} label={`Vaga${unit.parkingSpaces !== 1 ? 's' : ''}`} />
+          <SpecTile icon={<Car size={16} style={{ color: '#5A6577' }} />} value={unit.parkingSpaces} label={`Vaga${unit.parkingSpaces !== 1 ? 's' : ''}`} />
         )}
         {unit.privateAreaM2 != null && (
-          <SpecTile icon={<Maximize2 size={16} style={{ color: '#948F84' }} />} value={`${unit.privateAreaM2} m²`} label="Privativo" />
+          <SpecTile icon={<Maximize2 size={16} style={{ color: '#5A6577' }} />} value={`${unit.privateAreaM2} m²`} label="Privativo" />
         )}
         {unit.totalAreaM2 != null && unit.totalAreaM2 !== unit.privateAreaM2 && (
           <SpecTile icon={<Maximize2 size={16} style={{ color: '#C8A44A' }} />} value={`${unit.totalAreaM2} m²`} label="Total" />
@@ -608,7 +608,7 @@ function SpecTile({ icon, value, label }: { icon: React.ReactNode; value: string
       {icon}
       <div>
         <p style={{ fontSize: 16, fontWeight: 800, color: '#0B1928', margin: 0 }}>{value}</p>
-        <p style={{ fontSize: 10, color: '#948F84', margin: 0 }}>{label}</p>
+        <p style={{ fontSize: 10, color: '#5A6577', margin: 0 }}>{label}</p>
       </div>
     </div>
   )

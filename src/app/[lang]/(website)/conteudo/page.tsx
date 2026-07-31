@@ -65,7 +65,7 @@ export default async function ConteudoPage() {
                         Conteúdo &amp;<br />
                         <span style={{ color: '#C8A44A' }}>Insights</span>
                     </h1>
-                    <p className="text-lg max-w-xl font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.45)' }}>
+                    <p className="text-lg max-w-xl font-light leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
                         Análises exclusivas, tendências e inteligência aplicada ao mercado imobiliário de alto padrão.
                     </p>
 
@@ -73,12 +73,12 @@ export default async function ConteudoPage() {
                         <div className="flex gap-8 mt-10 pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}>
                             <div>
                                 <p className="text-3xl font-bold text-white">{items.length}</p>
-                                <p className="text-xs mt-1 uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.35)' }}>Publicações</p>
+                                <p className="text-xs mt-1 uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.7)' }}>Publicações</p>
                             </div>
                             <div style={{ width: 1, background: 'rgba(255,255,255,0.1)' }} />
                             <div>
                                 <p className="text-3xl font-bold text-white">{totalViews.toLocaleString('pt-BR')}</p>
-                                <p className="text-xs mt-1 uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.35)' }}>Visualizações</p>
+                                <p className="text-xs mt-1 uppercase tracking-wider" style={{ color: 'rgba(255,255,255,0.7)' }}>Visualizações</p>
                             </div>
                         </div>
                     )}
@@ -112,7 +112,7 @@ export default async function ConteudoPage() {
                         {/* Post em destaque */}
                         {featured && (
                             <div className="mb-12">
-                                <p className="text-[11px] font-bold uppercase tracking-[0.2em] mb-5" style={{ color: '#C8A44A' }}>Em Destaque</p>
+                                <p className="text-[11px] font-bold uppercase tracking-[0.2em] mb-5" style={{ color: '#8A6820' }}>Em Destaque</p>
                                 <div className="rounded-3xl border p-6 md:p-8 lg:p-12" style={{ background: '#fff', borderColor: '#E9ECEF' }}>
                                     <div className="flex flex-wrap items-center gap-3 mb-5">
                                         {(() => {
@@ -209,7 +209,7 @@ export default async function ConteudoPage() {
                             <h2 className="text-3xl font-bold text-white mb-3" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                                 Receba Inteligência de Mercado
                             </h2>
-                            <p className="mb-8 max-w-sm mx-auto text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                            <p className="mb-8 max-w-sm mx-auto text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
                                 Análises exclusivas direto no seu e-mail. Sem spam, apenas insights que importam.
                             </p>
                             <Link href="/pt/contato"

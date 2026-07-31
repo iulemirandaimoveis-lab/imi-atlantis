@@ -42,7 +42,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       bg-white dark:bg-[#081624]
       border rounded-[10px]
       text-[14px] text-imi-900 dark:text-[#E8E4DC] leading-[20px]
-      placeholder:text-imi-400 dark:placeholder:text-[#3F4E5E]
+      placeholder:text-imi-500 dark:placeholder:text-[#8FA0B4]
       transition-all duration-200 ease-smooth
       focus:outline-none
       hover:border-imi-300 dark:hover:border-[rgba(200,164,74,0.38)]
@@ -67,7 +67,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
                 <div className="relative">
                     {leftIcon && (
-                        <div className="absolute left-[14px] top-1/2 -translate-y-1/2 text-imi-400 dark:text-[#4F5B6B] pointer-events-none">
+                        <div className="absolute left-[14px] top-1/2 -translate-y-1/2 text-imi-500 dark:text-[#8FA0B4] pointer-events-none">
                             <div className="w-[18px] h-[18px] flex items-center justify-center">
                                 {leftIcon}
                             </div>
@@ -104,7 +104,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                             <Check className="w-[16px] h-[16px] text-green-500" />
                         )}
                         {rightIcon && !error && !success && (
-                            <div className="w-[18px] h-[18px] text-imi-400 dark:text-[#4F5B6B]">
+                            <div className="w-[18px] h-[18px] text-imi-500 dark:text-[#8FA0B4]">
                                 {rightIcon}
                             </div>
                         )}
@@ -112,7 +112,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
                             <button
                                 type="button"
                                 onClick={() => setShowPassword(!showPassword)}
-                                className="w-[18px] h-[18px] text-imi-400 dark:text-[#4F5B6B] hover:text-imi-600 dark:hover:text-[#8E99AB] transition-colors focus:outline-none"
+                                className="w-[18px] h-[18px] text-imi-500 dark:text-[#8FA0B4] hover:text-imi-600 dark:hover:text-[#8E99AB] transition-colors focus:outline-none"
                                 tabIndex={-1}
                             >
                                 {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
@@ -174,7 +174,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
       bg-white dark:bg-[#081624]
       border rounded-[10px]
       text-[14px] text-imi-900 dark:text-[#E8E4DC] leading-relaxed
-      placeholder:text-imi-400 dark:placeholder:text-[#3F4E5E]
+      placeholder:text-imi-500 dark:placeholder:text-[#8FA0B4]
       transition-all duration-200 ease-smooth
       resize-vertical min-h-[88px]
       focus:outline-none

@@ -31,7 +31,7 @@ interface NearbyPOIsProps {
 
 const NAVY = '#0B1928'
 const GOLD = '#C8A44A'
-const MUTED = '#948F84'
+const MUTED = '#5A6577'
 const LIGHT_BG = '#F8F6F2'
 
 const CATEGORY_META: Record<string, { label: string; icon: typeof MapPin; color: string }> = {

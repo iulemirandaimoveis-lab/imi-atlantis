@@ -18,7 +18,7 @@ const APPRAISAL_TYPES = [
     icon: Landmark,
     title: 'Garantia Bancária',
     tag: 'Financiamentos',
-    tagColor: 'bg-[#C8A44A]/10 text-[#C8A44A]',
+    tagColor: 'bg-[#8A6820]/10 text-[#8A6820]',
     description: 'Laudos técnicos aceitos por Caixa, Bradesco, Itaú e Santander. Conformidade total com as exigências bancárias.',
     points: ['Aceito por todos os grandes bancos', 'Formato PTAM', 'Prazo expresso disponível'],
   },
@@ -26,7 +26,7 @@ const APPRAISAL_TYPES = [
     icon: Scale,
     title: 'Judicial / Extrajudicial',
     tag: 'Perícia Técnica',
-    tagColor: 'bg-[#C8A44A]/10 text-[#C8A44A]',
+    tagColor: 'bg-[#8A6820]/10 text-[#8A6820]',
     description: 'Perícia técnica para processos judiciais, inventários, partilhas e arbitragens. Fundamentação normativa para uso legal.',
     points: ['Habilitado junto ao TJPE', 'Assistência técnica judicial', 'Laudo pericial fundamentado'],
   },
@@ -34,7 +34,7 @@ const APPRAISAL_TYPES = [
     icon: Briefcase,
     title: 'Patrimonial / Empresarial',
     tag: 'Corporativo',
-    tagColor: 'bg-emerald-50 text-emerald-600',
+    tagColor: 'bg-emerald-50 text-emerald-700',
     description: 'Avaliação de portfólio imobiliário para fins contábeis, IFRS, fiscais ou reestruturação estratégica.',
     points: ['Conformidade IFRS 13', 'Múltiplos ativos simultâneos', 'Relatório executivo incluso'],
   },
@@ -114,7 +114,7 @@ export default function AppraisalsPage() {
               {[{ v: '+500', l: 'Laudos emitidos' }, { v: 'NBR', l: '14653 metodologia' }, { v: '72h', l: 'Prazo expresso' }].map((s, i) => (
                 <div key={i}>
                   <div className="text-[30px] font-black text-[#C8A44A] leading-none mb-1" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>{s.v}</div>
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/40">{s.l}</div>
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/70">{s.l}</div>
                 </div>
               ))}
             </motion.div>
@@ -150,7 +150,7 @@ export default function AppraisalsPage() {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="text-center mb-14">
-            <span className="text-[#C8A44A] text-[11px] font-bold uppercase tracking-[0.25em]">Serviços</span>
+            <span className="text-[#8A6820] text-[11px] font-bold uppercase tracking-[0.25em]">Serviços</span>
             <h2 className="text-[32px] lg:text-[44px] font-black mt-4 mb-4 text-neutral-900" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>Tipos de Avaliação</h2>
             <p className="text-gray-500 text-lg max-w-xl mx-auto font-light">Serviços especializados para cada necessidade de mercado e conformidade legal</p>
           </div>
@@ -184,7 +184,7 @@ export default function AppraisalsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-14">
-              <span className="text-[#C8A44A] text-[11px] font-bold uppercase tracking-[0.25em]">Processo</span>
+              <span className="text-[#8A6820] text-[11px] font-bold uppercase tracking-[0.25em]">Processo</span>
               <h2 className="text-[30px] lg:text-[40px] font-black mt-4 mb-4 text-neutral-900" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>Nossa Metodologia</h2>
               <p className="text-gray-500 max-w-lg mx-auto font-light">Todas as avaliações seguem rigorosamente a <strong className="text-neutral-900">NBR 14653</strong> e as diretrizes do IBAPE.</p>
             </div>
@@ -208,7 +208,7 @@ export default function AppraisalsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-14">
-              <span className="text-[#C8A44A] text-[11px] font-bold uppercase tracking-[0.25em]">Solicitar</span>
+              <span className="text-[#8A6820] text-[11px] font-bold uppercase tracking-[0.25em]">Solicitar</span>
               <h2 className="text-[30px] lg:text-[40px] font-black mt-4 mb-4 text-neutral-900" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>Solicitar Avaliação Técnica</h2>
               <p className="text-gray-500 max-w-md mx-auto font-light">Preencha o formulário e retornaremos em até 24 horas com um orçamento detalhado.</p>
             </div>
@@ -222,7 +222,7 @@ export default function AppraisalsPage() {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-14">
-              <span className="text-[#C8A44A] text-[11px] font-bold uppercase tracking-[0.25em]">Dúvidas Frequentes</span>
+              <span className="text-[#8A6820] text-[11px] font-bold uppercase tracking-[0.25em]">Dúvidas Frequentes</span>
               <h2 className="text-[30px] lg:text-[40px] font-black mt-4 mb-4 text-neutral-900" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>Perguntas Frequentes</h2>
             </div>
             <div className="space-y-4">
@@ -246,7 +246,7 @@ export default function AppraisalsPage() {
       <section className="bg-navy-950 section-padding">
         <div className="container-custom text-center">
           <h2 className="text-[28px] lg:text-[38px] font-black text-white mb-4" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>Dúvidas sobre Avaliações?</h2>
-          <p className="text-white/40 text-lg mb-10 max-w-md mx-auto font-light">Nossa equipe técnica esclarece qualquer questão normativa ou processual.</p>
+          <p className="text-white/70 text-lg mb-10 max-w-md mx-auto font-light">Nossa equipe técnica esclarece qualquer questão normativa ou processual.</p>
           <ButtonPrimary href="https://wa.me/5581986141487" target="_blank" rel="noopener noreferrer" size="lg" icon={<MessageCircle size={16} />}>
             Falar com Especialista
           </ButtonPrimary>

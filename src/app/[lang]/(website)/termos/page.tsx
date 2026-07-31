@@ -77,7 +77,7 @@ export default function TermosPage() {
                     >
                         Termos de Uso
                     </h1>
-                    <p className="text-base font-light" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                    <p className="text-base font-light" style={{ color: 'rgba(255,255,255,0.7)' }}>
                         Última atualização: março de 2026
                     </p>
                 </div>
@@ -106,7 +106,7 @@ export default function TermosPage() {
                             <div className="flex items-start gap-4">
                                 <span
                                     className="text-[11px] font-black uppercase tracking-widest mt-1 flex-shrink-0 w-8 h-8 rounded-xl flex items-center justify-center"
-                                    style={{ background: '#F0F4F8', color: '#C8A44A' }}
+                                    style={{ background: '#F0F4F8', color: '#8A6820' }}
                                 >
                                     {section.id}
                                 </span>
@@ -136,7 +136,7 @@ export default function TermosPage() {
                     </div>
                     <div className="flex-1">
                         <p className="text-sm font-bold text-white mb-1">Dúvidas jurídicas ou comerciais?</p>
-                        <p className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+                        <p className="text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
                             Fale diretamente com nossa equipe pelo e-mail{' '}
                             <a
                                 href="mailto:iule.miranda.imoveis@gmail.com"

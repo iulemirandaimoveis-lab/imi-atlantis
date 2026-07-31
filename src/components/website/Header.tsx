@@ -132,11 +132,11 @@ export default function Header({ lang, settings }: HeaderProps) {
                             <span
                                 className="select-none"
                                 style={{
-                                    fontSize: '7px',
+                                    fontSize: '10px',
                                     fontWeight: 600,
-                                    letterSpacing: '2.2px',
+                                    letterSpacing: '1.6px',
                                     textTransform: 'uppercase',
-                                    color: 'rgba(255,255,255,0.6)',
+                                    color: 'rgba(255,255,255,0.75)',
                                     lineHeight: 1.45,
                                 }}
                             >
@@ -156,7 +156,7 @@ export default function Header({ lang, settings }: HeaderProps) {
                                         prefetch={true}
                                         className={`relative px-3 py-2 text-[13px] font-medium tracking-tight transition-colors duration-200 rounded-lg ${active
                                             ? 'text-white'
-                                            : 'text-white/50 hover:text-white hover:bg-white/[0.04]'
+                                            : 'text-white/70 hover:text-white hover:bg-white/[0.04]'
                                             }`}
                                     >
                                         {item.label}
@@ -178,7 +178,7 @@ export default function Header({ lang, settings }: HeaderProps) {
                                     onClick={() => setMoreOpen(v => !v)}
                                     className={`flex items-center gap-1 px-3 py-2 text-[13px] font-medium tracking-tight transition-colors duration-200 rounded-lg ${NAV_MORE.some(i => isActive(i.key))
                                         ? 'text-white'
-                                        : 'text-white/50 hover:text-white hover:bg-white/[0.04]'
+                                        : 'text-white/70 hover:text-white hover:bg-white/[0.04]'
                                         }`}
                                 >
                                     Mais
@@ -207,7 +207,7 @@ export default function Header({ lang, settings }: HeaderProps) {
                                                         onClick={() => setMoreOpen(false)}
                                                         className={`flex items-center h-[40px] px-4 text-[13px] font-medium transition-colors duration-150 ${active
                                                             ? 'text-white bg-white/[0.06] border-l-[3px] border-[#C8A44A] pl-[13px]'
-                                                            : 'text-white/50 hover:text-white hover:bg-white/[0.04]'
+                                                            : 'text-white/70 hover:text-white hover:bg-white/[0.04]'
                                                             }`}
                                                     >
                                                         {item.label}
@@ -285,11 +285,11 @@ export default function Header({ lang, settings }: HeaderProps) {
                                         IMI
                                     </span>
                                     <div className="h-3.5 w-px bg-[#C8A44A]/40" />
-                                    <span className="text-[9px] font-bold text-white/30 uppercase tracking-[0.2em]">Navegação</span>
+                                    <span className="text-[10px] font-bold text-white/60 uppercase tracking-[0.2em]">Navegação</span>
                                 </div>
                                 <button
                                     onClick={() => setOpen(false)}
-                                    className="p-2.5 rounded-lg hover:bg-white/[0.06] text-white/50 transition-colors active:scale-[0.92] min-w-[44px] min-h-[44px] flex items-center justify-center"
+                                    className="p-2.5 rounded-lg hover:bg-white/[0.06] text-white/70 transition-colors active:scale-[0.92] min-w-[44px] min-h-[44px] flex items-center justify-center"
                                     aria-label="Fechar menu"
                                     style={{ WebkitTapHighlightColor: 'transparent' }}
                                 >
@@ -315,7 +315,7 @@ export default function Header({ lang, settings }: HeaderProps) {
                                                     onClick={() => setOpen(false)}
                                                     className={`flex items-center h-[46px] px-4 rounded-xl text-[14px] font-semibold transition-all duration-150 active:scale-[0.98] ${active
                                                         ? 'bg-white/[0.06] text-white border-l-[3px] border-[#C8A44A] pl-[13px]'
-                                                        : 'text-white/50 hover:bg-white/[0.04] hover:text-white'
+                                                        : 'text-white/70 hover:bg-white/[0.04] hover:text-white'
                                                         }`}
                                                 >
                                                     {item.label}
@@ -378,11 +378,11 @@ export default function Header({ lang, settings }: HeaderProps) {
                                 >
                                     <div className="flex items-center justify-between">
                                         <p className="font-bold text-white text-[13px]">Iule Miranda</p>
-                                        <p className="text-[10px] text-[#C8A44A]/60 font-bold uppercase tracking-[0.15em]">CRECI 17933</p>
+                                        <p className="text-[10px] text-[#C8A44A] font-bold uppercase tracking-[0.15em]">CRECI 17933</p>
                                     </div>
                                     <a
                                         href={`https://wa.me/${settings?.companyPhone?.replace(/\D/g, '') || '5581986141487'}`}
-                                        className="text-[12px] text-white/30 mt-1 block hover:text-white transition-colors"
+                                        className="text-[12px] text-white/70 mt-1 block hover:text-white transition-colors"
                                     >
                                         {settings?.companyPhone || '+55 81 9 8614-1487'}
                                     </a>

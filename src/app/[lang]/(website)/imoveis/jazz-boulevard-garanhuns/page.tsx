@@ -109,7 +109,7 @@ export default async function JazzBoulevardPage({
                 <h.icon size={12} style={{ color: '#C8A44A', flexShrink: 0 }} />
                 <div>
                   <p style={{ fontSize: 11, fontWeight: 700, color: '#fff', margin: 0, whiteSpace: 'nowrap' }}>{h.label}</p>
-                  <p style={{ fontSize: 9, color: 'rgba(255,255,255,0.45)', margin: 0, whiteSpace: 'nowrap' }}>{h.sub}</p>
+                  <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)', margin: 0, whiteSpace: 'nowrap' }}>{h.sub}</p>
                 </div>
               </div>
             ))}

@@ -312,8 +312,8 @@ export default function PropertyMap({
                     }
                     <div style="padding:14px 16px 16px;">
                         <div style="font-weight:800;font-size:14px;margin-bottom:4px;line-height:1.3;color:#0B1928;">${esc(dev.name)}</div>
-                        <div style="font-size:11px;color:#948F84;margin-bottom:10px;display:flex;align-items:center;gap:3px;">
-                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#948F84" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <div style="font-size:11px;color:#5A6577;margin-bottom:10px;display:flex;align-items:center;gap:3px;">
+                            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#5A6577" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             ${dev.location.neighborhood ? esc(dev.location.neighborhood) + ', ' : ''}${esc(dev.location.city)}${dev.location.country && dev.location.country !== 'Brasil' ? ' — ' + esc(dev.location.country) : ''}
                         </div>
                         <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;">
@@ -327,7 +327,7 @@ export default function PropertyMap({
                         <div style="display:flex;align-items:center;justify-content:space-between;">
                             <div>
                                 ${dev.priceRange.min > 0
-                                    ? `<div style="font-size:10px;font-weight:600;color:#948F84;margin-bottom:1px;">A partir de</div>
+                                    ? `<div style="font-size:10px;font-weight:600;color:#5A6577;margin-bottom:1px;">A partir de</div>
                                        <div style="font-size:18px;font-weight:900;color:#0B1928;letter-spacing:-0.02em;">${formatCurrency(dev.priceRange.min)}</div>`
                                     : '<div style="font-size:14px;font-weight:700;color:#F59E0B;">Sob Consulta</div>'
                                 }
@@ -675,7 +675,7 @@ export default function PropertyMap({
                         borderRadius: '50%',
                         animation: 'spin 0.8s linear infinite',
                     }} />
-                    <p style={{ color: darkMode ? '#9CA3AF' : '#948F84', fontSize: 13, margin: 0 }}>Carregando mapa...</p>
+                    <p style={{ color: darkMode ? '#9CA3AF' : '#5A6577', fontSize: 13, margin: 0 }}>Carregando mapa...</p>
                     <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
                 </div>
             )}
@@ -743,14 +743,14 @@ export default function PropertyMap({
                 <div style={{
                     position: 'absolute', bottom: 14, left: 14, zIndex: 5,
                     background: 'rgba(255,255,255,0.88)', backdropFilter: 'blur(12px)',
-                    color: '#948F84', fontSize: 11, fontWeight: 500,
+                    color: '#5A6577', fontSize: 11, fontWeight: 500,
                     padding: '5px 12px', borderRadius: 10,
                     border: '1px solid rgba(0,0,0,0.06)',
                     boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
                     fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif',
                     display: 'flex', alignItems: 'center', gap: 5,
                 }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#948F84" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#5A6577" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
                     {excludedCount} {excludedCount === 1 ? 'imovel' : 'imoveis'} sem localizacao
                 </div>
             )}
@@ -822,8 +822,8 @@ export default function PropertyMap({
                             <p style={{ fontWeight: 800, fontSize: 16, color: '#0B1928', margin: '0 0 4px', lineHeight: 1.3, fontFamily: "'Playfair Display', Georgia, serif" }}>
                                 {selectedProperty.name}
                             </p>
-                            <p style={{ fontSize: 12, color: '#948F84', margin: '0 0 12px', display: 'flex', alignItems: 'center', gap: 4 }}>
-                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#948F84" strokeWidth="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <p style={{ fontSize: 12, color: '#5A6577', margin: '0 0 12px', display: 'flex', alignItems: 'center', gap: 4 }}>
+                                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#5A6577" strokeWidth="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                                 {selectedProperty.location.neighborhood ? `${selectedProperty.location.neighborhood}, ` : ''}
                                 {selectedProperty.location.city}
                                 {selectedProperty.location.country && selectedProperty.location.country !== 'Brasil'
@@ -845,7 +845,7 @@ export default function PropertyMap({
                                 <div>
                                     {selectedProperty.priceRange.min > 0 ? (
                                         <>
-                                            <p style={{ fontSize: 10, color: '#948F84', margin: '0 0 1px', fontWeight: 600 }}>A partir de</p>
+                                            <p style={{ fontSize: 10, color: '#5A6577', margin: '0 0 1px', fontWeight: 600 }}>A partir de</p>
                                             <p style={{ fontSize: 22, fontWeight: 900, color: '#0B1928', margin: 0, letterSpacing: '-0.02em' }}>
                                                 {formatCurrency(selectedProperty.priceRange.min)}
                                             </p>

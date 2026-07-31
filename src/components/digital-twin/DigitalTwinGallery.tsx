@@ -55,7 +55,7 @@ export default function DigitalTwinGallery({ photos, title }: Props) {
   if (count === 0) {
     return (
       <div className="aspect-video rounded-2xl flex items-center justify-center border border-dashed border-[#E0D8CC] bg-[#FBF8F3]">
-        <div className="text-center text-[#B8B3A8]">
+        <div className="text-center text-[#6E6C60]">
           <ImageOff size={36} className="mx-auto mb-3" strokeWidth={1.2} />
           <p className="text-sm font-medium">Imagens em breve</p>
         </div>

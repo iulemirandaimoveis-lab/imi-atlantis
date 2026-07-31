@@ -125,7 +125,8 @@ export default function ConstrutorasClient({ developers, lang }: ConstrutorasCli
                                             className="absolute top-3 right-3 text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full z-20"
                                             style={{
                                                 background: 'rgba(200,164,74,0.10)',
-                                                color: '#C8A44A',
+                                                // O badge fica sobre a area branca do logo: #C8A44A da 2,4:1.
+                                                color: '#8A6820',
                                                 border: '1px solid rgba(200,164,74,0.20)',
                                             }}
                                         >

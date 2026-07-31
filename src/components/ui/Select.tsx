@@ -60,7 +60,9 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
             <div className="space-y-[8px]">
                 {/* Label */}
                 {label && (
-                    <label className="block text-sm font-medium text-imi-700">
+                    // A escala --imi-* so existe em :root, nunca sob .dark — sem a variante
+                    // dark o label resolvia para #3E3C34 e sumia em painel escuro (1,6:1).
+                    <label className="block text-sm font-medium text-imi-700 dark:text-[#E8E4DC]">
                         {label}
                     </label>
                 )}

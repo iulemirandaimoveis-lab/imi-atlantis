@@ -95,7 +95,7 @@ export default function SimilarProperties({ developments, lang }: SimilarPropert
                                     {/* Price */}
                                     {dev.priceRange.min > 0 && (
                                         <div>
-                                            <p className="text-[11px] uppercase tracking-wider font-semibold" style={{ color: '#C8A44A', opacity: 0.6, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>A partir de</p>
+                                            <p className="text-[11px] uppercase tracking-wider font-semibold" style={{ color: '#C8A44A', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>A partir de</p>
                                             <p className="text-base font-bold" style={{ color: '#C8A44A', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
                                                 {formatPrice(dev.priceRange.min)}
                                             </p>

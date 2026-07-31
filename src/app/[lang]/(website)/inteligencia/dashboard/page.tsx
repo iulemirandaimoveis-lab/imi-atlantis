@@ -153,7 +153,7 @@ export default async function DashboardPage() {
                             <div className="text-center">
                                 <BarChart3 className="w-10 h-10 text-white/10 mx-auto mb-3" strokeWidth={1} />
                                 <p className="text-white/50 text-sm font-light">Gráfico interativo disponível em breve</p>
-                                <p className="text-white/20 text-xs mt-1">Integração com dados históricos Supabase</p>
+                                <p className="text-white/60 text-xs mt-1">Integração com dados históricos Supabase</p>
                             </div>
                         </div>
                     </div>

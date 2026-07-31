@@ -121,7 +121,7 @@ function TowerCard({ tower, index }: { tower: Tower; index: number }) {
           />
           <p
             className="text-[11px] font-bold uppercase tracking-widest"
-            style={{ color: '#948F84' }}
+            style={{ color: '#5A6577' }}
           >
             Torre {index + 1}
           </p>

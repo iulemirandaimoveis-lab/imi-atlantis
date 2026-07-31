@@ -51,3 +51,11 @@
 
 ---
 **Atualizado**: 2026-07-02
+
+- **P21** Contraste: sobre navy `#0B1928` use `text-white/70` (corpo, 9,1:1), `/60` (meta) e
+  `/55` (placeholder); sobre fundo claro use `#5A6577` (corpo mudo), `#6E6C60` (placeholder) e
+  `#8A6820` (dourado). `#948F84` e `#C8A44A` **só** sobre navy. Ver D-16.
+- **A15** Auditar contraste sem rolar a página inteira antes: framer-motion `whileInView` deixa
+  tudo abaixo da dobra em `opacity: 0` e o axe ignora invisível — o gate passa em falso.
+- **A16** `opacity` no ancestral de um overlay decorativo: o axe não resolve e acusa falso
+  positivo. Pôr a opacidade na própria cor (`bg-[#C8A44A]/10`).

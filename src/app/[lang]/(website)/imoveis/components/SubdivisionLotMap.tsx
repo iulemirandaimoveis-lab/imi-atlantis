@@ -358,7 +358,7 @@ function LotModal({
         {score.tags.length > 0 && (
           <div className="px-5 pb-3 flex flex-wrap gap-1.5">
             {score.tags.map(tag => (
-              <span key={tag} style={{ fontSize: 9, fontWeight: 700, padding: '3px 8px', borderRadius: 99, background: '#F0EDE5', color: '#948F84' }}>
+              <span key={tag} style={{ fontSize: 10, fontWeight: 700, padding: '3px 8px', borderRadius: 99, background: '#F0EDE5', color: '#5A6577' }}>
                 {tag}
               </span>
             ))}
@@ -369,8 +369,8 @@ function LotModal({
         <div className="grid grid-cols-2 gap-3 px-5 pb-4">
           <div style={{ background: '#F8F6F2', borderRadius: 14, padding: '14px 16px' }}>
             <div className="flex items-center gap-2 mb-1.5">
-              <Ruler size={13} style={{ color: '#948F84' }} />
-              <span style={{ fontSize: 10, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Área</span>
+              <Ruler size={13} style={{ color: '#5A6577' }} />
+              <span style={{ fontSize: 10, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Área</span>
             </div>
             <p style={{ fontSize: 20, fontWeight: 800, color: '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", margin: 0 }}>
               {fmtM2(lot.area_m2)}
@@ -378,8 +378,8 @@ function LotModal({
           </div>
           <div style={{ background: isAvailable ? '#0B1928' : '#F8F6F2', borderRadius: 14, padding: '14px 16px' }}>
             <div className="flex items-center gap-2 mb-1.5">
-              <DollarSign size={13} style={{ color: isAvailable ? '#C8A44A' : '#948F84' }} />
-              <span style={{ fontSize: 10, fontWeight: 700, color: isAvailable ? '#C8A44A' : '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Valor</span>
+              <DollarSign size={13} style={{ color: isAvailable ? '#C8A44A' : '#5A6577' }} />
+              <span style={{ fontSize: 10, fontWeight: 700, color: isAvailable ? '#C8A44A' : '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Valor</span>
             </div>
             <p style={{ fontSize: lot.price && lot.price >= 100000 ? 16 : 20, fontWeight: 800, color: isAvailable ? '#fff' : '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", margin: 0 }}>
               {lot.price ? fmtBRL(lot.price) : 'Consultar'}
@@ -391,7 +391,7 @@ function LotModal({
         {pricePerM2 && (
           <div className="px-5 pb-3">
             <div style={{ background: '#F0EDE5', borderRadius: 12, padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-              <span style={{ fontSize: 11, color: '#948F84', fontWeight: 600 }}>Preço por m²</span>
+              <span style={{ fontSize: 11, color: '#5A6577', fontWeight: 600 }}>Preço por m²</span>
               <span style={{ fontSize: 15, fontWeight: 800, color: '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
                 {fmtBRL(pricePerM2)}/m²
               </span>
@@ -405,7 +405,7 @@ function LotModal({
                 ] as const).map(item => (
                   <div key={item.label} style={{ background: '#F8F6F2', borderRadius: 10, padding: '8px 10px' }}>
                     <div className="flex justify-between items-center mb-1">
-                      <span style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{item.label}</span>
+                      <span style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.1em' }}>{item.label}</span>
                       <span style={{ fontSize: 10, fontWeight: 800, color: item.color, fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>{item.value}</span>
                     </div>
                     <div style={{ height: 3, borderRadius: 2, background: '#E5E0D8', overflow: 'hidden' }}>
@@ -421,7 +421,7 @@ function LotModal({
         {/* Payment plan breakdown — Alto Bellevue */}
         {abPrice && isAvailable && (
           <div className="px-5 pb-3">
-            <p style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 8px', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+            <p style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 8px', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
               Formas de Pagamento
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6 }}>
@@ -433,7 +433,7 @@ function LotModal({
                 { label: '120×', desc: `Entrada ${fmtBRL(abPrice.entrada)}`, total: abPrice.p120_total, parcela: abPrice.p120_parcela, highlight: false },
               ].map(plan => (
                 <div key={plan.label} style={{ background: plan.highlight ? '#0B1928' : '#F8F6F2', borderRadius: 10, padding: '10px 12px' }}>
-                  <p style={{ fontSize: 9, fontWeight: 700, color: plan.highlight ? '#C8A44A' : '#948F84', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 2px', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+                  <p style={{ fontSize: 9, fontWeight: 700, color: plan.highlight ? '#C8A44A' : '#5A6577', textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 2px', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                     {plan.label}
                   </p>
                   {plan.parcela ? (
@@ -441,7 +441,7 @@ function LotModal({
                       <p style={{ fontSize: 13, fontWeight: 800, color: plan.highlight ? '#fff' : '#0B1928', margin: 0, fontFamily: "var(--fm, 'JetBrains Mono', monospace)", lineHeight: 1.2 }}>
                         {fmtBRL(plan.parcela)}/mês
                       </p>
-                      <p style={{ fontSize: 9, color: plan.highlight ? 'rgba(255,255,255,0.4)' : '#948F84', margin: '2px 0 0', fontWeight: 500 }}>
+                      <p style={{ fontSize: 11, color: plan.highlight ? 'rgba(255,255,255,0.4)' : '#5A6577', margin: '2px 0 0', fontWeight: 500 }}>
                         Total {fmtBRL(plan.total)}
                       </p>
                     </>
@@ -450,7 +450,7 @@ function LotModal({
                       {fmtBRL(plan.total)}
                     </p>
                   )}
-                  <p style={{ fontSize: 8, color: plan.highlight ? 'rgba(255,255,255,0.35)' : '#B8B3A8', margin: '1px 0 0', fontWeight: 500 }}>
+                  <p style={{ fontSize: 11, color: plan.highlight ? 'rgba(255,255,255,0.35)' : '#6E6C60', margin: '1px 0 0', fontWeight: 500 }}>
                     {plan.desc}
                   </p>
                 </div>
@@ -462,7 +462,7 @@ function LotModal({
         {/* Notes */}
         {lot.notes && (
           <div className="px-5 pb-3">
-            <p style={{ fontSize: 11, color: '#948F84', background: '#F8F6F2', borderRadius: 10, padding: '8px 12px', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 11, color: '#5A6577', background: '#F8F6F2', borderRadius: 10, padding: '8px 12px', margin: 0, lineHeight: 1.5 }}>
               {lot.notes}
             </p>
           </div>
@@ -618,13 +618,13 @@ function LotComparator({
                     onClick={() => onRemove(lot.id)}
                     style={{ position: 'absolute', top: 6, right: 6, width: 18, height: 18, borderRadius: '50%', background: '#E5E0D8', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                   >
-                    <X size={9} style={{ color: '#948F84' }} />
+                    <X size={9} style={{ color: '#5A6577' }} />
                   </button>
                   <div style={{ width: 8, height: 8, borderRadius: '50%', background: cfg.bg, margin: '0 auto 4px' }} />
                   <p style={{ fontSize: 12, fontWeight: 800, color: '#0B1928', margin: 0, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                     Q{lot.quadra}–L{lot.lot_number}
                   </p>
-                  <p style={{ fontSize: 10, color: '#948F84', margin: '2px 0 0' }}>{cfg.label}</p>
+                  <p style={{ fontSize: 10, color: '#5A6577', margin: '2px 0 0' }}>{cfg.label}</p>
                   {i === 0 && scores[0].costBenefit >= 70 && (
                     <span style={{ fontSize: 8, fontWeight: 800, padding: '2px 5px', borderRadius: 4, background: '#FEF3C7', color: '#92400E', display: 'block', marginTop: 3 }}>
                       RECOMENDADO
@@ -649,7 +649,7 @@ function LotComparator({
                 padding: '8px 4px',
               }}
             >
-              <span style={{ fontSize: 10, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', paddingLeft: 4 }}>
+              <span style={{ fontSize: 10, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', paddingLeft: 4 }}>
                 {row.label}
               </span>
               {compareLots.map(lot => (
@@ -669,7 +669,7 @@ function LotComparator({
               return (
                 <div key={key} style={{ marginBottom: 8 }}>
                   <div className="flex justify-between mb-1">
-                    <span style={{ fontSize: 9, color: 'rgba(255,255,255,0.5)', fontWeight: 600 }}>{labels[key]}</span>
+                    <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', fontWeight: 600 }}>{labels[key]}</span>
                     <div className="flex gap-3">
                       {scores.map((s, i) => (
                         <span key={i} style={{ fontSize: 10, fontWeight: 800, color: colors[key], fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
@@ -767,7 +767,7 @@ function RankingSection({
               className="flex items-center gap-1.5 px-3 h-8 rounded-lg whitespace-nowrap transition-all flex-shrink-0"
               style={{
                 background: activeRanking === tab.key ? tab.color : '#F8F6F2',
-                color: activeRanking === tab.key ? '#fff' : '#948F84',
+                color: activeRanking === tab.key ? '#fff' : '#5A6577',
                 fontSize: 11,
                 fontWeight: 700,
                 fontFamily: "var(--fu, 'Outfit', sans-serif)",
@@ -794,7 +794,7 @@ function RankingSection({
                 <p style={{ fontSize: 12, fontWeight: 700, color: '#0B1928', margin: 0, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                   Q{item.lot.quadra} — Lote {item.lot.lot_number}
                 </p>
-                <p style={{ fontSize: 10, color: '#948F84', margin: '1px 0 0' }}>{item.reason}</p>
+                <p style={{ fontSize: 10, color: '#5A6577', margin: '1px 0 0' }}>{item.reason}</p>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -802,9 +802,9 @@ function RankingSection({
                 <p style={{ fontSize: 13, fontWeight: 800, color: activeTab.color, margin: 0, fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
                   {item.score[activeRanking === 'bestValue' ? 'costBenefit' : activeRanking === 'bestLiving' ? 'living' : 'investment']}
                 </p>
-                <p style={{ fontSize: 9, color: '#948F84', margin: 0, fontWeight: 600 }}>score</p>
+                <p style={{ fontSize: 11, color: '#5A6577', margin: 0, fontWeight: 600 }}>score</p>
               </div>
-              <ArrowRight size={13} style={{ color: '#948F84' }} />
+              <ArrowRight size={13} style={{ color: '#5A6577' }} />
             </div>
           </button>
         ))}
@@ -912,7 +912,7 @@ function QuadraBlock({
             background: available > 0 ? '#DCFCE7' : '#F8F6F2',
             display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
           }}>
-            <span style={{ fontSize: 14, fontWeight: 900, color: available > 0 ? '#166534' : '#948F84', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
+            <span style={{ fontSize: 14, fontWeight: 900, color: available > 0 ? '#166534' : '#5A6577', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
               {quadra}
             </span>
           </div>
@@ -920,7 +920,7 @@ function QuadraBlock({
             <p style={{ fontSize: 13, fontWeight: 700, color: '#0B1928', margin: 0, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
               Quadra {quadra}
             </p>
-            <p style={{ fontSize: 11, color: '#948F84', margin: 0 }}>
+            <p style={{ fontSize: 11, color: '#5A6577', margin: 0 }}>
               {total} lotes · {available} disponível{available !== 1 ? 'is' : ''}
             </p>
           </div>
@@ -938,7 +938,7 @@ function QuadraBlock({
             })}
           </div>
           <div style={{ width: 48, textAlign: 'right' }}>
-            <span style={{ fontSize: 11, fontWeight: 700, color: available > 0 ? '#16A34A' : '#948F84', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
+            <span style={{ fontSize: 11, fontWeight: 700, color: available > 0 ? '#16A34A' : '#5A6577', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
               {pct}%
             </span>
           </div>
@@ -1005,13 +1005,13 @@ function CompareBar({
               <span style={{ fontSize: 11, fontWeight: 700, color: '#fff', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
                 Q{lot.quadra}-L{lot.lot_number}
               </span>
-              <button onClick={() => onRemove(lot.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#948F84', padding: 0, display: 'flex' }}>
+              <button onClick={() => onRemove(lot.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#5A6577', padding: 0, display: 'flex' }}>
                 <X size={10} />
               </button>
             </div>
           ))}
           {compareLots.length < 3 && (
-            <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', whiteSpace: 'nowrap' }}>
+            <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.7)', whiteSpace: 'nowrap' }}>
               +{3 - compareLots.length} lote{3 - compareLots.length !== 1 ? 's' : ''}
             </span>
           )}
@@ -1025,7 +1025,7 @@ function CompareBar({
               Comparar
             </button>
           )}
-          <button onClick={onClear} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.4)' }}>
+          <button onClick={onClear} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'rgba(255,255,255,0.7)' }}>
             <X size={14} />
           </button>
         </div>
@@ -1382,7 +1382,7 @@ export default function SubdivisionLotMap({
     return (
       <div className="flex flex-col items-center justify-center py-20">
         <div className="w-8 h-8 rounded-full border-2 border-gray-200 border-t-green-600 animate-spin mb-3" />
-        <p style={{ fontSize: 12, color: '#948F84', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Carregando mapa de lotes...</p>
+        <p style={{ fontSize: 12, color: '#5A6577', fontWeight: 700, letterSpacing: '0.15em', textTransform: 'uppercase', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Carregando mapa de lotes...</p>
       </div>
     );
   }
@@ -1424,7 +1424,7 @@ export default function SubdivisionLotMap({
                 Mapa de Disponibilidade
               </h2>
             </div>
-            <p style={{ fontSize: 13, color: '#948F84', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 13, color: '#5A6577', margin: 0, lineHeight: 1.5 }}>
               {stats.available} de {stats.total} lotes disponíveis em {quadras.size} quadras
             </p>
           </div>
@@ -1442,7 +1442,7 @@ export default function SubdivisionLotMap({
                 className="flex items-center gap-1.5 h-7 px-2.5 rounded-md transition-all"
                 style={{
                   background: 'transparent',
-                  color: '#948F84',
+                  color: '#5A6577',
                   fontSize: 11, fontWeight: 700,
                   boxShadow: 'none',
                   fontFamily: "var(--fu, 'Outfit', sans-serif)",
@@ -1504,7 +1504,7 @@ export default function SubdivisionLotMap({
                 Mapa de Disponibilidade
               </h2>
             </div>
-            <p style={{ fontSize: 13, color: '#948F84', margin: 0, lineHeight: 1.5 }}>
+            <p style={{ fontSize: 13, color: '#5A6577', margin: 0, lineHeight: 1.5 }}>
               {stats.available} de {stats.total} lotes disponíveis em {quadras.size} quadras
             </p>
           </div>
@@ -1539,7 +1539,7 @@ export default function SubdivisionLotMap({
                 className="flex items-center gap-1.5 h-7 px-2.5 rounded-md transition-all"
                 style={{
                   background: viewMode === 'list' ? '#fff' : 'transparent',
-                  color: viewMode === 'list' ? '#0B1928' : '#948F84',
+                  color: viewMode === 'list' ? '#0B1928' : '#5A6577',
                   fontSize: 11, fontWeight: 700,
                   boxShadow: viewMode === 'list' ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
                   fontFamily: "var(--fu, 'Outfit', sans-serif)",
@@ -1554,7 +1554,7 @@ export default function SubdivisionLotMap({
                 className="flex items-center gap-1.5 h-7 px-2.5 rounded-md transition-all"
                 style={{
                   background: viewMode === 'plan' ? '#fff' : 'transparent',
-                  color: viewMode === 'plan' ? '#0B1928' : '#948F84',
+                  color: viewMode === 'plan' ? '#0B1928' : '#5A6577',
                   fontSize: 11, fontWeight: 700,
                   boxShadow: viewMode === 'plan' ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
                   fontFamily: "var(--fu, 'Outfit', sans-serif)",
@@ -1598,7 +1598,7 @@ export default function SubdivisionLotMap({
             className="flex items-center gap-1.5 px-3 h-9 rounded-xl whitespace-nowrap transition-all flex-shrink-0"
             style={{
               background: smartFilter === sf.key ? '#0B1928' : '#F8F6F2',
-              color: smartFilter === sf.key ? '#fff' : '#948F84',
+              color: smartFilter === sf.key ? '#fff' : '#5A6577',
               fontSize: 11,
               fontWeight: 700,
               border: smartFilter === sf.key ? 'none' : '1px solid rgba(184,179,168,0.3)',
@@ -1639,11 +1639,11 @@ export default function SubdivisionLotMap({
       {viewMode === 'list' && stats.priceMin > 0 && (
         <div style={{ background: '#F8F6F2', border: '1px solid rgba(184,179,168,0.3)', borderRadius: 14, padding: '14px 16px', marginBottom: 16, display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
           <BarChart2 size={14} style={{ color: '#C8A44A', flexShrink: 0 }} />
-          <span style={{ fontSize: 12, color: '#948F84', fontWeight: 600 }}>Lotes disponíveis:</span>
+          <span style={{ fontSize: 12, color: '#5A6577', fontWeight: 600 }}>Lotes disponíveis:</span>
           <span style={{ fontSize: 13, fontWeight: 800, color: '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
             {fmtBRL(stats.priceMin)} — {fmtBRL(stats.priceMax)}
           </span>
-          {stats.areaMin > 0 && <span style={{ fontSize: 11, color: '#948F84' }}>· a partir de {Math.round(stats.areaMin)}m²</span>}
+          {stats.areaMin > 0 && <span style={{ fontSize: 11, color: '#5A6577' }}>· a partir de {Math.round(stats.areaMin)}m²</span>}
         </div>
       )}
 
@@ -1666,7 +1666,7 @@ export default function SubdivisionLotMap({
                 { label: 'Direto com', value: pc.seller },
               ].map(item => (
                 <div key={item.label}>
-                  <p style={{ fontSize: 9, fontWeight: 700, color: 'rgba(255,255,255,0.45)', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>{item.label}</p>
+                  <p style={{ fontSize: 9, fontWeight: 700, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>{item.label}</p>
                   <p style={{ fontSize: 14, fontWeight: 800, color: item.gold ? '#C8A44A' : '#fff', margin: 0, fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>{item.value}</p>
                 </div>
               ))}
@@ -1688,7 +1688,7 @@ export default function SubdivisionLotMap({
             <div style={{ background: '#fff', border: '1px solid rgba(184,179,168,0.3)', borderRadius: 14, padding: '16px' }}>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 <div>
-                  <label style={{ fontSize: 10, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: 6, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Status</label>
+                  <label style={{ fontSize: 10, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: 6, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Status</label>
                   <select
                     value={filterStatus}
                     onChange={(e: { target: { value: string } }) => setFilterStatus(e.target.value)}
@@ -1699,7 +1699,7 @@ export default function SubdivisionLotMap({
                   </select>
                 </div>
                 <div>
-                  <label style={{ fontSize: 10, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: 6, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Preço máx.</label>
+                  <label style={{ fontSize: 10, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: 6, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Preço máx.</label>
                   <select
                     value={maxPrice ?? ''}
                     onChange={(e: { target: { value: string } }) => setMaxPrice(e.target.value ? Number(e.target.value) : null)}
@@ -1712,7 +1712,7 @@ export default function SubdivisionLotMap({
                   </select>
                 </div>
                 <div>
-                  <label style={{ fontSize: 10, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: 6, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Área mínima</label>
+                  <label style={{ fontSize: 10, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', display: 'block', marginBottom: 6, fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Área mínima</label>
                   <select
                     value={minArea ?? ''}
                     onChange={(e: { target: { value: string } }) => setMinArea(e.target.value ? Number(e.target.value) : null)}
@@ -1728,7 +1728,7 @@ export default function SubdivisionLotMap({
               <div className="flex items-center gap-2 mt-3">
                 <button
                   onClick={() => { setFilterStatus('ALL'); setMaxPrice(null); setMinArea(null); setSmartFilter('ALL'); }}
-                  style={{ fontSize: 11, color: '#948F84', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+                  style={{ fontSize: 11, color: '#5A6577', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
                   Limpar filtros
                 </button>
@@ -1763,14 +1763,14 @@ export default function SubdivisionLotMap({
         {presentStatusCounts.map(({ key, cfg, count }) => (
           <div key={key} className="flex items-center gap-1.5">
             <div style={{ width: 10, height: 10, borderRadius: 3, background: cfg.bg }} />
-            <span style={{ fontSize: 11, color: '#948F84', fontWeight: 600 }}>{cfg.label}</span>
-            <span style={{ fontSize: 11, color: '#B8B3A8', fontWeight: 700, fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>{count}</span>
+            <span style={{ fontSize: 11, color: '#5A6577', fontWeight: 600 }}>{cfg.label}</span>
+            <span style={{ fontSize: 11, color: '#6E6C60', fontWeight: 700, fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>{count}</span>
           </div>
         ))}
         {compareLots.length > 0 && (
           <div className="flex items-center gap-1.5">
             <div style={{ width: 10, height: 10, borderRadius: 3, background: '#DBEAFE', border: '1.5px solid #2563EB' }} />
-            <span style={{ fontSize: 11, color: '#948F84', fontWeight: 600 }}>Em comparação</span>
+            <span style={{ fontSize: 11, color: '#5A6577', fontWeight: 600 }}>Em comparação</span>
           </div>
         )}
       </div>}
@@ -1804,7 +1804,7 @@ export default function SubdivisionLotMap({
               <span style={{ fontSize: 12, fontWeight: 700, color: '#C8A44A', textTransform: 'uppercase', letterSpacing: '0.15em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                 Recomendações IA
               </span>
-              {recLoading && <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)' }}>atualizando...</span>}
+              {recLoading && <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.7)' }}>atualizando...</span>}
             </div>
             <div className="flex gap-1">
               {(['all', 'investor', 'resident'] as const).map(p => (
@@ -1821,7 +1821,7 @@ export default function SubdivisionLotMap({
             </div>
           </div>
           {hasActiveFilter && (
-            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)', margin: '0 0 10px', fontWeight: 500 }}>
+            <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.7)', margin: '0 0 10px', fontWeight: 500 }}>
               Mostrando recomendações dentro do filtro ativo.
             </p>
           )}
@@ -1843,7 +1843,7 @@ export default function SubdivisionLotMap({
                   <p style={{ fontSize: 13, fontWeight: 800, color: '#fff', margin: '0 0 4px', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
                     {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(rec.price)}
                   </p>
-                  <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.45)', margin: 0 }}>
+                  <p style={{ fontSize: 10, color: 'rgba(255,255,255,0.7)', margin: 0 }}>
                     {Math.round(rec.area_m2)} m² · {new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 }).format(Math.round(rec.price / rec.area_m2))}/m²
                   </p>
                   {rec.reasons[0] && (
@@ -1862,15 +1862,15 @@ export default function SubdivisionLotMap({
       {viewMode === 'list' && (
         <>
           <div className="flex items-center justify-between mb-4">
-            <p style={{ fontSize: 12, color: '#948F84', fontWeight: 600 }}>
+            <p style={{ fontSize: 12, color: '#5A6577', fontWeight: 600 }}>
               {filteredQuadras.size} quadra{filteredQuadras.size !== 1 ? 's' : ''} {smartFilter !== 'ALL' || filterStatus !== 'ALL' ? '· filtro ativo' : ''}
             </p>
             <div className="flex items-center gap-2">
               <button onClick={expandAll} style={{ fontSize: 11, color: '#C8A44A', fontWeight: 700, background: 'none', border: 'none', cursor: 'pointer' }}>
                 Expandir todas
               </button>
-              <span style={{ color: '#948F84' }}>·</span>
-              <button onClick={collapseAll} style={{ fontSize: 11, color: '#948F84', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer' }}>
+              <span style={{ color: '#5A6577' }}>·</span>
+              <button onClick={collapseAll} style={{ fontSize: 11, color: '#5A6577', fontWeight: 600, background: 'none', border: 'none', cursor: 'pointer' }}>
                 Recolher
               </button>
             </div>
@@ -1891,7 +1891,7 @@ export default function SubdivisionLotMap({
             ))}
 
             {filteredQuadras.size === 0 && (
-              <div style={{ textAlign: 'center', padding: '40px 20px', color: '#948F84' }}>
+              <div style={{ textAlign: 'center', padding: '40px 20px', color: '#5A6577' }}>
                 <MapPin size={32} style={{ margin: '0 auto 12px', opacity: 0.3 }} />
                 <p style={{ fontWeight: 600, margin: 0 }}>Nenhum lote encontrado com os filtros aplicados.</p>
               </div>
@@ -1904,7 +1904,7 @@ export default function SubdivisionLotMap({
       {compareLots.length === 0 && viewMode === 'list' && stats.available > 1 && (
         <div style={{ marginTop: 16, padding: '12px 16px', background: '#F8F6F2', borderRadius: 12, display: 'flex', alignItems: 'center', gap: 8 }}>
           <Zap size={13} style={{ color: '#C8A44A', flexShrink: 0 }} />
-          <span style={{ fontSize: 11, color: '#948F84', fontWeight: 600 }}>
+          <span style={{ fontSize: 11, color: '#5A6577', fontWeight: 600 }}>
             Clique num lote para ver detalhes e adicionar à comparação (até 3 lotes)
           </span>
         </div>

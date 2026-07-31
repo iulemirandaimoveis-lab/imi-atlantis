@@ -57,8 +57,8 @@ export default function DevelopmentDetails({ development, financingEnabled = tru
             {/* Section heading — premium style */}
             <motion.div variants={slideUp} className="mb-6 sm:mb-8 md:mb-10">
                 <div className="flex items-center gap-3 mb-3">
-                    <div className="w-8 h-[2px] rounded-full" style={{ background: '#B8B3A8' }} />
-                    <span className="text-[10px] uppercase tracking-[0.25em] font-bold" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Sobre</span>
+                    <div className="w-8 h-[2px] rounded-full" style={{ background: '#6E6C60' }} />
+                    <span className="text-[10px] uppercase tracking-[0.25em] font-bold" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Sobre</span>
                 </div>
                 <h2
                     className="text-2xl md:text-[32px] font-bold tracking-tight leading-tight"
@@ -96,8 +96,8 @@ export default function DevelopmentDetails({ development, financingEnabled = tru
                 <motion.div variants={slideUp}>
                     <div className="mb-8">
                         <div className="flex items-center gap-3 mb-3">
-                            <div className="w-8 h-[2px] rounded-full" style={{ background: '#B8B3A8' }} />
-                            <span className="text-[10px] uppercase tracking-[0.25em] font-bold" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Infraestrutura</span>
+                            <div className="w-8 h-[2px] rounded-full" style={{ background: '#6E6C60' }} />
+                            <span className="text-[10px] uppercase tracking-[0.25em] font-bold" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Infraestrutura</span>
                         </div>
                         <h3
                             className="text-xl md:text-2xl font-bold tracking-tight"
@@ -155,13 +155,13 @@ export default function DevelopmentDetails({ development, financingEnabled = tru
                         style={{ background: '#F8F6F2', border: '1px solid rgba(184,179,168,0.3)' }}>
                         <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-3 mb-1">
-                                <div className="w-8 h-[2px] rounded-full" style={{ background: '#B8B3A8' }} />
-                                <span className="text-[10px] uppercase tracking-[0.25em] font-bold" style={{ color: '#948F84' }}>Financiamento</span>
+                                <div className="w-8 h-[2px] rounded-full" style={{ background: '#6E6C60' }} />
+                                <span className="text-[10px] uppercase tracking-[0.25em] font-bold" style={{ color: '#5A6577' }}>Financiamento</span>
                             </div>
                             <p className="text-base font-bold mb-0.5" style={{ color: '#0B1928', fontFamily: "var(--font-heading, 'Playfair Display', serif)" }}>
                                 Este imóvel aceita financiamento
                             </p>
-                            <p className="text-sm" style={{ color: '#948F84' }}>
+                            <p className="text-sm" style={{ color: '#5A6577' }}>
                                 Simule parcelas, compare bancos e condições na nossa calculadora de crédito.
                             </p>
                         </div>

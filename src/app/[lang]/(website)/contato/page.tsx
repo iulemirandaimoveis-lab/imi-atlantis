@@ -15,7 +15,10 @@ const inputStyle = {
     transition: 'all 0.2s',
 }
 
-const inputFocusClass = 'focus:border-[#C8A44A]/10 focus:ring-0 focus:outline-none'
+// Antes era `focus:border-[#C8A44A]/10`, que deixava a borda MAIS fraca ao focar —
+// o campo focado ficava sem indicacao visivel. Agora o foco reforca a borda dourada.
+const inputFocusClass =
+    'focus:border-[#C8A44A] focus:ring-2 focus:ring-[#C8A44A]/40 focus:outline-none'
 
 const FAQ_ITEMS = [
     {
@@ -133,7 +136,7 @@ export default function ContactPage() {
                             Atendimento Técnico{' '}
                             <span className="text-[#C8A44A] italic">Personalizado</span>
                         </motion.h1>
-                        <motion.p variants={slideUp} className="text-white/45 text-base sm:text-lg leading-relaxed max-w-xl">
+                        <motion.p variants={slideUp} className="text-white/70 text-base sm:text-lg leading-relaxed max-w-xl">
                             Entre em contato e descubra como nossa inteligência pode proteger e valorizar seu patrimônio.
                         </motion.p>
                     </motion.div>
@@ -178,7 +181,7 @@ export default function ContactPage() {
                                 ) : (
                                     <p className="text-[13px] text-white/60">{item.content}</p>
                                 )}
-                                <p className="text-[11px] text-white/30 mt-1">{item.sub}</p>
+                                <p className="text-[11px] text-white/60 mt-1">{item.sub}</p>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -208,7 +211,7 @@ export default function ContactPage() {
                                 >
                                     Envie sua <span className="text-[#C8A44A] italic">Mensagem</span>
                                 </h2>
-                                <p className="text-sm text-white/40">
+                                <p className="text-sm text-white/70">
                                     Preencha o formulário abaixo e retornaremos em breve.
                                 </p>
                             </div>
@@ -216,7 +219,7 @@ export default function ContactPage() {
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <div>
-                                        <label className="block text-[10px] font-bold text-white/40 uppercase tracking-[0.15em] mb-2">Nome Completo</label>
+                                        <label className="block text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-2">Nome Completo</label>
                                         <input
                                             type="text"
                                             placeholder="Como devemos chamá-lo?"
@@ -224,12 +227,12 @@ export default function ContactPage() {
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             required
                                             disabled={isSubmitting}
-                                            className={`w-full h-12 px-4 rounded-xl text-sm placeholder:text-white/20 disabled:opacity-50 ${inputFocusClass}`}
+                                            className={`w-full h-12 px-4 rounded-xl text-sm placeholder:text-white/55 disabled:opacity-50 ${inputFocusClass}`}
                                             style={inputStyle}
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-[10px] font-bold text-white/40 uppercase tracking-[0.15em] mb-2">Email</label>
+                                        <label className="block text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-2">Email</label>
                                         <input
                                             type="email"
                                             placeholder="seu@email.com"
@@ -237,14 +240,14 @@ export default function ContactPage() {
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             required
                                             disabled={isSubmitting}
-                                            className={`w-full h-12 px-4 rounded-xl text-sm placeholder:text-white/20 disabled:opacity-50 ${inputFocusClass}`}
+                                            className={`w-full h-12 px-4 rounded-xl text-sm placeholder:text-white/55 disabled:opacity-50 ${inputFocusClass}`}
                                             style={inputStyle}
                                         />
                                     </div>
                                 </div>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <div>
-                                        <label className="block text-[10px] font-bold text-white/40 uppercase tracking-[0.15em] mb-2">Telefone / WhatsApp</label>
+                                        <label className="block text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-2">Telefone / WhatsApp</label>
                                         <input
                                             type="text"
                                             placeholder="(00) 00000-0000"
@@ -252,12 +255,12 @@ export default function ContactPage() {
                                             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                             required
                                             disabled={isSubmitting}
-                                            className={`w-full h-12 px-4 rounded-xl text-sm placeholder:text-white/20 disabled:opacity-50 ${inputFocusClass}`}
+                                            className={`w-full h-12 px-4 rounded-xl text-sm placeholder:text-white/55 disabled:opacity-50 ${inputFocusClass}`}
                                             style={inputStyle}
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-[10px] font-bold text-white/40 uppercase tracking-[0.15em] mb-2">Assunto</label>
+                                        <label className="block text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-2">Assunto</label>
                                         <input
                                             type="text"
                                             placeholder="Ex: Avaliação de Imóvel"
@@ -265,13 +268,13 @@ export default function ContactPage() {
                                             onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                             required
                                             disabled={isSubmitting}
-                                            className={`w-full h-12 px-4 rounded-xl text-sm placeholder:text-white/20 disabled:opacity-50 ${inputFocusClass}`}
+                                            className={`w-full h-12 px-4 rounded-xl text-sm placeholder:text-white/55 disabled:opacity-50 ${inputFocusClass}`}
                                             style={inputStyle}
                                         />
                                     </div>
                                 </div>
                                 <div>
-                                    <label className="block text-[10px] font-bold text-white/40 uppercase tracking-[0.15em] mb-2">Mensagem</label>
+                                    <label className="block text-[10px] font-bold text-white/70 uppercase tracking-[0.15em] mb-2">Mensagem</label>
                                     <textarea
                                         placeholder="Conte-nos brevemente sobre sua necessidade..."
                                         value={formData.message}
@@ -279,7 +282,7 @@ export default function ContactPage() {
                                         required
                                         disabled={isSubmitting}
                                         rows={5}
-                                        className={`w-full px-4 py-3 rounded-xl text-sm placeholder:text-white/20 resize-none disabled:opacity-50 ${inputFocusClass}`}
+                                        className={`w-full px-4 py-3 rounded-xl text-sm placeholder:text-white/55 resize-none disabled:opacity-50 ${inputFocusClass}`}
                                         style={inputStyle}
                                     />
                                 </div>
@@ -320,7 +323,7 @@ export default function ContactPage() {
                                 >
                                     Perguntas Frequentes
                                 </h3>
-                                <p className="text-[13px] text-white/35">Tire suas dúvidas rapidamente.</p>
+                                <p className="text-[13px] text-white/70">Tire suas dúvidas rapidamente.</p>
                             </div>
 
                             <div className="space-y-3">
@@ -349,7 +352,7 @@ export default function ContactPage() {
                                         </button>
                                         {openFaq === i && (
                                             <div className="px-4 pb-4">
-                                                <p className="text-[12px] text-white/40 leading-relaxed">{item.a}</p>
+                                                <p className="text-[12px] text-white/70 leading-relaxed">{item.a}</p>
                                             </div>
                                         )}
                                     </div>
@@ -375,7 +378,7 @@ export default function ContactPage() {
                                     <p className="text-[12px] text-white/50">
                                         <span className="text-white/70 font-semibold">CNAI</span> — Cadastro Nacional de Avaliadores Imobiliários
                                     </p>
-                                    <p className="text-[11px] text-white/30 mt-2">
+                                    <p className="text-[11px] text-white/60 mt-2">
                                         Laudos em conformidade com NBR 14653 (ABNT)
                                     </p>
                                 </div>
@@ -406,7 +409,7 @@ export default function ContactPage() {
                         >
                             Respostas <span className="text-[#C8A44A] italic">Imediatas</span>
                         </h2>
-                        <p className="text-white/40 text-base mb-8 max-w-md mx-auto leading-relaxed">
+                        <p className="text-white/70 text-base mb-8 max-w-md mx-auto leading-relaxed">
                             Precisa de agilidade? Fale diretamente com nossa equipe técnica pelo WhatsApp.
                         </p>
                         <ButtonPrimary

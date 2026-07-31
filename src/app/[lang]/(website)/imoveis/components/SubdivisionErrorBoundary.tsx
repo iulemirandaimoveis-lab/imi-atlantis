@@ -49,7 +49,7 @@ export default class SubdivisionErrorBoundary extends React.Component<
           >
             Mapa temporariamente indisponível
           </h3>
-          <p style={{ fontSize: 13, color: '#948F84', margin: '0 0 20px', maxWidth: 300, lineHeight: 1.6 }}>
+          <p style={{ fontSize: 13, color: '#5A6577', margin: '0 0 20px', maxWidth: 300, lineHeight: 1.6 }}>
             Recarregue a página para tentar novamente ou entre em contato para obter informações sobre os lotes.
           </p>
           <button

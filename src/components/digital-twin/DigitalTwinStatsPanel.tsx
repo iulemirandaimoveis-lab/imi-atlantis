@@ -54,7 +54,7 @@ export default function DigitalTwinStatsPanel({ model }: Props) {
               <p className="text-3xl font-bold mb-1" style={{ color: card.color, fontFamily: "'Playfair Display', Georgia, serif" }}>
                 {card.value}
               </p>
-              <p className="text-xs uppercase tracking-widest text-[#948F84]">{card.label}</p>
+              <p className="text-xs uppercase tracking-widest text-[#5A6577]">{card.label}</p>
             </div>
           ))}
         </div>
@@ -68,7 +68,7 @@ export default function DigitalTwinStatsPanel({ model }: Props) {
                 <div className="flex-1 h-2 rounded-full bg-[#E8E1D6] overflow-hidden">
                   <div className="h-full rounded-full" style={{ width: `${pct}%`, background: 'linear-gradient(90deg,#16A34A,#22C55E)' }} />
                 </div>
-                <span className="text-[11px] text-[#948F84] w-24 text-right flex-shrink-0">
+                <span className="text-[11px] text-[#5A6577] w-24 text-right flex-shrink-0">
                   {info.disp}/{info.total} disp.
                 </span>
               </div>

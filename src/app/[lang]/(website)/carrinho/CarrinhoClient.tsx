@@ -62,22 +62,22 @@ interface ProposalStatus {
 }
 
 const STATUS_LABEL: Record<string, { label: string; icon: typeof Send; color: string }> = {
-  draft: { label: 'Rascunho', icon: FileText, color: '#948F84' },
+  draft: { label: 'Rascunho', icon: FileText, color: '#5A6577' },
   sent: { label: 'Proposta enviada', icon: Send, color: GOLD },
   viewed: { label: 'Em análise pela equipe', icon: Eye, color: GOLD },
   negotiating: { label: 'Em negociação', icon: Clock, color: GOLD },
   countered: { label: 'Contraproposta enviada', icon: Clock, color: GOLD },
   accepted: { label: 'Proposta aceita', icon: CheckCircle2, color: '#16A34A' },
   rejected: { label: 'Proposta recusada', icon: XCircle, color: '#DC2626' },
-  expired: { label: 'Proposta expirada', icon: XCircle, color: '#948F84' },
+  expired: { label: 'Proposta expirada', icon: XCircle, color: '#5A6577' },
 };
 
 const SIGNATURE_LABEL: Record<string, { label: string; color: string }> = {
   enviada: { label: 'Contrato enviado para assinatura', color: GOLD },
   assinada: { label: 'Contrato assinado', color: '#16A34A' },
   recusada: { label: 'Assinatura recusada', color: '#DC2626' },
-  expirada: { label: 'Assinatura expirada', color: '#948F84' },
-  cancelada: { label: 'Assinatura cancelada', color: '#948F84' },
+  expirada: { label: 'Assinatura expirada', color: '#5A6577' },
+  cancelada: { label: 'Assinatura cancelada', color: '#5A6577' },
 };
 
 export default function CarrinhoClient() {
@@ -185,7 +185,7 @@ export default function CarrinhoClient() {
         </div>
 
         {state.kind === 'loading' && (
-          <p style={{ color: '#948F84', fontSize: 14 }}>Carregando seleção…</p>
+          <p style={{ color: '#5A6577', fontSize: 14 }}>Carregando seleção…</p>
         )}
 
         {state.kind === 'invalid' && (
@@ -193,7 +193,7 @@ export default function CarrinhoClient() {
             <AlertCircle size={18} style={{ color: '#F87171', flexShrink: 0, marginTop: 2 }} />
             <div>
               <p style={{ fontWeight: 700, color: NAVY, margin: 0 }}>Link inválido ou expirado.</p>
-              <p style={{ fontSize: 13, color: '#948F84', margin: '4px 0 0' }}>
+              <p style={{ fontSize: 13, color: '#5A6577', margin: '4px 0 0' }}>
                 Confira o link de compartilhamento ou monte uma nova seleção no mapa do empreendimento.
               </p>
             </div>
@@ -202,7 +202,7 @@ export default function CarrinhoClient() {
 
         {state.kind === 'ready' && totals && (
           <>
-            <p style={{ fontSize: 13, color: '#948F84', margin: '0 0 18px' }}>
+            <p style={{ fontSize: 13, color: '#5A6577', margin: '0 0 18px' }}>
               {state.devName} · {totals.count} {totals.count === 1 ? 'lote' : 'lotes'}
             </p>
 
@@ -226,7 +226,7 @@ export default function CarrinhoClient() {
             )}
 
             {totals.count === 0 ? (
-              <p style={{ color: '#948F84', fontSize: 14 }}>Nenhum lote nesta seleção.</p>
+              <p style={{ color: '#5A6577', fontSize: 14 }}>Nenhum lote nesta seleção.</p>
             ) : (
               <>
                 <div className="flex flex-col gap-2">
@@ -246,7 +246,7 @@ export default function CarrinhoClient() {
                         <div style={{ fontSize: 14, fontWeight: 700, color: NAVY }}>
                           Quadra {l.block} · Lote {l.lot}
                         </div>
-                        <div style={{ fontSize: 12, color: '#948F84', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
+                        <div style={{ fontSize: 12, color: '#5A6577', fontFamily: "var(--fm, 'JetBrains Mono', monospace)" }}>
                           {fmtM2(l.areaM2)}
                         </div>
                         {l.selectedPlan && (
@@ -275,7 +275,7 @@ export default function CarrinhoClient() {
                 </div>
 
                 {state.missing > 0 && (
-                  <p style={{ fontSize: 11, color: '#948F84', margin: '8px 0 0' }}>
+                  <p style={{ fontSize: 11, color: '#5A6577', margin: '8px 0 0' }}>
                     {state.missing} lote(s) da seleção não foram encontrados no mapa atual.
                   </p>
                 )}

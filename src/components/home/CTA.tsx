@@ -65,7 +65,7 @@ export default function CTA({ dict }: CTAProps) {
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
                     className="text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed"
-                    style={{ color: 'var(--text-secondary)', fontFamily: 'var(--font-sans)' }}
+                    style={{ color: '#94A3B8', fontFamily: 'var(--font-sans)' }}
                 >
                     {dict.final_cta_desc}
                 </motion.p>

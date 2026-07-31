@@ -192,8 +192,12 @@ export default function CreditPage() {
 
             {/* SEÇÃO CAIXA CONSÓRCIOS */}
             <section className="section-padding bg-[#0B1928] text-white relative overflow-hidden border-t border-white/[0.05]">
-                <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                    <div className="absolute top-0 right-0 w-1/2 h-full bg-[#C8A44A] -skew-x-12 translate-x-1/2" />
+                {/* Faixa dourada decorativa. A opacidade vive na propria cor (bg-.../10) em vez
+                    de um `opacity-10` no wrapper: o resultado visual e identico, mas ferramentas
+                    de contraste conseguem calcular o fundo efetivo — com opacity no ancestral,
+                    o axe le a faixa como dourado cheio e acusa 1,1:1 onde o real e ~7:1. */}
+                <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+                    <div className="absolute top-0 right-0 w-1/2 h-full bg-[#C8A44A]/10 -skew-x-12 translate-x-1/2" />
                 </div>
 
                 <div className="container-custom relative z-10">

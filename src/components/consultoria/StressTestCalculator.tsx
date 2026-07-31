@@ -58,11 +58,11 @@ export function StressTestCalculator() {
 
                 <div className="grid grid-cols-2 gap-4 mt-auto">
                     <div className="text-center">
-                        <div className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-1">Ponto de Equilíbrio</div>
+                        <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-1">Ponto de Equilíbrio</div>
                         <div className="text-sm font-bold text-white">12% de Vacância</div>
                     </div>
                     <div className="text-center">
-                        <div className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-1">Margem de Segurança</div>
+                        <div className="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-1">Margem de Segurança</div>
                         <div className="text-sm font-bold text-white">Alta</div>
                     </div>
                 </div>

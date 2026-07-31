@@ -1,5 +1,17 @@
 # NEXT_TASK — Próxima Tarefa
 
+## Contraste do site público ✅ ENTREGUE (2026-07-31, PR draft) — pendências pequenas
+- Varredura WCAG AA + gate `color-contrast` do axe em `e2e/a11y.spec.ts` (7 rotas, 7/7). ADR D-16.
+- **Pendência 1**: `dark:bg-card-dark` **não existe** no `tailwind.config.ts` mas é usado em 10
+  arquivos. Só `ui/Textarea.tsx` foi corrigido; **os outros 9 (`ui/Wizard` + 8 do backoffice)
+  seguem suspeitos** de caixa branca com texto branco. Varrer quando mexer no backoffice.
+- **Pendência 2**: colocar o e2e no CI — sem isso o gate de contraste só protege quem roda local.
+- **Pendência 3**: validar contra o preview da Vercel os mapas de lote (`SubdivisionLotMap`,
+  `AltoBellevuePlanView`) — não renderizam sem credenciais Supabase reais, então as mudanças de
+  `fontSize` ali não puderam ser conferidas por screenshot.
+- Detalhe: `.claude/completions/2026-07-31-site-publico-contraste-legibilidade.md`.
+
+
 **Atualizado**: 2026-07-07 (agendamento de visitas + laudo NBR/quadro amostral entregues, PRs draft)
 
 ## Agendamento de Visitas (calendário do corretor) — ENTREGUE, aplicação pendente

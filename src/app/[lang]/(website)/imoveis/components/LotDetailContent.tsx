@@ -113,7 +113,7 @@ export default function LotDetailContent({
           <h3 style={{ fontSize: 22, fontWeight: 800, color: '#081524', fontFamily: "'Outfit', sans-serif", margin: 0, lineHeight: 1.2 }}>
             Quadra {quadra} · Lote {lotNumber}
           </h3>
-          <p style={{ fontSize: 11, color: '#948F84', margin: '3px 0 0', fontWeight: 500 }}>
+          <p style={{ fontSize: 11, color: '#5A6577', margin: '3px 0 0', fontWeight: 500 }}>
             {developmentName} · Garanhuns, PE
           </p>
         </div>
@@ -125,7 +125,7 @@ export default function LotDetailContent({
             style={{ background: '#F7F8FA' }}
             aria-label="Fechar detalhes do lote"
           >
-            <X size={15} color="#948F84" />
+            <X size={15} color="#5A6577" />
           </button>
         )}
       </div>
@@ -133,13 +133,13 @@ export default function LotDetailContent({
       {/* Area + Price */}
       <div className="grid grid-cols-2 gap-2.5 px-5 pb-3">
         <div style={{ background: '#F8F6F2', borderRadius: 14, padding: '13px 14px' }}>
-          <p style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "'Outfit', sans-serif" }}>Área Total</p>
+          <p style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "'Outfit', sans-serif" }}>Área Total</p>
           <p style={{ fontSize: 18, fontWeight: 800, color: '#081524', fontFamily: "'JetBrains Mono', monospace", margin: 0 }}>
             {areaM2 ? fmtM2(areaM2) : '—'}
           </p>
         </div>
         <div style={{ background: isAvailable ? '#081524' : '#F8F6F2', borderRadius: 14, padding: '13px 14px' }}>
-          <p style={{ fontSize: 9, fontWeight: 700, color: isAvailable ? GOLD : '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "'Outfit', sans-serif" }}>Valor</p>
+          <p style={{ fontSize: 9, fontWeight: 700, color: isAvailable ? GOLD : '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 4px', fontFamily: "'Outfit', sans-serif" }}>Valor</p>
           <p style={{ fontSize: price && price >= 100000 ? 15 : 18, fontWeight: 800, color: isAvailable ? '#fff' : '#081524', fontFamily: "'JetBrains Mono', monospace", margin: 0 }}>
             {price ? fmtBRL(price) : 'Consultar'}
           </p>
@@ -150,13 +150,13 @@ export default function LotDetailContent({
       {dims && (
         <div className="grid grid-cols-2 gap-2.5 px-5 pb-3">
           <div style={{ background: '#F8F6F2', borderRadius: 14, padding: '11px 14px' }}>
-            <p style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.12em', margin: '0 0 3px', fontFamily: "'Outfit', sans-serif" }}>Testada aprox.</p>
+            <p style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.12em', margin: '0 0 3px', fontFamily: "'Outfit', sans-serif" }}>Testada aprox.</p>
             <p style={{ fontSize: 15, fontWeight: 800, color: '#081524', fontFamily: "'JetBrains Mono', monospace", margin: 0 }}>
               {fmtM(dims.testada)}
             </p>
           </div>
           <div style={{ background: '#F8F6F2', borderRadius: 14, padding: '11px 14px' }}>
-            <p style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.12em', margin: '0 0 3px', fontFamily: "'Outfit', sans-serif" }}>Profundidade aprox.</p>
+            <p style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.12em', margin: '0 0 3px', fontFamily: "'Outfit', sans-serif" }}>Profundidade aprox.</p>
             <p style={{ fontSize: 15, fontWeight: 800, color: '#081524', fontFamily: "'JetBrains Mono', monospace", margin: 0 }}>
               {fmtM(dims.profundidade)}
             </p>
@@ -167,7 +167,7 @@ export default function LotDetailContent({
       {/* Confrontações (aprox. — derivadas das arestas) */}
       {sides && (
         <div className="px-5 pb-3">
-          <p style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 8px', fontFamily: "'Outfit', sans-serif" }}>
+          <p style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 8px', fontFamily: "'Outfit', sans-serif" }}>
             Confrontações <span style={{ color: '#C0BAB2', fontWeight: 500 }}>(aprox.)</span>
           </p>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 6 }}>
@@ -178,7 +178,7 @@ export default function LotDetailContent({
               { label: 'Lateral dir.', v: sides.lateralDir },
             ] as const).map((s) => (
               <div key={s.label} style={{ background: '#F8F6F2', borderRadius: 10, padding: '8px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: 10, color: '#948F84', fontWeight: 600 }}>{s.label}</span>
+                <span style={{ fontSize: 10, color: '#5A6577', fontWeight: 600 }}>{s.label}</span>
                 <span style={{ fontSize: 13, fontWeight: 800, color: '#081524', fontFamily: "'JetBrains Mono', monospace" }}>{fmtM(s.v)}</span>
               </div>
             ))}
@@ -190,7 +190,7 @@ export default function LotDetailContent({
       {acessoRua && (
         <div className="px-5 pb-3">
           <div style={{ background: '#F0EDE5', borderRadius: 12, padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 11, color: '#948F84', fontWeight: 600, flexShrink: 0 }}>Rua de acesso</span>
+            <span style={{ fontSize: 11, color: '#5A6577', fontWeight: 600, flexShrink: 0 }}>Rua de acesso</span>
             <span style={{ fontSize: 12, fontWeight: 700, color: '#081524', textAlign: 'right', fontFamily: "'Outfit', sans-serif" }}>{acessoRua}</span>
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function LotDetailContent({
       {pricePerM2 && (
         <div className="px-5 pb-3">
           <div style={{ background: '#F0EDE5', borderRadius: 12, padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <span style={{ fontSize: 11, color: '#948F84', fontWeight: 600 }}>Preço por m²</span>
+            <span style={{ fontSize: 11, color: '#5A6577', fontWeight: 600 }}>Preço por m²</span>
             <span style={{ fontSize: 15, fontWeight: 800, color: '#081524', fontFamily: "'JetBrains Mono', monospace" }}>
               {fmtBRL(pricePerM2)}/m²
             </span>
@@ -211,7 +211,7 @@ export default function LotDetailContent({
       {/* Payment plans */}
       {paymentPlans && (isAvailable || isNegotiating) && (
         <div className="px-5 pb-3">
-          <p style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 10px', fontFamily: "'Outfit', sans-serif" }}>
+          <p style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.15em', margin: '0 0 10px', fontFamily: "'Outfit', sans-serif" }}>
             Formas de Pagamento <span style={{ color: '#C0BAB2', fontWeight: 500, textTransform: 'none', letterSpacing: 0 }}>(toque para selecionar)</span>
           </p>
           {/* Cash */}
@@ -265,7 +265,7 @@ export default function LotDetailContent({
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 3 }}>
-                    <p style={{ fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0, fontFamily: "'Outfit', sans-serif" }}>{plan.label}</p>
+                    <p style={{ fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.1em', margin: 0, fontFamily: "'Outfit', sans-serif" }}>{plan.label}</p>
                     {isSelected ? (
                       <span style={{ width: 16, height: 16, borderRadius: '50%', background: GOLD, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                         <Check size={10} color="#081524" strokeWidth={3} />
@@ -283,14 +283,14 @@ export default function LotDetailContent({
                   <p style={{ fontSize: 13, fontWeight: 800, color: '#081524', fontFamily: "'JetBrains Mono', monospace", margin: 0 }}>
                     {fmtBRL(plan.parcela)}/mês
                   </p>
-                  <p style={{ fontSize: 8, color: '#B8B3A8', margin: '2px 0 0', fontWeight: 500 }}>
+                  <p style={{ fontSize: 11, color: '#6E6C60', margin: '2px 0 0', fontWeight: 500 }}>
                     Entrada {fmtBRL(entrada)} · Total {fmtBRL(plan.total)}
                   </p>
                 </button>
               );
             })}
           </div>
-          <p style={{ fontSize: 8.5, color: '#B8B3A8', margin: '8px 2px 0', fontWeight: 500, lineHeight: 1.45 }}>
+          <p style={{ fontSize: 11.5, color: '#6E6C60', margin: '8px 2px 0', fontWeight: 500, lineHeight: 1.45 }}>
             Entrada de 10% sobre o valor do plano · correção mensal pelo INCC conforme tabela oficial.
           </p>
           {selectedPlanKey && (
@@ -379,7 +379,7 @@ export default function LotDetailContent({
               context={`${developmentName} — Quadra ${quadra}, Lote ${lotNumber}`}
               developmentName={developmentName}
             />
-            <p style={{ fontSize: 9.5, color: '#948F84', textAlign: 'center', fontWeight: 600, margin: '-2px 0 0', fontFamily: "'Outfit', sans-serif" }}>
+            <p style={{ fontSize: 11.5, color: '#5A6577', textAlign: 'center', fontWeight: 600, margin: '-2px 0 0', fontFamily: "'Outfit', sans-serif" }}>
               Precisa de atendimento na hora? Chame por vídeo.
             </p>
           </>

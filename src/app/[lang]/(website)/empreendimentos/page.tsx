@@ -56,7 +56,7 @@ export default async function EmpreendimentosPage({
         {devs.length === 0 ? (
           <div className="text-center py-20">
             <Building2 size={48} className="mx-auto mb-4 opacity-20" />
-            <p style={{ fontSize: 14, color: '#948F84', fontWeight: 600 }}>
+            <p style={{ fontSize: 14, color: '#5A6577', fontWeight: 600 }}>
               Nenhum empreendimento publicado no momento.
             </p>
           </div>
@@ -134,13 +134,13 @@ function DevelopmentCard({ dev }: { dev: Dev }) {
           {dev.name}
         </h3>
         <div className="flex items-center gap-1 mb-3">
-          <MapPin size={11} style={{ color: '#948F84' }} />
-          <span style={{ fontSize: 12, color: '#948F84', fontWeight: 600 }}>
+          <MapPin size={11} style={{ color: '#5A6577' }} />
+          <span style={{ fontSize: 12, color: '#5A6577', fontWeight: 600 }}>
             {dev.city}, {dev.state}
           </span>
         </div>
         {dev.description && (
-          <p style={{ fontSize: 12, color: '#948F84', lineHeight: 1.5, margin: '0 0 12px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' } as React.CSSProperties}>
+          <p style={{ fontSize: 12, color: '#5A6577', lineHeight: 1.5, margin: '0 0 12px', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' } as React.CSSProperties}>
             {dev.description}
           </p>
         )}
@@ -150,7 +150,7 @@ function DevelopmentCard({ dev }: { dev: Dev }) {
           </p>
         )}
         <div className="flex items-center justify-between">
-          <span style={{ fontSize: 11, fontWeight: 700, color: '#C8A44A', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+          <span style={{ fontSize: 11, fontWeight: 700, color: '#8A6820', textTransform: 'uppercase', letterSpacing: '0.08em', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
             Ver empreendimento
           </span>
           <ArrowRight size={14} style={{ color: '#C8A44A' }} className="group-hover:translate-x-1 transition-transform" />

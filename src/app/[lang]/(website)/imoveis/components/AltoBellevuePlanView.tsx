@@ -1552,7 +1552,7 @@ function AmenityBottomSheet({
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
               />
             </div>
-            <p style={{ fontSize: 10.5, color: '#948F84', margin: '6px 2px 0', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}>
+            <p style={{ fontSize: 10.5, color: '#5A6577', margin: '6px 2px 0', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}>
               <Video size={12} style={{ color: '#C8A44A', flexShrink: 0 }} />
               Tour virtual 360° — arraste para explorar · óculos VR suportado
             </p>
@@ -1734,7 +1734,7 @@ function ComparisonTray({
                 background: 'rgba(255,255,255,0.05)', borderRadius: 8,
                 padding: '4px 10px', border: '1px dashed rgba(255,255,255,0.15)',
               }}>
-                <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>
+                <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.7)', fontWeight: 500 }}>
                   + lote
                 </span>
               </div>
@@ -1744,7 +1744,7 @@ function ComparisonTray({
         <div style={{ display: 'flex', gap: 6, flexShrink: 0 }}>
           <button
             onClick={onClear}
-            style={{ height: 36, paddingLeft: 10, paddingRight: 10, borderRadius: 10, fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.45)', background: 'rgba(255,255,255,0.06)', border: 'none' }}
+            style={{ height: 36, paddingLeft: 10, paddingRight: 10, borderRadius: 10, fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.7)', background: 'rgba(255,255,255,0.06)', border: 'none' }}
           >
             Limpar
           </button>
@@ -1874,7 +1874,7 @@ function ComparisonModal({
           <table style={{ width: '100%', minWidth: lots.length > 1 ? 360 : 280, borderCollapse: 'collapse' }}>
             <thead>
               <tr style={{ background: '#F8F6F2' }}>
-                <th style={{ width: '28%', padding: '8px 12px', fontSize: 9, fontWeight: 700, color: '#948F84', textTransform: 'uppercase', letterSpacing: '0.12em', textAlign: 'left', fontFamily: "'Outfit', sans-serif" }}>
+                <th style={{ width: '28%', padding: '8px 12px', fontSize: 9, fontWeight: 700, color: '#5A6577', textTransform: 'uppercase', letterSpacing: '0.12em', textAlign: 'left', fontFamily: "'Outfit', sans-serif" }}>
                   Característica
                 </th>
                 {lots.map((l) => {
@@ -1916,7 +1916,7 @@ function ComparisonModal({
 
                 return (
                   <tr key={row.label} style={{ borderBottom: '1px solid #F0EDE5', background: ri % 2 === 0 ? '#fff' : '#FDFCFB' }}>
-                    <td style={{ padding: '9px 12px', fontSize: 10, fontWeight: 600, color: '#948F84', fontFamily: "'Outfit', sans-serif", verticalAlign: 'middle' }}>
+                    <td style={{ padding: '9px 12px', fontSize: 10, fontWeight: 600, color: '#5A6577', fontFamily: "'Outfit', sans-serif", verticalAlign: 'middle' }}>
                       {row.label}
                     </td>
                     {values.map((v, vi) => (
@@ -1948,7 +1948,7 @@ function ComparisonModal({
           const available = lots.filter(l => l.status === 'DISPONIVEL');
           if (available.length === 0) return (
             <div style={{ padding: '12px 20px 4px' }}>
-              <p style={{ fontSize: 10, color: '#B8B3A8', textAlign: 'center', margin: 0 }}>
+              <p style={{ fontSize: 10, color: '#6E6C60', textAlign: 'center', margin: 0 }}>
                 Nenhum lote disponível selecionado. Consulte o especialista.
               </p>
             </div>
@@ -2002,7 +2002,7 @@ function ComparisonModal({
                   </a>
                 );
               })}
-              <p style={{ fontSize: 9.5, color: '#B8B3A8', textAlign: 'center', margin: 0, fontWeight: 500 }}>
+              <p style={{ fontSize: 11.5, color: '#6E6C60', textAlign: 'center', margin: 0, fontWeight: 500 }}>
                 Valores aproximados · sujeitos à tabela vigente · consulte nosso especialista
               </p>
             </div>
@@ -2799,7 +2799,7 @@ export default function AltoBellevuePlanView({
               border: searchMiss ? '1.5px solid #FF5C5C' : '1.5px solid rgba(200,164,74,0.3)',
             }}
           >
-            <Search size={15} color="#948F84" style={{ flexShrink: 0 }} />
+            <Search size={15} color="#5A6577" style={{ flexShrink: 0 }} />
             <input
               value={searchQuery}
               onChange={(e) => { setSearchQuery(e.target.value); setSearchMiss(false); }}
@@ -2812,7 +2812,7 @@ export default function AltoBellevuePlanView({
             />
             {searchQuery && (
               <button onClick={() => { setSearchQuery(''); setSearchMiss(false); }} aria-label="Limpar busca" style={{ flexShrink: 0 }}>
-                <X size={14} color="#948F84" />
+                <X size={14} color="#5A6577" />
               </button>
             )}
           </div>
@@ -2834,7 +2834,7 @@ export default function AltoBellevuePlanView({
             style={{
               height: 34, paddingLeft: 10, paddingRight: 10, borderRadius: 10,
               background: multiSelectMode ? 'rgba(37,99,235,0.12)' : 'transparent',
-              color: multiSelectMode ? '#2563EB' : '#948F84',
+              color: multiSelectMode ? '#2563EB' : '#5A6577',
               border: multiSelectMode ? '1.5px solid #2563EB' : '1.5px solid rgba(148,143,132,0.4)',
               fontSize: 10, fontWeight: 700, fontFamily: "'Outfit', sans-serif",
               whiteSpace: 'nowrap',
@@ -3196,7 +3196,7 @@ export default function AltoBellevuePlanView({
                 <span style={{ fontSize: 10, fontWeight: 700, color: '#16A34A', fontFamily: "'Outfit', sans-serif" }}>
                   🟢 {stats.available} disponíveis
                 </span>
-                <span style={{ fontSize: 9, fontWeight: 600, color: '#948F84' }}>
+                <span style={{ fontSize: 11, fontWeight: 600, color: '#5A6577' }}>
                   {pctDisp}% disponível · {stats.total} lotes
                 </span>
               </div>
@@ -3212,7 +3212,7 @@ export default function AltoBellevuePlanView({
             <div key={key} className="flex items-center gap-1.5">
               <span style={{ width: 8, height: 8, borderRadius: '50%', background: cfg.dot, display: 'inline-block', flexShrink: 0 }} />
               <span style={{ fontSize: 14, fontWeight: 800, color: '#081524', fontFamily: "'JetBrains Mono', monospace" }}>{stats.byStatus[key]}</span>
-              <span style={{ fontSize: 10, color: '#948F84', fontWeight: 500 }}>{cfg.label}</span>
+              <span style={{ fontSize: 10, color: '#5A6577', fontWeight: 500 }}>{cfg.label}</span>
             </div>
           ))}
         </div>
@@ -3286,7 +3286,7 @@ export default function AltoBellevuePlanView({
               style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
             />
           </div>
-          <p style={{ fontSize: 10.5, color: '#948F84', margin: '6px 2px 0', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}>
+          <p style={{ fontSize: 10.5, color: '#5A6577', margin: '6px 2px 0', fontWeight: 600, display: 'flex', alignItems: 'center', gap: 4 }}>
             <Video size={12} style={{ color: '#C8A44A', flexShrink: 0 }} />
             Arraste para explorar o empreendimento em 360° · compatível com óculos VR
           </p>
@@ -3315,7 +3315,7 @@ export default function AltoBellevuePlanView({
               <p style={{ fontSize: 12, color: GOLD, fontWeight: 700, margin: '0 0 2px', textTransform: 'uppercase', letterSpacing: '0.1em', fontFamily: "'Outfit', sans-serif" }}>
                 {stats.available} lote{stats.available !== 1 ? 's' : ''} disponíve{stats.available !== 1 ? 'is' : 'l'}
               </p>
-              <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.40)', margin: 0 }}>
+              <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.7)', margin: 0 }}>
                 Fale com um especialista e escolha o seu.
               </p>
             </div>

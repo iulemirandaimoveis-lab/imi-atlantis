@@ -203,13 +203,13 @@ export default function DevelopmentLocation({ development }: DevelopmentLocation
                         >
                             {development.location.neighborhood}
                             {development.location.city && (
-                                <span style={{ fontWeight: 400, color: '#948F84' }}>
+                                <span style={{ fontWeight: 400, color: '#5A6577' }}>
                                     {', '}{development.location.city}
                                 </span>
                             )}
                         </p>
                         {development.location.address && (
-                            <p className="text-xs mt-0.5 truncate" style={{ color: '#948F84' }}>
+                            <p className="text-xs mt-0.5 truncate" style={{ color: '#5A6577' }}>
                                 {development.location.address}
                             </p>
                         )}

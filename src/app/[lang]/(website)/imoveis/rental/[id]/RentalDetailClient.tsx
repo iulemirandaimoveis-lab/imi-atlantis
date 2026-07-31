@@ -53,7 +53,7 @@ function MiniCalendar({ bookedDates, month, year }: { bookedDates: BookedRange[]
         <div>
             <div className="grid grid-cols-7 gap-1 mb-2">
                 {DAY_NAMES.map(d => (
-                    <div key={d} className="text-center text-[10px] font-bold uppercase tracking-wider" style={{ color: '#948F84' }}>{d}</div>
+                    <div key={d} className="text-center text-[10px] font-bold uppercase tracking-wider" style={{ color: '#5A6577' }}>{d}</div>
                 ))}
             </div>
             <div className="grid grid-cols-7 gap-1">
@@ -95,7 +95,7 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                 <Link
                     href={`/${lang}/imoveis`}
                     className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider transition-colors hover:opacity-70"
-                    style={{ color: '#948F84', textDecoration: 'none', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
+                    style={{ color: '#5A6577', textDecoration: 'none', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}
                 >
                     <ArrowLeft size={14} />
                     Voltar para imóveis
@@ -179,7 +179,7 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                     <div>
                         <div className="flex items-center gap-3 mb-3">
                             <div className="w-1 h-6 rounded-full" style={{ background: GOLD }} />
-                            <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+                            <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                                 Locação
                             </span>
                         </div>
@@ -190,7 +190,7 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                             {p.name as string}
                         </h1>
                         {p.address && (
-                            <p className="flex items-center gap-1.5 text-sm" style={{ color: '#948F84' }}>
+                            <p className="flex items-center gap-1.5 text-sm" style={{ color: '#5A6577' }}>
                                 <MapPin size={13} style={{ color: GOLD, opacity: 0.7 }} />
                                 {p.address as string}
                             </p>
@@ -233,8 +233,8 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                     {amenities.length > 0 && (
                         <div className="rounded-2xl p-5" style={{ background: '#FFFFFF', border: '1px solid rgba(184,179,168,0.3)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-6 h-[2px] rounded-full" style={{ background: '#B8B3A8' }} />
-                                <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Comodidades</span>
+                                <div className="w-6 h-[2px] rounded-full" style={{ background: '#6E6C60' }} />
+                                <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Comodidades</span>
                             </div>
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                                 {amenities.map(a => (
@@ -251,8 +251,8 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                     {p.rules && (
                         <div className="rounded-2xl p-5" style={{ background: '#FFFFFF', border: '1px solid rgba(184,179,168,0.3)', boxShadow: '0 2px 12px rgba(0,0,0,0.04)' }}>
                             <div className="flex items-center gap-3 mb-4">
-                                <div className="w-6 h-[2px] rounded-full" style={{ background: '#B8B3A8' }} />
-                                <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Regras da Casa</span>
+                                <div className="w-6 h-[2px] rounded-full" style={{ background: '#6E6C60' }} />
+                                <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Regras da Casa</span>
                             </div>
                             <p className="text-sm leading-relaxed whitespace-pre-line" style={{ color: '#4A4539' }}>{p.rules as string}</p>
                         </div>
@@ -263,7 +263,7 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                         <div className="flex items-center justify-between mb-5">
                             <div className="flex items-center gap-3">
                                 <Calendar size={16} style={{ color: GOLD }} />
-                                <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Disponibilidade</span>
+                                <span className="text-[10px] font-bold uppercase tracking-[0.25em]" style={{ color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>Disponibilidade</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <button
@@ -289,11 +289,11 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                         </div>
                         <MiniCalendar bookedDates={bookedDates} month={calMonth} year={calYear} />
                         <div className="flex items-center gap-5 mt-4 pt-4" style={{ borderTop: '1px solid rgba(184,179,168,0.2)' }}>
-                            <span className="flex items-center gap-1.5 text-[11px] font-medium" style={{ color: '#948F84' }}>
+                            <span className="flex items-center gap-1.5 text-[11px] font-medium" style={{ color: '#5A6577' }}>
                                 <span className="w-3 h-3 rounded" style={{ background: 'rgba(200,164,74,0.2)', border: `1px solid ${GOLD}` }} />
                                 Hoje
                             </span>
-                            <span className="flex items-center gap-1.5 text-[11px] font-medium" style={{ color: '#948F84' }}>
+                            <span className="flex items-center gap-1.5 text-[11px] font-medium" style={{ color: '#5A6577' }}>
                                 <span className="w-3 h-3 rounded" style={{ background: 'rgba(220,38,38,0.1)', border: '1px solid rgba(220,38,38,0.3)' }} />
                                 Reservado
                             </span>
@@ -321,7 +321,7 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                                 </p>
                             )}
                             {(p.cleaning_fee as number | null) != null && (p.cleaning_fee as number) > 0 && (
-                                <p className="text-[11px] mt-2" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                                <p className="text-[11px] mt-2" style={{ color: 'rgba(255,255,255,0.7)' }}>
                                     + Taxa de limpeza: {fmtCurrency(p.cleaning_fee as number)}
                                 </p>
                             )}
@@ -350,7 +350,7 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                                 Ligar agora
                             </a>
 
-                            <p className="text-center text-[10px]" style={{ color: 'rgba(255,255,255,0.3)', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+                            <p className="text-center text-[10px]" style={{ color: 'rgba(255,255,255,0.6)', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                                 Resposta rápida em horário comercial
                             </p>
                         </div>
@@ -382,7 +382,7 @@ export default function RentalDetailClient({ property, bookedDates, lang }: Prop
                 <div className="flex items-center gap-3 max-w-lg mx-auto">
                     {(p.daily_rate as number | null) != null && (
                         <div className="flex-1 min-w-0">
-                            <p style={{ fontSize: 10, color: '#948F84', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', fontFamily: "var(--fu, 'Outfit', sans-serif)", margin: 0 }}>A partir de</p>
+                            <p style={{ fontSize: 10, color: '#5A6577', fontWeight: 600, letterSpacing: '1.5px', textTransform: 'uppercase', fontFamily: "var(--fu, 'Outfit', sans-serif)", margin: 0 }}>A partir de</p>
                             <p style={{ fontSize: 18, fontWeight: 700, color: NAVY, fontFamily: "var(--fm, 'JetBrains Mono', monospace)", margin: 0 }}>
                                 {fmtCurrency(p.daily_rate as number)}/dia
                             </p>

@@ -58,8 +58,8 @@ export default function PropertyIntelligence({ property }: Props) {
         }}>
             {/* Header */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 }}>
-                <div style={{ width: 32, height: 2, borderRadius: 1, background: '#B8B3A8' }} />
-                <span style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.25em', fontWeight: 700, color: '#948F84', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
+                <div style={{ width: 32, height: 2, borderRadius: 1, background: '#6E6C60' }} />
+                <span style={{ fontSize: 10, textTransform: 'uppercase', letterSpacing: '0.25em', fontWeight: 700, color: '#5A6577', fontFamily: "var(--fu, 'Outfit', sans-serif)" }}>
                     Inteligência IMI
                 </span>
             </div>
@@ -157,7 +157,7 @@ export default function PropertyIntelligence({ property }: Props) {
                             fontWeight: 700,
                             textTransform: 'uppercase',
                             letterSpacing: '0.15em',
-                            color: '#948F84',
+                            color: '#5A6577',
                             margin: '0 0 6px',
                             fontFamily: "var(--fu, 'Outfit', sans-serif)",
                         }}>
@@ -174,7 +174,7 @@ export default function PropertyIntelligence({ property }: Props) {
                             {m.value}
                         </p>
                         {m.sub && (
-                            <p style={{ fontSize: 11, color: '#948F84', margin: '2px 0 0' }}>{m.sub}</p>
+                            <p style={{ fontSize: 11, color: '#5A6577', margin: '2px 0 0' }}>{m.sub}</p>
                         )}
                     </div>
                 ))}
@@ -190,7 +190,7 @@ export default function PropertyIntelligence({ property }: Props) {
                     fontWeight: 700,
                     textTransform: 'uppercase',
                     letterSpacing: '0.2em',
-                    color: '#948F84',
+                    color: '#5A6577',
                     margin: '0 0 12px',
                     fontFamily: "var(--fu, 'Outfit', sans-serif)",
                 }}>
@@ -215,8 +215,8 @@ export default function PropertyIntelligence({ property }: Props) {
 
             {/* Disclaimer */}
             <p style={{
-                fontSize: 10,
-                color: '#B8B3A8',
+                fontSize: 11,
+                color: '#6E6C60',
                 margin: '16px 0 0',
                 lineHeight: 1.5,
             }}>

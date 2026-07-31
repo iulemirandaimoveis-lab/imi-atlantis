@@ -55,7 +55,7 @@ export default function MobileStickyBar({ propertyName, propertyId, priceMin, wh
                 />
                 <div className="flex items-center gap-3 max-w-lg mx-auto">
                     <div className="flex-1 min-w-0">
-                        <p style={{ fontSize: 9, color: '#948F84', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', fontFamily: "var(--fu, 'Outfit', sans-serif)", margin: '0 0 2px' }}>
+                        <p style={{ fontSize: 9, color: '#5A6577', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', fontFamily: "var(--fu, 'Outfit', sans-serif)", margin: '0 0 2px' }}>
                             A partir de
                         </p>
                         <p style={{ fontSize: 17, fontWeight: 800, color: '#0B1928', fontFamily: "var(--fm, 'JetBrains Mono', monospace)", margin: 0, lineHeight: 1.15 }}>

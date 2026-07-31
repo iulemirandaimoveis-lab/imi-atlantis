@@ -20,6 +20,19 @@ Plataforma imobiliária (Next.js 14 + Supabase) com 3 mundos: site público i18n
 
 ## Trabalho recente (main)
 
+- 2026-07-31 (branch claude/website-visibility-readability-2bwhi2, PR draft): **Site público —
+  varredura de contraste WCAG AA + gate axe**. 3ª recorrência da mesma classe de bug (#379,
+  #381): cor de um tema sobre o fundo do outro. Causa estrutural: a casca pública e navy
+  (`(website)/layout.tsx:39`) enquanto UI_DESIGN_STANDARDS §4 declara fundo claro, e nao havia
+  `body { color }` — texto sem cor virava preto do browser. Corrigidos defeitos reais (h2 do
+  `error.tsx` a 1,0:1; `ui/Textarea` com `dark:bg-card-dark` INEXISTENTE = texto digitado
+  branco no branco nos formularios; label do `ui/Select` a 1,6:1; foco do form de contato que
+  ENFRAQUECIA a borda) + varredura completa (~40 arquivos, so valor de cor) + piso de fonte.
+  Gate novo: `@axe-core/playwright` em `e2e/a11y.spec.ts` (7 rotas, 7/7). **INVARIANTE: o gate
+  precisa rolar a pagina toda antes de auditar** — framer-motion `whileInView` deixa o que esta
+  abaixo da dobra em `opacity: 0` e o axe ignora invisivel. ADR D-16. Fecha A-04/A-05.
+  tsc/lint limpos, jest 981/986, 0 regressao.
+
 - 2026-07-07 (branch claude/map-zoom-optimization-ii2mj8, PR draft): **Mapa Alto Bellevue —
   árvores removidas + zoom corrigido**. Dono relatou zoom "bugando" e mapa pouco prático de
   apresentar. Removida a arborização puramente decorativa (~120 símbolos SVG) e o filtro morto
